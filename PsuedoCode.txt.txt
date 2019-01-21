@@ -1,0 +1,53 @@
+development Pahses: 
+	-html skeleton
+		>from there we divi-out the pages and components based on our skeleton.
+		>pages and associated components			
+			-Login/Landing
+				#Buttons(login/sign-in)
+			-Character Select
+				#List
+				#list items(character name. Class/Lvl)
+				#Button(New Character)  
+			-Survey
+				#Question
+				#Answer(a dropdown menu with associated answers)
+				#submit button
+			-Character Sheet
+				#Sheet Header {
+				#portrait box
+				#detail box
+				}
+				#roll button
+				#attr wrapper
+				#attr box
+				#Stat list
+				#Stat list item
+				#feature box/list
+				#feature list item
+				#item list/box
+				#item list item
+				#primary attack box
+				#primary attack items
+				#spell quick access(wil include link to the spell detail page)
+			-Spell book
+				#spell list
+				#spell item
+				#spell tabs(sort by class,sort by level, school)
+				#save spell button
+				#sort break point
+			-Spell Detail	
+				#spell heading( Name, school, level, Casting type/time/Components/range)
+				#spell Description
+				#Saved Tag
+				#Save Button			
+	-logic flow
+		>After log in, we will load a [New Character] button adn then list all available [Character Sheets] associted with that user.
+		>create a survey and store all the inputs in the state so that it can be pushed to the db all at once. 
+		>on charsheet load, we render components conditionally based on the flags and conditionals present. 
+		>once on the character sheet page, any updates to the data on the page will be stored on the sate, unless the user clicks [Save]
+		>the [Level Up] button, wil access a table (class level table) that has data stored for each respective level of class. and will auto apply the static updates.
+		>each class level table will also have its associated subclass data at each respective [Subclass Feature] level.
+	-API
+		>the API will hadle the cheking of conditionals for character sheet generation through the user of params maybe? 
+		(i.e. will render [Spellbook] components if [`isSpellcaster = true`], will render [Animal Companion/ Familiar Sheet] if ['hasAnimal = true'])
+		
