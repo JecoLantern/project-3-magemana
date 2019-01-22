@@ -16,5 +16,9 @@
   "bugs": {
     "url": "https://github.com/Austin-Shep/project-3-magemana/issues"
   },
-  "homepage": "https://github.com/Austin-Shep/project-3-magemana#readme"
+  "homepage": "https://github.com/Austin-Shep/project-3-magemana#readme",
+  "dependencies": {
+    "express": "^4.16.4",
+    "path": "^0.12.7"
+  }
 }
