@@ -1,0 +1,42 @@
+.navbar {
+    height: 60px;
+    background: rgba(255, 35, 35, 0.9);
+    position: fixed !important;
+    width: 100%;
+    z-index: 1;
+    margin-bottom: 25px;
+}
+
+.navbar a {
+    color: white;
+    font-size: 1.3rem;
+    text-decoration: none;
+    margin: 5px;
+    line-height: 3px;
+}
+
+.navTitle {
+    color: white;
+    text-shadow: 2px 3px 5px rgb(92, 92, 92);
+}
+
+h1 {
+    font-weight: bold;
+    margin: auto;
+}
+
+@media only screen and (max-width: 420px) {
+    .navTitle {
+        font-size: 28px;
+    }
+}
+
+/* @media only screen and (max-width: 370px) {
+
+} */
+
+@media only screen and (max-width: 349px) {
+    .navTitle {
+        font-size: 25px;
+    }
+}
