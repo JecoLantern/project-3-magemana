@@ -1,11 +1,13 @@
 {
-  "name": "Project-3-MageMana",
+  "name": "project-3-magmana",
   "version": "1.0.0",
   "description": "",
+  "private": true,
+  "proxy": "http://localhost:3001/",
   "main": "index.js",
   "scripts": {
     "start": "webpack-dev-server --mode development",
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "react-scripts test --env=jsdom",
     "build": "webpack --mode development"
   },
   "keywords": [],
@@ -28,6 +30,7 @@
     "react": "^16.7.0",
     "react-dom": "^16.7.0",
     "react-hot-loader": "^4.6.3",
-    "react-router": "^4.3.1"
+    "react-router": "^4.3.1",
+    "react-scripts": "^2.1.1"
   }
 }
