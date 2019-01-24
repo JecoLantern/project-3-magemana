@@ -6,7 +6,7 @@
   "proxy": "http://localhost:3001/",
   "main": "index.js",
   "scripts": {
-    "start": "webpack-dev-server --mode development",
+    "start": "webpack-dev-server --hot --mode development",
     "test": "react-scripts test --env=jsdom",
     "build": "webpack --mode development"
   },

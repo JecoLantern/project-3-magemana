@@ -1,9 +1,10 @@
 development Pahses: 
 	-html skeleton
 		>from there we divi-out the pages and components based on our skeleton.
-		>pages and associated components			
+		>pages(-) and associated components(#)			
 			-Login/Landing
 				#Buttons(login/sign-in)
+				#form rows
 			-Character Select
 				#List
 				#list items(character name. Class/Lvl)
