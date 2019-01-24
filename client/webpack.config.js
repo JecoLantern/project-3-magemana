@@ -15,11 +15,7 @@ module.exports = {
             {
                 test: /\.css$/,
                 use: ["style-loader", "css-loader"]
-            }
-        ]
-    },
-    module: {
-        rules: [
+            },
             {
                 test: /\.(png|jpg|gif)$/,
                 use: [
@@ -29,9 +25,8 @@ module.exports = {
                     },
                 ],
             },
-        ],
+        ]
     },
-    resolve: { extensions: ["*", ".js", ".jsx"] },
     output: {
         path: path.resolve(__dirname, "dist/"),
         publicPath: "/dist/",
@@ -40,7 +35,6 @@ module.exports = {
     devServer: {
         contentBase: path.join(__dirname, "public/"),
         port: 3000,
-        publicPath: "http://localhost:3000/dist/",
         hotOnly: true
     },
     plugins: [new webpack.HotModuleReplacementPlugin()]
