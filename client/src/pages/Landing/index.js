@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import '../Landing/_loginSty.scss';
+import '../Landing/_loginSty.css';
 import reactDOM from "react-dom";
 import TransitionGroup from "react-transition-group";
 import FadeTransition from "../transitions";

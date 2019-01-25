@@ -1,16 +1,9 @@
-html,
-body,
-#root {
+html, body, #root {
     width: 100%;
     height: 100%;
     box-sizing: border-box;
-   
-}
-
-  
-
-$clear_theme: #0000;
-.root-container {
+  }
+  .root-container {
     width: 100%;
     height: 100%;
     display: flex;
@@ -18,15 +11,12 @@ $clear_theme: #0000;
     align-items: center;
     flex-direction: column;
     background-image: url(https://i.pinimg.com/originals/5f/89/c3/5f89c39a29f03178787355585581dd73.jpg);
-    background-color: #e4c55f; 
- 
-    background-position: center; 
-    background-repeat: no-repeat; 
-    background-size: cover; 
-
-}
-
-.box-controller {
+    background-color: #e4c55f;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .box-controller {
     visibility: visible;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -39,31 +29,27 @@ $clear_theme: #0000;
     margin-bottom: 30px;
     align-items: center;
     transition: visibility 0.5s ease-out;
-}
-
-.controller {
+  }
+  .controller {
     flex: 1;
     text-align: center;
     height: 100%;
     line-height: 2;
     cursor: pointer;
     background-image: url(http://pngimg.com/uploads/paper_sheet/paper_sheet_PNG7231.png);
-    background-size: cover; 
-    background-position: center; 
-    background-repeat: no-repeat; 
-}
-
-
-.selected-controller {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  .selected-controller {
     transition: border 0.5s ease-out;
-    border-bottom: 2px solid $clear_theme;
+    border-bottom: 2px solid #000 0;
     background-image: url(http://pngimg.com/uploads/paper_sheet/paper_sheet_PNG7231.png);
-    background-size: cover; 
-    background-position: center; 
-    background-repeat: no-repeat; 
-}
-
-.box-container {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  .box-container {
     display: flex;
     flex-direction: column;
     max-width: 27em;
@@ -72,78 +58,65 @@ $clear_theme: #0000;
     border-radius: 6px;
     padding: 28px;
     background-image: url(http://pngimg.com/uploads/paper_sheet/paper_sheet_PNG7231.png);
-    background-size: cover; 
-    background-position: center; 
-    background-repeat: no-repeat; 
-}
-
-.inner-container {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  .inner-container {
     transition: visibility 0.2s ease-out;
-}
-
-.inner-container.show {
+  }
+  .inner-container.show {
     visibility: visible;
-}
-
-
-.header {
+  }
+  .header {
     text-align: center;
     padding: 5px;
     margin-bottom: 17px;
     font-family: Ozxgen, sans-serif;
     font-size: 22px;
-    border-bottom: 2px solid $clear_theme;
-}
-
-.box {
+    border-bottom: 2px solid #000 0;
+  }
+  .box {
     display: flex;
     flex-direction: column;
     justify-content: center;
-}
-
-.input-group {
+  }
+  .input-group {
     display: flex;
     flex-direction: column;
     margin-top: 5px;
     margin-bottom: 5px;
-}
-
-
-.login-label {
+  }
+  .login-label {
     font-family: Oxygen, sans-serif;
     font-size: 20px;
     font-weight: 600;
     padding-left: 5px;
-}
-
-.login-input {
+  }
+  .login-input {
     height: 2.1em;
     border-radius: 3px;
-    border: 1px solid $clear_theme;
+    border: 1px solid #000 0;
     transition: border 0.4s ease-out;
     padding: 13px;
     font-family: Oxygen, sans-serif;
     font-size: 19px;
     color: #3e3e42;
     background: rgba(15, 15, 15, 0.01);
-}
-
-.login-input:hover {
-    border: 2px solid $clear_theme;
-}
-
-.login-input:focus {
+  }
+  .login-input:hover {
+    border: 2px solid #000 0;
+  }
+  .login-input:focus {
     border: 2px solid #000;
     box-shadow: 0px 0px 20px rgba(15, 15, 15, 0.2);
-}
-
-.login-input::placeholder {
+  }
+  .login-input::placeholder {
     font-family: Oxygen, sans-serif;
-    font-size: 16px; //color: rgba(46, 213, 116, 0.839);
+    font-size: 16px;
     color: rgba(15, 15, 15, 0.4);
-}
-
-.login-btn {
+  }
+  .login-btn {
     padding: 2px 30px;
     /* background-color: #417cef; */
     border: 0;
@@ -152,46 +125,38 @@ $clear_theme: #0000;
     font-family: Oxygen, sans-serif;
     background-color: rgba(15, 15, 15, 0.03);
     margin-top: 20px;
-    border: 2px solid #0000;
+    border: 2px solid #000 0;
     transition: background-color 0.3s ease-out;
     cursor: pointer;
-}
-
-.login-btn:hover,
-.login-btn:focus {
+  }
+  .login-btn:hover, .login-btn:focus {
     background-color: #000;
     color: white;
-}
-
-.danger-error {
+  }
+  .danger-error {
     color: #e74c3c;
     font-size: 16px;
-}
-
-.password-state {
+  }
+  .password-state {
     display: flex;
     flex-direction: row;
     margin-top: 20px;
-}
-
-.pwd {
+  }
+  .pwd {
     height: 6px;
     flex: 1;
     visibility: hidden;
-}
-
-.pwd-weak {
+  }
+  .pwd-weak {
     background-color: #e74c3c;
-}
-
-.pwd-medium {
+  }
+  .pwd-medium {
     background-color: #3498db;
-}
-
-.pwd-strong {
+  }
+  .pwd-strong {
     background-color: #2ecc71;
-}
-
-.show {
+  }
+  .show {
     visibility: visible;
-}
+  }
+  
