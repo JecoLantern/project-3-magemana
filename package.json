@@ -33,8 +33,6 @@
   },
   "dependencies": {
     "express": "^4.16.4",
-    "if-env": "^1.0.4",
-    "react-router-dom": "^4.3.1",
-    "react-transition-group": "^2.5.3"
+    "if-env": "^1.0.4"
   }
 }
