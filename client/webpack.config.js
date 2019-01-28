@@ -13,11 +13,13 @@ module.exports = {
                 options: { presets: ["@babel/env"] }
             },
             {
-                test: /\.(s*)css$/,
+                test: /\.css$/,
+                exclude: /(node_modules|bower_components)/,
                 use: ["style-loader", "css-loader", "sass-loader"]
             },
             {
                 test: /\.(png|jpg|gif)$/,
+                exclude: /(node_modules|bower_components)/,
                 use: [
                     {
                         loader: 'file-loader',

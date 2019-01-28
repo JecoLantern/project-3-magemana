@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { hot } from "react-hot-loader";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import "./App.css";
+import Landing from './pages/Landing'
 
 class App extends Component {
     render() {
@@ -9,8 +9,7 @@ class App extends Component {
             <div>
                 <Router>
                     <Switch>
-
-                        <Route />
+                        <Route exact path="/" component={Landing} />
                     </Switch>
                 </Router>
             </div>

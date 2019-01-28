@@ -2,9 +2,9 @@ import React, { Component } from 'react';
 import '../Landing/_loginSty.css';
 import reactDOM from "react-dom";
 import TransitionGroup from "react-transition-group";
-import FadeTransition from "../transitions";
+import FadeTransition from "../transitions/fadeTransitions.jsx";
 
-class App extends React.Component {
+class Land extends React.Component {
 
   constructor(props) {
     super(props);
@@ -15,47 +15,47 @@ class App extends React.Component {
   }
 
   showLoginBox() {
-    this.setState({isLoginOpen: true, isRegisterOpen: false});
+    this.setState({ isLoginOpen: true, isRegisterOpen: false });
   }
 
   showRegisterBox() {
-    this.setState({isRegisterOpen: true, isLoginOpen: false});
+    this.setState({ isRegisterOpen: true, isLoginOpen: false });
   }
 
   render() {
 
     return (
       <div className="root-container">
- <div className="bg"></div>
+        <div className="bg"></div>
         <div className="box-controller">
           <div
             className={"controller " + (this.state.isLoginOpen
-            ? "selected-controller"
-            : "")}
+              ? "selected-controller"
+              : "")}
             onClick={this
-            .showLoginBox
-            .bind(this)}>
+              .showLoginBox
+              .bind(this)}>
             Login
           </div>
           <div
             className={"controller " + (this.state.isRegisterOpen
-            ? "selected-controller"
-            : "")}
+              ? "selected-controller"
+              : "")}
             onClick={this
-            .showRegisterBox
-            .bind(this)}>
+              .showRegisterBox
+              .bind(this)}>
             Register
           </div>
         </div>
- 
+
         <FadeTransition isOpen={this.state.isLoginOpen} duration={500}>
           <div className="box-container">
-            <LoginBox/>
+            <LoginBox />
           </div>
         </FadeTransition>
         <FadeTransition isOpen={this.state.isRegisterOpen} duration={500}>
           <div className="box-container">
-            <RegisterBox/>
+            <RegisterBox />
           </div>
         </FadeTransition>
 
@@ -73,7 +73,7 @@ class LoginBox extends React.Component {
     this.state = {};
   }
 
-  submitLogin(e) {}
+  submitLogin(e) { }
 
   render() {
     return (
@@ -89,7 +89,7 @@ class LoginBox extends React.Component {
               type="text"
               name="username"
               className="login-input"
-              placeholder="Username"/>
+              placeholder="Username" />
           </div>
 
           <div className="input-group">
@@ -98,15 +98,15 @@ class LoginBox extends React.Component {
               type="password"
               name="password"
               className="login-input"
-              placeholder="Password"/>
+              placeholder="Password" />
           </div>
 
           <button
             type="button"
             className="login-btn"
             onClick={this
-            .submitLogin
-            .bind(this)}>Login</button>
+              .submitLogin
+              .bind(this)}>Login</button>
 
         </div>
       </div>
@@ -151,29 +151,29 @@ class RegisterBox extends React.Component {
           newArr.push(err);
         }
       }
-      return {errors: newArr};
+      return { errors: newArr };
     });
   }
 
   onUsernameChange(e) {
-    this.setState({username: e.target.value});
+    this.setState({ username: e.target.value });
     this.clearValidationErr("username");
   }
 
   onEmailChange(e) {
-    this.setState({email: e.target.value});
+    this.setState({ email: e.target.value });
     this.clearValidationErr("email");
   }
 
   onPasswordChange(e) {
-    this.setState({password: e.target.value});
+    this.setState({ password: e.target.value });
     this.clearValidationErr("password");
 
-    this.setState({pwdState: "weak"});
+    this.setState({ pwdState: "weak" });
     if (e.target.value.length > 8) {
-      this.setState({pwdState: "medium"});
+      this.setState({ pwdState: "medium" });
     } else if (e.target.value.length > 12) {
-      this.setState({pwdState: "strong"});
+      this.setState({ pwdState: "strong" });
     }
 
   }
@@ -246,11 +246,11 @@ class RegisterBox extends React.Component {
               className="login-input"
               placeholder="Username"
               onChange={this
-              .onUsernameChange
-              .bind(this)}/>
+                .onUsernameChange
+                .bind(this)} />
             <small className="danger-error">{usernameErr
-                ? usernameErr
-                : ""}</small>
+              ? usernameErr
+              : ""}</small>
           </div>
 
           <div className="input-group">
@@ -261,11 +261,11 @@ class RegisterBox extends React.Component {
               className="login-input"
               placeholder="Email"
               onChange={this
-              .onEmailChange
-              .bind(this)}/>
+                .onEmailChange
+                .bind(this)} />
             <small className="danger-error">{emailErr
-                ? emailErr
-                : ""}</small>
+              ? emailErr
+              : ""}</small>
           </div>
 
           <div className="input-group">
@@ -276,25 +276,25 @@ class RegisterBox extends React.Component {
               className="login-input"
               placeholder="Password"
               onChange={this
-              .onPasswordChange
-              .bind(this)}/>
+                .onPasswordChange
+                .bind(this)} />
             <small className="danger-error">{passwordErr
-                ? passwordErr
-                : ""}</small>
+              ? passwordErr
+              : ""}</small>
 
             {this.state.password && <div className="password-state">
               <div
                 className={"pwd pwd-weak " + (pwdWeak
-                ? "show"
-                : "")}></div>
+                  ? "show"
+                  : "")}></div>
               <div
                 className={"pwd pwd-medium " + (pwdMedium
-                ? "show"
-                : "")}></div>
+                  ? "show"
+                  : "")}></div>
               <div
                 className={"pwd pwd-strong " + (pwdStrong
-                ? "show"
-                : "")}></div>
+                  ? "show"
+                  : "")}></div>
             </div>}
 
           </div>
@@ -303,11 +303,11 @@ class RegisterBox extends React.Component {
             type="button"
             className="login-btn"
             onHover={this
-            .openPopup
-            .bind(this)}
+              .openPopup
+              .bind(this)}
             onClick={this
-            .openPopup
-            .bind(this)}>Register</button>
+              .openPopup
+              .bind(this)}>Register</button>
 
         </div>
       </div>
@@ -318,6 +318,4 @@ class RegisterBox extends React.Component {
 
 }
 
-reactDOM.render(
-  <App/>, document.getElementById("root"));
-export default App;
+export default Land;
