@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { hot } from "react-hot-loader";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Landing from './pages/Landing'
+import  Survey  from './pages/Survey'
 
 class App extends Component {
     render() {
@@ -10,6 +11,7 @@ class App extends Component {
                 <Router>
                     <Switch>
                         <Route exact path="/" component={Landing} />
+                        <Route exact path="/survey" component={Survey} />
                     </Switch>
                 </Router>
             </div>
