@@ -1,7 +1,7 @@
 import React from 'react';
 import { Col } from '../../../components/Grid'
 
-QuestionBox = props => {
+const QuestionBox = props => {
     return (
         <Col size="m-4">
             <div>
@@ -13,11 +13,11 @@ QuestionBox = props => {
                 </button>
                 <div className="dropdown-menu" aria-labelledby="dropdownMenuButton">
                     {//if choices is empty provide text field
-                    props.choices.length > 0 ?
+                    props.choices.length >= 1 ?
                         props.choices.map(ans =>
-                    <a className="dropdown-item" onClick={props.choicePush}>{ans}</a>
-                    ) : <input className={props.value} onChange={props.onChange}
-                    />}
+                    <a className="dropdown-item" onClick={props.choicePush}>{ans}</a>)
+                    : <input className={props.value} onChange={props.onChange}/>
+                    }
                 </div>
             </div>
         </Col>

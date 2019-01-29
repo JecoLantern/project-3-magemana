@@ -10,11 +10,14 @@ class Survey extends Component {
             {
                 value: "name",
                 question: "What is your adventurers name?",
-                choices: []
+                choices: [],
+                chose:""
+
             }, {
                 question: "What is your chosen class?",
                 value: "class",
-                choices: ["Barbarian", "Bard", "Cleric", "Druid", "Fighter", "Monk", "Paladin", "Ranger", "Rougue", "Sorcerer", "Warlock", "Wizard"]
+                choices: ["Barbarian", "Bard", "Cleric", "Druid", "Fighter", "Monk", "Paladin", "Ranger", "Rougue", "Sorcerer", "Warlock", "Wizard"],
+                chose:""
             },
         ],
         characterBuild: {
@@ -22,7 +25,7 @@ class Survey extends Component {
             level: 1,
             race: "",
             subrace: "",
-            class: "",
+            classType: "",
             subclass: "",
             attributes: [
                 {attr:"str" , val:10},
@@ -85,6 +88,7 @@ class Survey extends Component {
                 choicePush={()=> this.inputHandler()}
                 choices={el.choices}
                 value={el.value}
+                buttonLabel={el.value}
                 onChange={this.inputHandler()}
                  />
             )
@@ -132,13 +136,13 @@ class Survey extends Component {
     // }
     // }
 
-    handleProgressiveRenderSkillProf = () => {
+    // handleProgressiveRenderSkillProf = () => {
 
-    }
+    // }
 
-    handleProgressiveRenderStartEquip = () => {
+    // handleProgressiveRenderStartEquip = () => {
 
-    }
+    // }
 
 
 
@@ -147,7 +151,7 @@ class Survey extends Component {
             <div className="container">
                 <Row>
                     <Col size={["sm-12", "md-6", "lg-4"]}>
-                        {this.surveyHandle()}
+                        {this.surveyHandle}
                     </Col>
                 </Row>
             </div>
