@@ -23,3 +23,5 @@ questionBox = props => {
         </Col>
     )
 }
+
+export default questionBox;

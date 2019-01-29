@@ -26,7 +26,14 @@ class Survey extends Component {
             subrace: "",
             class: "",
             subclass: "",
-            attributes: [10, 10, 10, 10, 10, 10],
+            attributes: [
+                {attr:"str" , val:10},
+                {attr:"dex" , val:10}, 
+                {attr:"con" , val:10}, 
+                {attr:"int" , val:10}, 
+                {attr:"wis" , val:10}, 
+                {attr:"cha" , val:10}
+            ],
             proficencies: [],
             startingEquipment: [],
         }
@@ -90,12 +97,42 @@ class Survey extends Component {
     handleProgressiveRenderClass = () => {
         //based on the selected Class it will render a list of subclass'
         //switch case, the class then make an api call to get all of the appropraite subclass 
+        // switch(class){
+        //     case "barbarian":
+        //     break
+        // }
     }
 
-    handleProgressiveRenderRace = () => {
-        //based on the selected race it will render a list of sub races' 
-        //switch case, the class then make an api call to get all of the appropraite subrace
-    }
+    // handleProgressiveRenderRace = () => {
+    //     //based on the selected race it will render a list of sub races' 
+    //     //switch case, the class then make an api call to get all of the appropraite subraceswitch (race) {
+    //     case "elf":
+            
+    //         break;
+    //     case "half-elf":
+            
+    //         break;
+    //     case "human":
+            
+    //         break;
+    //     case "dwarf":
+            
+    //         break;
+    //     case "halfling":
+            
+    //         break;
+    //     case "dragonborn":
+            
+    //         break;
+    //     case "half-orc":
+            
+    //         break;
+    //     case "tiefling":
+            
+    //         break;
+
+    // }
+    // }
 
     handleProgressiveRenderSkillProf = () => {
 
