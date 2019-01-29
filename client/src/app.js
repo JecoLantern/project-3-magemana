@@ -3,7 +3,7 @@ import { hot } from "react-hot-loader";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Landing from './pages/Landing'
 import Sheet from './pages/Sheet'
-import  Survey  from './pages/Survey'
+// import  Survey  from './pages/Survey'
 
 class App extends Component {
     render() {
@@ -13,7 +13,7 @@ class App extends Component {
                     <Switch>
                         <Route exact path="/" component={Landing} />
                         <Route exact path="/charsheet" component={Sheet} />
-                        <Route exact path="/survey" component={Survey} />
+                        {/* <Route exact path="/survey" component={Survey} /> */}
                     </Switch>
                 </Router>
             </div>

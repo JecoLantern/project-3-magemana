@@ -1,6 +1,6 @@
 import React, { Component } from 'react-dom';
 import { Col, Row } from '../../components/Grid';
-import questionBox from './components';
+import QuestionBox from './components';
 import './_surveyStyle.css';
 import ranNames from './util/randomNames.json';
 
@@ -78,10 +78,10 @@ class Survey extends Component {
 
     surveyHandle = () => {
         //generate a 
-        this.state.surveyQuestions.map(el =>{
+        this.state.surveyQuestions.map(el => {
             //map through the question objects
             return(
-                <questionBox
+                <QuestionBox
                 key={el.key}
                 question={el.question}
                 choicePush={()=> this.inputHandler()}
