@@ -1,0 +1,25 @@
+#diamond1 {
+    width: 0;
+    height: 0;
+    border: 70px solid transparent;
+    border-bottom-color: orange;
+    position: relative;
+    top: -92px;
+    left: -18px;
+    z-index: 1;
+}
+#diamond1:after {
+    content: "";
+    position: absolute;
+    left: -70px;
+    top: 70px;
+    width: 0;
+    height: 0;
+    border: 70px solid transparent;
+    border-top-color: orange;
+}
+#square1 {
+    width: 100px;
+    height: 100px;
+    background: red;
+}
