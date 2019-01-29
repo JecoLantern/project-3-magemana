@@ -14,14 +14,14 @@ export default class FadeTransition extends React.Component {
     };
     this.transitionStyle = {
       entering: {
-        opacity: "0"
+        opacity: "0.4 "
       },
       entered: {
         opacity: "1",
-        transitionDelay: "700ms"
+        transitionDelay: "1ms"
       },
       exiting: {
-        opacity: "0"
+        opacity: "0.2"
       },
       exited: {
         opacity: "0"
