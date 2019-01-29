@@ -1,9 +1,9 @@
 // export { default } from "../../components";
-import React, { Component } from "react-dom";
+import React, { Component } from "react";
 import {Col, Row} from "../../components/Grid";
 import "../Sheet/_charSheetSty.css";
 
-class CharSheet {
+class CharacterSheet extends Component{
 
     render() {
         return (
@@ -46,4 +46,4 @@ class CharSheet {
 
 };
 
-export default CharSheet;
+export default CharacterSheet;

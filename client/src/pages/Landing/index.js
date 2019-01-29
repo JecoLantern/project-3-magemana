@@ -68,10 +68,12 @@ class Land extends React.Component {
 
 class LoginBox extends React.Component {
 
-  constructor(props) {
-    super(props);
-    this.state = {};
-  }
+  // constructor(props) {
+  //   super(props);
+  //   this.state = {};
+  // }
+
+  state ={};
 
   submitLogin(e) { }
 
