@@ -1,19 +1,17 @@
 import React, { Component } from 'react-dom';
 import { Col, Row } from '../../components/Grid';
-import questionBox from './components';
 import './_surveyStyle.css';
 import ranNames from './util/randomNames.json';
+import QuestionBox from './components';
 
 class Survey extends Component {
     state = {
         surveyQuestions: [
             {
-                key: 1,
                 value: "name",
                 question: "What is your adventurers name?",
                 choices: []
             }, {
-                key: 2,
                 question: "What is your chosen class?",
                 value: "class",
                 choices: ["Barbarian", "Bard", "Cleric", "Druid", "Fighter", "Monk", "Paladin", "Ranger", "Rougue", "Sorcerer", "Warlock", "Wizard"]
@@ -81,8 +79,8 @@ class Survey extends Component {
         this.state.surveyQuestions.map(el =>{
             //map through the question objects
             return(
-                <questionBox 
-                key={el.key}
+                <QuestionBox 
+                key={el.value}
                 question={el.question}
                 choicePush={()=> this.inputHandler()}
                 choices={el.choices}
