@@ -1,6 +1,6 @@
 import React, { Component } from 'react-dom';
 import { Col, Row } from '../../components/Grid';
-import {questionBox} from './components'
+import questionBox from './components';
 import './_surveyStyle.css';
 import ranNames from './util/randomNames.json';
 
