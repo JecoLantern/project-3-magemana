@@ -19,7 +19,7 @@ if (process.env.NODE_ENV === "production") {
   app.use(express.static("client/build"));
 }
 app.use(session({
-  secret:"secretsyuf",
+  secret:"secretSecrets",
   saveUninitialized:false,
   resave:false
 }))
@@ -27,6 +27,7 @@ app.use(session({
 app.use(passport.initialize())
 app.use(passport.session())
 
+app.use('/auth',auth)
 
 // Define API routes here
 app.get("/", (req, res) => {
