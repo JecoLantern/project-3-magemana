@@ -2,6 +2,7 @@ const express = require('express');
 const router = express.Router();
 const db = require('../models')
 const User = db.User;
+
 module.exports = function (passport) {
     router.post('/signup', function (req, res) {
         const body = req.body,
