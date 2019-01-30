@@ -26,7 +26,6 @@ class Land extends React.Component {
 
     return (
       <div className="root-container">
-        <div className="bg"></div>
         <div className="box-controller">
           <div
             className={"controller " + (this.state.isLoginOpen
@@ -48,12 +47,13 @@ class Land extends React.Component {
           </div>
         </div>
 
-        <FadeTransition isOpen={this.state.isLoginOpen} duration={500}>
+        <FadeTransition isOpen={this.state.isLoginOpen} duration={100}>
           <div className="box-container">
             <LoginBox />
           </div>
         </FadeTransition>
-        <FadeTransition isOpen={this.state.isRegisterOpen} duration={500}>
+        
+        <FadeTransition isOpen={this.state.isRegisterOpen} duration={100}>
           <div className="box-container">
             <RegisterBox />
           </div>
