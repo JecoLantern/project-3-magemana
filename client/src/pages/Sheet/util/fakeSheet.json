@@ -1,16 +1,18 @@
 {
     "name": "John Human",
     "level": 1,
-    "race": "Human",
+    "race":{
+        "race":"Human",
+        "subrace": "Variant"
+    }, 
     "gender": "nonbinary",
     "alignment":"true nuetral",
-    "subrace": "Variant",
     "class":{ 
         "className":"Fighter",
+        "subclass": "Champion",
         "isSpellcaster": false,
         "hitDice":"1d8"
     },
-    "subclass": "Champion",
     "classFeatures":[
         {
             "feature":"Skilled",
