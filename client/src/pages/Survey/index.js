@@ -4,40 +4,40 @@ import ranNames from './util/randomNames.json';
 import QuestionBox from './components';
 
 class Survey extends Component{
-    // state = {
-    //     surveyQuestions: [
-    //         {
-    //             value: "name",
-    //             question: "What is your adventurers name?",
-    //             choices: [],
-    //             chose:""
+    state = {
+        surveyQuestions: [
+            {
+                value: "name",
+                question: "What is your adventurers name?",
+                choices: [],
+                chose:""
 
-    //         }, {
-    //             question: "What is your chosen class?",
-    //             value: "class",
-    //             choices: ["Barbarian", "Bard", "Cleric", "Druid", "Fighter", "Monk", "Paladin", "Ranger", "Rougue", "Sorcerer", "Warlock", "Wizard"],
-    //             chose:""
-    //         },
-    //     ],
-    //     characterBuild: {
-    //         name: "",
-    //         level: 1,
-    //         race: "",
-    //         subrace: "",
-    //         classType: "",
-    //         subclass: "",
-    //         attributes: [
-    //             {attr:"str" , val:10},
-    //             {attr:"dex" , val:10}, 
-    //             {attr:"con" , val:10}, 
-    //             {attr:"int" , val:10}, 
-    //             {attr:"wis" , val:10}, 
-    //             {attr:"cha" , val:10}
-    //         ],
-    //         proficencies: [],
-    //         startingEquipment: [],
-    //     }
-    // }
+            }, {
+                question: "What is your chosen class?",
+                value: "class",
+                choices: ["Barbarian", "Bard", "Cleric", "Druid", "Fighter", "Monk", "Paladin", "Ranger", "Rougue", "Sorcerer", "Warlock", "Wizard"],
+                chose:""
+            },
+        ],
+        characterBuild: {
+            name: "",
+            level: 1,
+            race: "",
+            subrace: "",
+            classType: "",
+            subclass: "",
+            attributes: [
+                {attr:"str" , val:10},
+                {attr:"dex" , val:10}, 
+                {attr:"con" , val:10}, 
+                {attr:"int" , val:10}, 
+                {attr:"wis" , val:10}, 
+                {attr:"cha" , val:10}
+            ],
+            proficencies: [],
+            startingEquipment: [],
+        }
+    }
 
     render() {
         return (

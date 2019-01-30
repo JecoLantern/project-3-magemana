@@ -12,62 +12,59 @@ const charSchema = new Schema({
     alignment: { type: String },
     class: {
         type: String, required: true,
-        subclass: { type: String, required: true },
+        subclass: String,
         isSpellcaster: Boolean,
     },
     classFeatures: [
-        {
-            featureName: String,
-            featureUrl: String,
-        }
+        { featureName: String, featureUrl: String }
     ],
     vitals: {
         armorClass: { type: Number, required: true },
         health: { type: Number, required: true },
         hitDice: { type: String, required: true },
         speed: { type: Number, required: true },
-    initiative: { type: Number, required: true },
-    passivePerception: { type: Number, required: true }
+        initiative: { type: Number, required: true },
+        passivePerception: { type: Number, required: true }
     },
-attributes: [
+    attributes: [
 
-    {
-        attr: { type: String, default: "Str", required: true },
-        val: { type: Number, default: 10, required: true },
-        mod: { type: Number, default: 0, required: true },
-        save: { type: Number, default: 0, isProficient: Boolean },
-    },
-    {
-        attr: { type: String, default: "Dex", required: true },
-        val: { type: Number, default: 10, required: true },
-        mod: { type: Number, default: 0, required: true },
-        save: { type: Number, default: 0, isProficient: Boolean },
-    },
-    {
-        attr: { type: String, default: "Con", required: true },
-        val: { type: Number, default: 10, required: true },
-        mod: { type: Number, default: 0, required: true },
-        save: { type: Number, default: 0, isProficient: Boolean },
-    },
-    {
-        attr: { type: String, default: "Int", required: true },
-        val: { type: Number, default: 10, required: true },
-        mod: { type: Number, default: 0, required: true },
-        save: { type: Number, default: 0, isProficient: Boolean },
-    },
-    {
-        attr: { type: String, default: "Wis", required: true },
-        val: { type: Number, default: 10, required: true },
-        mod: { type: Number, default: 0, required: true },
-        save: { type: Number, default: 0, isProficient: Boolean },
-    },
-    {
-        attr: { type: String, default: "cha", required: true },
-        val: { type: Number, default: 10, required: true },
-        mod: { type: Number, default: 0, required: true },
-        save: { type: Number, default: 0, isProficient: Boolean },
-    }
-],
+        {
+            attr: { type: String, default: "Str", required: true },
+            val: { type: Number, default: 10, required: true },
+            mod: { type: Number, default: 0, required: true },
+            save: { type: Number, default: 0, isProficient: Boolean },
+        },
+        {
+            attr: { type: String, default: "Dex", required: true },
+            val: { type: Number, default: 10, required: true },
+            mod: { type: Number, default: 0, required: true },
+            save: { type: Number, default: 0, isProficient: Boolean },
+        },
+        {
+            attr: { type: String, default: "Con", required: true },
+            val: { type: Number, default: 10, required: true },
+            mod: { type: Number, default: 0, required: true },
+            save: { type: Number, default: 0, isProficient: Boolean },
+        },
+        {
+            attr: { type: String, default: "Int", required: true },
+            val: { type: Number, default: 10, required: true },
+            mod: { type: Number, default: 0, required: true },
+            save: { type: Number, default: 0, isProficient: Boolean },
+        },
+        {
+            attr: { type: String, default: "Wis", required: true },
+            val: { type: Number, default: 10, required: true },
+            mod: { type: Number, default: 0, required: true },
+            save: { type: Number, default: 0, isProficient: Boolean },
+        },
+        {
+            attr: { type: String, default: "cha", required: true },
+            val: { type: Number, default: 10, required: true },
+            mod: { type: Number, default: 0, required: true },
+            save: { type: Number, default: 0, isProficient: Boolean },
+        }
+    ],
     skills: [
         {
             skillName: { type: String, default: "Acrobatics", required: true },
@@ -179,25 +176,27 @@ attributes: [
         },
 
     ],
-        proficiencies: {
-    modifier: { type: Number, required: true, default: 2 },
-    languages: [{ type: String, required: true }],
+    proficiencies: {
+        modifier: { type: Number, required: true, default: 2 },
+        languages: [{ type: String, required: true }],
         armor: [{ type: String }],
-            weapons: [{ type: String, required: true }],
-                tools: [{ type: String }],
+        weapons: [{ type: String, required: true }],
+        tools: [{ type: String }],
     },
-equipment: {
-    mundane: [{ itemName: String }],
+    equipment: {
+        mundane: [{ itemName: String }],
         magical: [{ itemName: String }],
-            weapons: [{ weaponName: String, damage: String, damageType: String, isProficient: Boolean, IsRanged: Boolean, isFinesse: Boolean, isVersatile: Boolean }]
-},
-money: [
-    { currency: { type: String, default: "cp" }, ammount: Number },
-    { currency: { type: String, default: "sp" }, ammount: Number },
-    { currency: { type: String, default: "ep" }, ammount: Number },
-    { currency: { type: String, default: "gp" }, ammount: Number },
-    { currency: { type: String, default: "gems" }, ammount: Number },
-]
+        weapons: [
+            { weaponName: String, damage: String, damageType: String, isProficient: Boolean, IsRanged: Boolean, isFinesse: Boolean, isVersatile: Boolean }
+        ]
+    },
+    money: [
+        { currency: { type: String, default: "cp" }, ammount: { type: Number, default: 0 } },
+        { currency: { type: String, default: "sp" }, ammount: { type: Number, default: 0 } },
+        { currency: { type: String, default: "ep" }, ammount: { type: Number, default: 0 } },
+        { currency: { type: String, default: "gp" }, ammount: { type: Number, default: 0 } },
+        { currency: { type: String, default: "gems" }, ammount: { type: Number, default: 0 } },
+    ]
 
 
 });
