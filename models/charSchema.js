@@ -24,7 +24,7 @@ const charSchema = new Schema({
     vitals: {
         armorClass: { type: Number, required: true },
         health: { type: Number, required: true },
-        hitDice: { type: String, required: true }
+        hitDice: { type: String, required: true },
         speed: { type: Number, required: true },
     initiative: { type: Number, required: true },
     passivePerception: { type: Number, required: true }
