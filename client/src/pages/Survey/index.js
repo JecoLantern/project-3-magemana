@@ -12,7 +12,14 @@ class Survey extends Component{
                 choices: [],
                 chose:""
 
-            }, {
+            },
+            {
+                question: "What is your chosen class?",
+                value: "class",
+                choices: ["Barbarian", "Bard", "Cleric", "Druid", "Fighter", "Monk", "Paladin", "Ranger", "Rougue", "Sorcerer", "Warlock", "Wizard"],
+                chose:""
+            },
+            {
                 question: "What is your chosen class?",
                 value: "class",
                 choices: ["Barbarian", "Bard", "Cleric", "Druid", "Fighter", "Monk", "Paladin", "Ranger", "Rougue", "Sorcerer", "Warlock", "Wizard"],
