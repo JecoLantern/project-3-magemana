@@ -1,4 +1,5 @@
 module.exports = {
     CharModel: require("./charSchema"),
-    User: require('./User')
+    User: require('./User'),
+    UserSession: require('./UserSession')
 };

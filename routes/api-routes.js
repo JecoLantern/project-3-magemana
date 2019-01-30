@@ -1,6 +1,4 @@
 const express = require('express');
 const router = express.Router();
-
-module.exports = function(app){
-    
-};
+const passport
+module.exports = router;
