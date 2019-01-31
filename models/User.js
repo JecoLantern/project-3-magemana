@@ -21,12 +21,11 @@ const UserSchema = new mongoose.Schema({
 
 })
 
-UserSchema.methods.hashPassword = function(password) {
-    return bcrypt.hashSync(password, bcrypt.genSaltSync(10))
+User.methods.hashPassword = function(password) {
+    return bcrypt.hashSync(password, bcrypt.genSaltSync(10), null)
+}
+User.methods.comparePassword = function(password, hash) {
+    return bcrypt.compareSync(password, hash)
 }
 
-UserSchema.methods.validPassword = function(password) {
-    return bcrypt.compareSync(password, this.password);
-    };
-
-module.exports = mongoose.model("user", UserSchema);
+module.exports = mongoose.model("User", User, 'User');
