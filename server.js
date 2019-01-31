@@ -9,8 +9,6 @@ const routes = require("./routes");
 
 mongoose.connect('mongodb://localhost:27017/login');
 
-
-
 // Define middleware here
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
@@ -26,16 +24,6 @@ app.use(session({
 
 app.use(passport.initialize())
 app.use(passport.session())
-
-
-
-
-// app.get("/", (req, res) => {
-// res.sendFile(path.join(__dirname, "./client/src/pages/Landing"))
-// })
-// app.get("/charsheet", (req, res) => {
-// res.sendFile(path.join(__dirname, "./client/src/pages/Sheet"))
-// })
 
 // Connect to the Mongo DB
 mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/characterbuild", {useNewUrlParser: true});
