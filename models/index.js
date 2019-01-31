@@ -1,4 +1,3 @@
 module.exports = {
-    CharModel: require("./charSchema"),
-    User: require('./User')
+    CharacterBuild: require("./charsheetModel")
 };

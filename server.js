@@ -5,6 +5,8 @@ const session = require('express-session')
 const passport = require('passport')
 const PORT = process.env.PORT || 3001;
 const app = express();
+const routes = require("./routes");
+const mongoose = require("mongoose");
 
 mongoose.connect('mongodb://localhost:27017/login');
 
@@ -15,7 +17,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 // Serve up static assets (usually on heroku)
 if (process.env.NODE_ENV === "production") {
-  app.use(express.static("client/build"));
+  app.use(express.static("client/public"));
 }
 app.use(session({
   secret:"secretSecrets",
@@ -28,12 +30,17 @@ app.use(passport.session())
 
 
 // Define API routes here
-app.get("/", (req, res) => {
-res.sendFile(path.join(__dirname, "./client/src/pages/Landing"))
-})
-app.get("/charsheet", (req, res) => {
-res.sendFile(path.join(__dirname, "./client/src/pages/Sheet"))
-})
+app.use(routes);
+
+// app.get("/", (req, res) => {
+// res.sendFile(path.join(__dirname, "./client/src/pages/Landing"))
+// })
+// app.get("/charsheet", (req, res) => {
+// res.sendFile(path.join(__dirname, "./client/src/pages/Sheet"))
+// })
+
+// Connect to the Mongo DB
+mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/characterbuild");
 
 // Send every other request to the React app
 // Define any API routes before this runs

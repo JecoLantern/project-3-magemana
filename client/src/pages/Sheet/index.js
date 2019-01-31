@@ -1,4 +1,3 @@
-// export { default } from "../../components";
 import React, { Component } from "react";
 import {Col, Row} from "../../components/Grid";
 import "../Sheet/_charSheetSty.css";
