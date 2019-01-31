@@ -1,9 +1,15 @@
 const express = require("express");
 const path = require("path");
+const mongoose = require('mongoose');
+const session = require('express-session')
+const passport = require('passport')
 const PORT = process.env.PORT || 3001;
 const app = express();
 const routes = require("./routes");
-const mongoose = require("mongoose");
+
+mongoose.connect('mongodb://localhost:27017/login');
+
+
 
 // Define middleware here
 app.use(express.urlencoded({ extended: true }));
@@ -12,6 +18,15 @@ app.use(express.json());
 if (process.env.NODE_ENV === "production") {
   app.use(express.static("client/public"));
 }
+app.use(session({
+  secret:"secretSecrets",
+  saveUninitialized:false,
+  resave:false
+}))
+
+app.use(passport.initialize())
+app.use(passport.session())
+
 
 
 

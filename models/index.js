@@ -1,3 +1,5 @@
 module.exports = {
-    CharacterBuild: require("./charsheetModel")
+    CharModel: require("./charSchema"),
+    User: require('./User'),
+    UserSession: require('./UserSession')
 };
