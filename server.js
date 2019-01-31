@@ -4,14 +4,12 @@ const path = require("path");
 const mongoose = require('mongoose');
 const session = require('express-session');
 const routes = require("./routes");
-<<<<<<< HEAD
 
 mongoose.connect('mongodb://localhost:27017/login');
-=======
+
 const app = express();
 const PORT = process.env.PORT || 3001;
 
->>>>>>> b76e421751bf33ae758713f86236d2017dac1c63
 
 // Define middleware here
 app.use(express.urlencoded({ extended: true }));
