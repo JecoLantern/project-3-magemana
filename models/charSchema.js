@@ -199,7 +199,7 @@ const charSchema = new Schema({
 
 });
 
-const fakedata = require("../fakeSheet.json")
+const fakedata = require("../client/src/pages/Sheet/util/fakeSheet.json")
 mongoose.model("charSchema", charSchema).insertMany(fakedata, function(err){
   console.log(err)
 })
