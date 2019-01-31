@@ -22,7 +22,7 @@ module.exports = function (app) {
                 success: false,
                 message: 'error: missing password'
             });
-        }a
+        } a
         if (!email) {
             return res.send({
                 success: false,
@@ -159,6 +159,31 @@ module.exports = function (app) {
             }
         })
 
+    })
+
+    app.get('/api/account/logout', (req, res, next) => {
+        const { query } = req;
+        const { token } = query;
+
+        UserSession.findOneAndUpdate({
+            _id: token,
+            isDeleted: false
+        }, {
+                $set: { isDeleted: true }
+            }, null, (err, sessions) => {
+                if (err) {
+                    return res.send({
+                        success: false,
+                        message: 'Error: Internal Server Error'
+                    });
+                }
+
+                return res.send({
+                    success: true,
+                    message: 'good'
+                });
+
+            })
     })
 
 };
