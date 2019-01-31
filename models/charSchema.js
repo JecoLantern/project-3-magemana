@@ -32,37 +32,37 @@ const charSchema = new Schema({
             attr: { type: String, default: "Str", required: true },
             val: { type: Number, default: 10, required: true },
             mod: { type: Number, default: 0, required: true },
-            save: { type: Number, default: 0, isProficient: Boolean },
+            saveThrow: { type: Number, default: 0, isProficient: Boolean },
         },
         {
             attr: { type: String, default: "Dex", required: true },
             val: { type: Number, default: 10, required: true },
             mod: { type: Number, default: 0, required: true },
-            save: { type: Number, default: 0, isProficient: Boolean },
+            saveThrow: { type: Number, default: 0, isProficient: Boolean },
         },
         {
             attr: { type: String, default: "Con", required: true },
             val: { type: Number, default: 10, required: true },
             mod: { type: Number, default: 0, required: true },
-            save: { type: Number, default: 0, isProficient: Boolean },
+            saveThrow: { type: Number, default: 0, isProficient: Boolean },
         },
         {
             attr: { type: String, default: "Int", required: true },
             val: { type: Number, default: 10, required: true },
             mod: { type: Number, default: 0, required: true },
-            save: { type: Number, default: 0, isProficient: Boolean },
+            saveThrow: { type: Number, default: 0, isProficient: Boolean },
         },
         {
             attr: { type: String, default: "Wis", required: true },
             val: { type: Number, default: 10, required: true },
             mod: { type: Number, default: 0, required: true },
-            save: { type: Number, default: 0, isProficient: Boolean },
+            saveThrow: { type: Number, default: 0, isProficient: Boolean },
         },
         {
             attr: { type: String, default: "cha", required: true },
             val: { type: Number, default: 10, required: true },
             mod: { type: Number, default: 0, required: true },
-            save: { type: Number, default: 0, isProficient: Boolean },
+            saveThrow: { type: Number, default: 0, isProficient: Boolean },
         }
     ],
     skills: [
@@ -201,6 +201,6 @@ const charSchema = new Schema({
 
 });
 
-const charSchema = mongoose.model("carSchema", charSchema);
 
-module.exports = charSchema;
+
+module.exports = mongoose.model("carSchema", charSchema);

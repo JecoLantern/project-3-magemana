@@ -300,10 +300,10 @@ class RegisterBox extends React.Component {
             </div>}
 
           </div>
-
           <button
             type="button"
             className="login-btn"
+            
             onHover={this
               .openPopup
               .bind(this)}
@@ -311,9 +311,9 @@ class RegisterBox extends React.Component {
               .openPopup
               .bind(this)}>Register</button>
 
-        </div>
+    
       </div>
-
+</div>
     );
 
   }

@@ -8,7 +8,6 @@ const app = express();
 
 mongoose.connect('mongodb://localhost:27017/login');
 
-const auth = require('./routes/auth')(passport)
 
 
 // Define middleware here
@@ -27,7 +26,6 @@ app.use(session({
 app.use(passport.initialize())
 app.use(passport.session())
 
-app.use('/auth',auth)
 
 // Define API routes here
 app.get("/", (req, res) => {

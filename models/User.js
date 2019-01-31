@@ -1,26 +1,32 @@
 const mongoose = require("mongoose");
 const bcrypt = require("bcrypt-nodejs")
 
-const Schema = mongoose.Schema;
-
-const User = new Schema({
+const UserSchema = new mongoose.Schema({
     username:{
         type:String,
         required:true,
     },
-    
+    email:{
+        type:String,
+        required:true,
+    },
     password:{
         type:String,
         required:true,
+    },   
+     isDeleted:{
+        type:   Boolean,
+        default: false,
     },
 
 })
 
-User.methods.hashPassword = function(password) {
+UserSchema.methods.hashPassword = function(password) {
     return bcrypt.hashSync(password, bcrypt.genSaltSync(10))
 }
-User.methods.hashPassword = function(password, hash) {
-    return bcrypt.compareSync(password, hash)
-}
 
-module.exports = mongoose.model("user", User, 'user');
+UserSchema.methods.validPassword = function(password) {
+    return bcrypt.compareSync(password, this.password);
+    };
+
+module.exports = mongoose.model("user", UserSchema);
