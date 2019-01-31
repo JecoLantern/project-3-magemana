@@ -4,17 +4,15 @@ const Schema = mongoose.Schema;
 const charSchema = new Schema({
     name: { type: String, required: true },
     level: { type: Number, required: true },
-    race: {
-        type: String, required: true,
-        subrace: { type: String, required: true }
-    },
-    gender: { type: String },
-    alignment: { type: String },
+    race: { type: String, required: true },
+    subrace: { type: String, required: true },
+    gender: String,
+    alignment: String,
     class: {
         type: String, required: true,
-        subclass: String,
-        isSpellcaster: Boolean,
     },
+    subclass: String,
+    isSpellcaster: Boolean,
     classFeatures: [
         { featureName: String, featureUrl: String }
     ],
@@ -178,9 +176,9 @@ const charSchema = new Schema({
     ],
     proficiencies: {
         modifier: { type: Number, required: true, default: 2 },
-        languages: [{ type: String, required: true, default:["common"]}],
+        languages: [{ type: String, required: true, default: ["common"] }],
         armor: [{ type: String }],
-        weapons: [{ type: String}],
+        weapons: [{ type: String }],
         tools: [{ type: String }],
     },
     equipment: {
@@ -201,4 +199,4 @@ const charSchema = new Schema({
 
 });
 
-module.exports = mongoose.model("charSchema", charSchema);;
+module.exports = mongoose.model("charSchema", charSchema);
