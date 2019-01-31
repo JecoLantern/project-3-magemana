@@ -4,23 +4,32 @@ const path = require("path");
 const mongoose = require('mongoose');
 const session = require('express-session');
 const routes = require("./routes");
+const passport = require("passport");
+
 const app = express();
 const PORT = process.env.PORT || 3001;
 
 
-// Define middleware here
+// Define middleware here===========================
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
+app.use(session({
+  secret:"secretSecrets",
+  saveUninitialized:true,
+  resave:true
+}))
 
-// Serve up static assets (usually on heroku)
+// Serve up static assets (usually on heroku)=============
 if (process.env.NODE_ENV === "production") {
   app.use(express.static("client/public"));
 }
-app.use(session({
-  secret:"secretSecrets",
-  saveUninitialized:false,
-  resave:false
-}))
+
+// ===== Passport ====
+app.use(passport.initialize());
+app.use(passport.session()) // will call the deserializeUser
+
+
+
 
 
 
