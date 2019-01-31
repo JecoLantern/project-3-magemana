@@ -199,9 +199,12 @@ const charSchema = new Schema({
 
 });
 
+// Delete before deploy
 const fakedata = require("../client/src/pages/Sheet/util/fakeSheet.json")
-mongoose.model("charSchema", charSchema).insertMany(fakedata, function(err){
-  console.log(err)
+mongoose.model("charSchema", charSchema).deleteMany({}).then( () => {
+    mongoose.model("charSchema", charSchema).insertMany(fakedata, function(err){console.log(err + " errors. Data inserted!")})
 })
+
+
 
 module.exports = mongoose.model("charSchema", charSchema);

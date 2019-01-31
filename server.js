@@ -42,7 +42,7 @@ mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/characterbuild"
 var db = mongoose.connection;
 db.on('error', console.error.bind(console, 'connection error:'));
 db.once('open', function() {
-  console.log("we're connected to db!");
+  console.log("We're connected to db!");
 });
 
 // Define API routes here
