@@ -1,14 +1,11 @@
 const express = require("express");
 const path = require("path");
+
 const mongoose = require('mongoose');
-const session = require('express-session')
-const passport = require('passport')
-const PORT = process.env.PORT || 3001;
-const app = express();
+const session = require('express-session');
 const routes = require("./routes");
-
-mongoose.connect('mongodb://localhost:27017/login');
-
+const app = express();
+const PORT = process.env.PORT || 3001;
 
 
 // Define middleware here
@@ -28,9 +25,6 @@ app.use(passport.initialize())
 app.use(passport.session())
 
 
-
-
-
 // Connect to the Mongo DB
 mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/characterbuild", {useNewUrlParser: true});
 var db = mongoose.connection;
@@ -44,7 +38,7 @@ app.use(routes);
 
 // Send every other request to the React app
 // Define any API routes before this runs
-app.get("*", (req, res) => {
+app.get("/*", (req, res) => {
   res.sendFile(path.join(__dirname, "./client/public/index.html"));
 });
 
