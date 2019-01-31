@@ -1,4 +1,4 @@
-{
+[{
     "name": "John Human",
     "level": 1,
     "race": "Human",
@@ -272,4 +272,4 @@
         {"currency": "pp", "ammount": 0},
         {"currency":"gems", "ammount":0}
     ]
-}
+}]

@@ -4,7 +4,7 @@ const db = require("../models");
 module.exports = {
   findAll: function(req, res) {
     db.CharacterBuild
-      .find(req.query)
+      .find({})
       .sort({ name: (a, b) => a.firstname.localeCompare(b.firstname) })
       .then(dbModel => res.json(dbModel))
       .catch(err => res.status(422).json(err));

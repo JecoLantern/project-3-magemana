@@ -13,8 +13,7 @@ if (process.env.NODE_ENV === "production") {
   app.use(express.static("client/public"));
 }
 
-// Define API routes here
-app.use(routes);
+
 
 // app.get("/", (req, res) => {
 // res.sendFile(path.join(__dirname, "./client/src/pages/Landing"))
@@ -24,7 +23,15 @@ app.use(routes);
 // })
 
 // Connect to the Mongo DB
-mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/characterbuild");
+mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/characterbuild", {useNewUrlParser: true});
+var db = mongoose.connection;
+db.on('error', console.error.bind(console, 'connection error:'));
+db.once('open', function() {
+  console.log("we're connected to db!");
+});
+
+// Define API routes here
+app.use(routes);
 
 // Send every other request to the React app
 // Define any API routes before this runs
