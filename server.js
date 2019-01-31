@@ -4,28 +4,33 @@ const path = require("path");
 const mongoose = require('mongoose');
 const session = require('express-session');
 const routes = require("./routes");
-
-mongoose.connect('mongodb://localhost:27017/login');
+const passport = require("passport");
 
 const app = express();
 const PORT = process.env.PORT || 3001;
 
 
-// Define middleware here
+// Define middleware here===========================
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
-// Serve up static assets (usually on heroku)
+app.use(session({
+  secret:"secretSecrets",
+  saveUninitialized:true,
+  resave:true
+}))
+
+// Serve up static assets (usually on heroku)=============
 if (process.env.NODE_ENV === "production") {
   app.use(express.static("client/public"));
 }
-app.use(session({
-  secret:"secretSecrets",
-  saveUninitialized:false,
-  resave:false
-}))
 
-app.use(passport.initialize())
-app.use(passport.session())
+// ===== Passport ====
+app.use(passport.initialize());
+app.use(passport.session()) // will call the deserializeUser
+
+
+
+
 
 // Connect to the Mongo DB
 mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/characterbuild", {useNewUrlParser: true});
