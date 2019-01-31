@@ -59,7 +59,7 @@ const charSchema = new Schema({
             saveThrow: { type: Number, default: 0, isProficient: Boolean },
         },
         {
-            attr: { type: String, default: "cha", required: true },
+            attr: { type: String, default: "Cha", required: true },
             val: { type: Number, default: 10, required: true },
             mod: { type: Number, default: 0, required: true },
             saveThrow: { type: Number, default: 0, isProficient: Boolean },
@@ -178,9 +178,9 @@ const charSchema = new Schema({
     ],
     proficiencies: {
         modifier: { type: Number, required: true, default: 2 },
-        languages: [{ type: String, required: true }],
+        languages: [{ type: String, required: true, default:["common"]}],
         armor: [{ type: String }],
-        weapons: [{ type: String, required: true }],
+        weapons: [{ type: String}],
         tools: [{ type: String }],
     },
     equipment: {

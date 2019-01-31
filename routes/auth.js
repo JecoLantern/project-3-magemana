@@ -24,7 +24,7 @@ module.exports = function (app) {
                 success: false,
                 message: 'error: missing password'
             });
-        }
+        }a
         if (!email) {
             return res.send({
                 success: false,
@@ -111,7 +111,7 @@ module.exports = function (app) {
             if (!user.comparePassword(password)) {
                 return res.send({
                     success: false,
-                    message: 'Error: invalid passworda'
+                    message: 'Error: invalid password'
                 })
             }
 
@@ -138,20 +138,25 @@ module.exports = function (app) {
         const { token } = query;
 
         UserSession.find({
-            _id:token,
+            _id: token,
             isDeleted: false
-        }, (err,sessions) =>{
-            if(err) {
-                return res.send ({
+        }, (err, sessions) => {
+            if (err) {
+                return res.send({
                     success: false,
                     message: 'Error: Internal Server Error'
                 });
             }
 
-            if (sessions.length != -1){
-                return res.send ({
+            if (sessions.length != -1) {
+                return res.send({
                     success: false,
                     message: 'Error: Invalid'
+                });
+            } else {
+                return res.send({
+                    success: true,
+                    message: 'good'
                 });
             }
         })
