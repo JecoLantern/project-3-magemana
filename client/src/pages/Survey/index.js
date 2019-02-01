@@ -34,15 +34,89 @@ class Survey extends Component{
             classType: "",
             subclass: "",
             attributes: [
-                {attr:"str" , val:10},
-                {attr:"dex" , val:10}, 
-                {attr:"con" , val:10}, 
-                {attr:"int" , val:10}, 
-                {attr:"wis" , val:10}, 
-                {attr:"cha" , val:10}
+                { name: 'Charisma', value: 10 },
+                { name: 'Constitution', value: 10 },
+                { name: 'Dexterity', value: 10 },
+                { name: 'Intelligence', value: 10 },
+                { name: 'Strength', value: 10 },
+                { name: 'Wisdom', value: 10 }
+            ];
+            alignment = '',
+            armor = [],
+            armorClass = 0,
+            attacks = [],
+            background = '',
+            currentHP = 0,
+            deathSaves = {
+              failures: 0,
+              successes: 0
+            },
+            hitDice = {
+              numberOfDice: 1,
+              numberOfSides: 4
+            },
+            id = null,
+            initative = 0,
+            inspiration = 0,
+            proficiency = 0,
+            savingThrows = [
+              { name: 'Charisma', proficient: false, value: 0 },
+              { name: 'Constitution', proficient: false, value: 0 },
+              { name: 'Dexterity', proficient: false, value: 0 },
+              { name: 'Intelligence', proficient: false, value: 0 },
+              { name: 'Strength', proficient: false, value: 0 },
+              { name: 'Wisdom', proficient: false, value: 0 }
             ],
-            proficencies: [],
+            speed = 0,
+            skills = [
+              { name: 'Acrobatics', proficient: false, ability: 'dexterity', value: 0 },
+              {
+                name: 'Animal Handling',
+                proficient: false,
+                ability: 'Wisdom',
+                value: 0
+              },
+              { name: 'Arcana', proficient: false, ability: 'intelligence', value: 0 },
+              { name: 'Athletics', proficient: false, ability: 'strength', value: 0 },
+              { name: 'Deception', proficient: false, ability: 'charisma', value: 0 },
+              { name: 'History', proficient: false, ability: 'intelligence', value: 0 },
+              { name: 'Insight', proficient: false, ability: 'wisdom', value: 0 },
+              {
+                name: 'Intimidation',
+                proficient: false,
+                ability: 'charisma',
+                value: 0
+              },
+              {
+                name: 'Investigation',
+                proficient: false,
+                ability: 'intelligence',
+                value: 0
+              },
+              { name: 'Medicine', proficient: false, ability: 'wisdom', value: 0 },
+              { name: 'Nature', proficient: false, ability: 'intelligence', value: 0 },
+              { name: 'Perception', proficient: false, ability: 'wisdom', value: 0 },
+              { name: 'Performance', proficient: false, ability: 'charisma', value: 0 },
+              { name: 'Persuasion', proficient: false, ability: 'charisma', value: 0 },
+              {
+                name: 'Religion',
+                proficient: false,
+                ability: 'intelligence',
+                value: 0
+              },
+              {
+                name: 'Sleight Of Hand',
+                proficient: false,
+                ability: 'dexterity',
+                value: 0
+              },
+              { name: 'Stealth', proficient: false, ability: 'dexterity', value: 0 },
+              { name: 'Survival', proficient: false, ability: 'wisdom', value: 0 }
+            ],
+            temporaryHP = 0,
+            xp = 0,
             startingEquipment: [],
+         
         }
     }
 
@@ -61,3 +135,11 @@ class Survey extends Component{
 }
 
 export default Survey;
+
+
+
+
+
+
+
+
