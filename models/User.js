@@ -1,31 +1,27 @@
 const mongoose = require("mongoose");
 const bcrypt = require("bcrypt-nodejs")
+const Schema = mongoose.Schema;
 
-const UserSchema = new mongoose.Schema({
-    username:{
-        type:String,
-        required:true,
+const userSchema = new Schema({
+    email: { type: String },
+    local: {
+        username: { type: String, required: false },
+        password: { type: String, required: false }
     },
-    email:{
-        type:String,
-        required:true,
-    },
-    password:{
-        type:String,
-        required:true,
-    },   
-     isDeleted:{
-        type:   Boolean,
-        default: false,
-    },
-
 })
-
-User.methods.hashPassword = function(password) {
-    return bcrypt.hashSync(password, bcrypt.genSaltSync(10), null)
+// Define schema methods
+userSchema.methods = {
+    checkPassword: function (inputPassword) {
+        return bcrypt.compareSync(inputPassword, this.local.password)
+    },
+    hashPassword: (plainTextPassword)=> {
+        console.log("hash hash hash....")
+        var salt = bcrypt.genSaltSync(10);
+        return bcrypt.hashSync(plainTextPassword, salt)
+    }
 }
-User.methods.comparePassword = function(password, hash) {
-    return bcrypt.compareSync(password, hash)
-}
 
-module.exports = mongoose.model("User", User, 'User');
+
+// Create reference to User & export
+const User = mongoose.model('User', userSchema)
+module.exports = User
