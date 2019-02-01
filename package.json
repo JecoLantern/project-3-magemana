@@ -38,6 +38,9 @@
     "if-env": "^1.0.4",
     "mongoose": "^5.4.8",
     "passport": "^0.4.0",
-    "passport-local": "^1.0.0"
+    "passport-local": "^1.0.0",
+    "react": "^16.7.0",
+    "react-dom": "^16.7.0",
+    "react-modal": "^3.8.1"
   }
 }
