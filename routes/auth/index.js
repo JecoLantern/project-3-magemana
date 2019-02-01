@@ -14,7 +14,7 @@ router.get('/user', (req, res, next) => {
 		return res.json({ user: null })
 	}
 })
-
+//login route
 router.post(
 	'/login',
 	function (req, res, next) {
@@ -34,7 +34,7 @@ router.post(
 		res.json({ user: cleanUser })
 	}
 )
-
+//logout route
 router.post('/logout', (req, res) => {
 	if (req.user) {
 		req.session.destroy()
@@ -44,7 +44,7 @@ router.post('/logout', (req, res) => {
 		return res.json({ msg: 'no user to log out!' })
 	}
 })
-
+//sign upe
 router.post('/signup', (req, res) => {
 	console.log(req.body)
 	let { username, password } = req.body
