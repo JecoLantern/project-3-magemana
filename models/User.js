@@ -14,27 +14,13 @@ userSchema.methods = {
     checkPassword: function (inputPassword) {
         return bcrypt.compareSync(inputPassword, this.local.password)
     },
-    hashPassword: function (plainTextPassword) {
-        return bcrypt.hashSync(plainTextPassword, 10)
+    hashPassword: (plainTextPassword)=> {
+        console.log("hash hash hash....")
+        var salt = bcrypt.genSaltSync(10);
+        return bcrypt.hashSync(plainTextPassword, salt)
     }
 }
 
-// Define hooks for pre-saving
-userSchema.pre('save', function (next) {
-    if (!this.local.password) {
-        console.log('=======NO PASSWORD PROVIDED=======')
-        next()
-    } else {
-        console.log("hashbrowns")
-        console.log(this.local.password)
-        this.local.password = this.hashPassword(this.local.password)///here lies the error!!!!!!!!!!!!!!!
-        console.log("salted hashbrowns")
-        console.log(this.local.password)
-        next()
-    }
-    // this.password = this.hashPassword(this.password)
-    // next()
-})
 
 // Create reference to User & export
 const User = mongoose.model('User', userSchema)

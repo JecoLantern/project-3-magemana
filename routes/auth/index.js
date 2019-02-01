@@ -17,7 +17,7 @@ router.get('/user', (req, res, next) => {
 
 router.post(
 	'/login',
-	function(req, res, next) {
+	function (req, res, next) {
 		console.log(req.body)
 		console.log('================')
 		next()
@@ -61,8 +61,11 @@ router.post('/signup', (req, res) => {
 			'local.username': username,
 			'local.password': password
 		})
-		console.log(`hashing ${newUser}..`);
-		newUser.save(function(err, newUser){
+		if (!newUser.local.password) {
+			return console.log('=======NO PASSWORD PROVIDED=======')
+		}
+		newUser.local.password = newUser.hashPassword(password)
+		newUser.save(function (err, newUser) {
 			if (err) return res.json(err);
 			console.log(newUser)
 			return res.json(newUser)
