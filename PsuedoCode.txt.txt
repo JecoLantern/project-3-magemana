@@ -56,4 +56,7 @@ development Pahses:
 		>using the state on the Survey component, well store the users survey choices and then at the end of the suvey when they click `generate`it will `push` an api call to 
 		 store the data upto the DB. from there once the character sheet pulls up it will then pull that data drom the database.
 		
-		> 		
+		>
+
+api psuedocode:
+	>api/race
