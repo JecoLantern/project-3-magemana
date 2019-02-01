@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import axios from "axios";
+import { Redirect } from 'react-router-dom';
 class RegisterBox extends Component {
 
     state = {
@@ -7,7 +8,8 @@ class RegisterBox extends Component {
         email: "",
         password: "",
         errors: [],
-        pwdState: null
+        pwdState: null,
+        redirectTo: null
     };
 
     showValidationErr(elm, msg) {
@@ -60,7 +62,7 @@ class RegisterBox extends Component {
         console.log("Hello world!");
     }
 
-    handleSubmit=(event)=> {
+    handleSubmit = (event) => {
         event.preventDefault()
         // TODO - validate!
         axios
@@ -114,96 +116,98 @@ class RegisterBox extends Component {
             pwdMedium = true;
             pwdStrong = true;
         }
-
-        return (
-            <div className="inner-container">
-                <div className="header">
-                    Register
+        if (this.state.redirectTo) {
+            return <Redirect to={{ pathname: this.state.redirectTo }} />
+        } else {
+            return (
+                <div className="inner-container">
+                    <div className="header">
+                        Register
           </div>
-                <div className="box">
-                    <form>
+                    <div className="box">
+                        <form>
 
-                        <div className="input-group">
-                            <label htmlFor="username">Username</label>
-                            <input
-                                type="text"
-                                name="username"
-                                value={this.state.username}
-                                className="login-input"
-                                placeholder="Username"
-                                onChange={this
-                                    .onUsernameChange
-                                    .bind(this)} />
-                            <small className="danger-error">{usernameErr
-                                ? usernameErr
-                                : ""}</small>
-                        </div>
+                            <div className="input-group">
+                                <label htmlFor="username">Username</label>
+                                <input
+                                    type="text"
+                                    name="username"
+                                    value={this.state.username}
+                                    className="login-input"
+                                    placeholder="Username"
+                                    onChange={this
+                                        .onUsernameChange
+                                        .bind(this)} />
+                                <small className="danger-error">{usernameErr
+                                    ? usernameErr
+                                    : ""}</small>
+                            </div>
 
-                        <div className="input-group">
-                            <label htmlFor="email">Email</label>
-                            <input
-                                type="text"
-                                name="email"
-                                value={this.state.email}
-                                className="login-input"
-                                placeholder="Email"
-                                onChange={this
-                                    .onEmailChange
-                                    .bind(this)} />
-                            <small className="danger-error">{emailErr
-                                ? emailErr
-                                : ""}</small>
-                        </div>
+                            <div className="input-group">
+                                <label htmlFor="email">Email</label>
+                                <input
+                                    type="text"
+                                    name="email"
+                                    value={this.state.email}
+                                    className="login-input"
+                                    placeholder="Email"
+                                    onChange={this
+                                        .onEmailChange
+                                        .bind(this)} />
+                                <small className="danger-error">{emailErr
+                                    ? emailErr
+                                    : ""}</small>
+                            </div>
 
-                        <div className="input-group">
-                            <label htmlFor="password">Password</label>
-                            <input
-                                type="password"
-                                name="password"
-                                value={this.state.password}
-                                className="login-input"
-                                placeholder="Password"
-                                onChange={this
-                                    .onPasswordChange
-                                    .bind(this)} />
-                            <small className="danger-error">{passwordErr
-                                ? passwordErr
-                                : ""}</small>
+                            <div className="input-group">
+                                <label htmlFor="password">Password</label>
+                                <input
+                                    type="password"
+                                    name="password"
+                                    value={this.state.password}
+                                    className="login-input"
+                                    placeholder="Password"
+                                    onChange={this
+                                        .onPasswordChange
+                                        .bind(this)} />
+                                <small className="danger-error">{passwordErr
+                                    ? passwordErr
+                                    : ""}</small>
 
-                            {this.state.password && <div className="password-state">
-                                <div
-                                    className={"pwd pwd-weak " + (pwdWeak
-                                        ? "show"
-                                        : "")}></div>
-                                <div
-                                    className={"pwd pwd-medium " + (pwdMedium
-                                        ? "show"
-                                        : "")}></div>
-                                <div
-                                    className={"pwd pwd-strong " + (pwdStrong
-                                        ? "show"
-                                        : "")}></div>
-                            </div>}
+                                {this.state.password && <div className="password-state">
+                                    <div
+                                        className={"pwd pwd-weak " + (pwdWeak
+                                            ? "show"
+                                            : "")}></div>
+                                    <div
+                                        className={"pwd pwd-medium " + (pwdMedium
+                                            ? "show"
+                                            : "")}></div>
+                                    <div
+                                        className={"pwd pwd-strong " + (pwdStrong
+                                            ? "show"
+                                            : "")}></div>
+                                </div>}
 
-                        </div>
+                            </div>
 
-                        <button
-                            type="button"
-                            className="login-btn"
-                            onHover={this
-                                .openPopup
-                                .bind(this)}
-                            onClick={this
-                                .handleSubmit}>Register</button>
-                    </form>
+                            <button
+                                type="button"
+                                className="login-btn"
+                                onHover={this
+                                    .openPopup
+                                    .bind(this)}
+                                onClick={this
+                                    .handleSubmit}>Register</button>
+                        </form>
 
+                    </div>
                 </div>
-            </div>
 
-        );
+            );
 
+        }
     }
-
 }
 
 export default RegisterBox;
