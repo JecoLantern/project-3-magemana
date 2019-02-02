@@ -5,7 +5,7 @@ import Tasks from './tasks'
 
 import Deleteall from './delete-all'
 
-import ModalAlert from '../components/modal'
+import ModalAlert from '../../../components/Modal/modal'
 
 import '../styles/App.css'
 
