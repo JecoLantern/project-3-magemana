@@ -1,25 +1,72 @@
 #diamond1 {
+    margin-top: 2rem;
     width: 0;
     height: 0;
-    border: 70px solid transparent;
+    border: 4.375rem solid transparent;
     border-bottom-color: orange;
     position: relative;
-    top: -92px;
-    left: -18px;
+    top: -5.75rem;
+    left: -1.125rem;
     z-index: 1;
 }
 #diamond1:after {
     content: "";
     position: absolute;
-    left: -70px;
-    top: 70px;
+    left: -4.375rem;
+    top: 4.375rem;
     width: 0;
     height: 0;
-    border: 70px solid transparent;
+    border: 4.375rem solid transparent;
     border-top-color: orange;
 }
 #square1 {
-    width: 100px;
-    height: 100px;
+    margin-top: 1rem;
+    width: 8.25rem;
+    height: 8.25rem;
     background: red;
+}
+.name {
+    margin-top: 1rem;
+    border-top: 0.2rem solid black;
+    border-left: 0.2rem solid black;
+    border-bottom: 0.2rem solid black;
+    text-align: center;
+}
+.background {
+    margin-top: 1rem;
+    border-top: 0.2rem solid black;
+    border-bottom: 0.2rem solid black;
+    text-align: center;
+}
+.expPoints {
+    margin-top: 1rem;
+    border-top: 0.2rem solid black;
+    border-right: 0.2rem solid black;
+    border-bottom: 0.2rem solid black;
+    text-align: center;
+}
+.race {
+    border-top: 0.2rem solid black;
+    border-left: 0.2rem solid black;
+    border-bottom: 0.2rem solid black;
+    text-align: center;
+}
+.alignment {
+    border-top: 0.2rem solid black;
+    border-bottom: 0.2rem solid black;
+    text-align: center;
+}
+.classLvl {
+    border-top: 0.2rem solid black;
+    border-right: 0.2rem solid black;
+    border-bottom: 0.2rem solid black;
+    text-align: center;
+}
+.col-4,
+.col-sm-4,
+.col-md-4,
+.col-lg-4,
+.col-xl-4 {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
 }
