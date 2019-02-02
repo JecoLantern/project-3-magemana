@@ -134,8 +134,16 @@ class CharacterSheet extends Component{
                         <Col size="3, sm-3, md-3, lg-3, xl-3">
                             <Row>
                                 <Col size="12, sm-12, md-12, lg-12, xl-12">
-                                    <Row></Row>
-                                    <Row></Row>
+                                    <Row>
+                                        <div id="squareTV2">
+                                            <div id="rectangleRounded2"></div>
+                                        </div>
+                                    </Row>
+                                    <Row>
+                                        <div id="squareTV2">
+                                            <div id="rectangleRounded2"></div>
+                                        </div>
+                                    </Row>
                                 </Col>
                             </Row>
                         </Col>

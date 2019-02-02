@@ -173,3 +173,21 @@
     border-top: 1.25rem solid gray;
     z-index: -1;
 }
+#squareTV2 {
+    width: 8rem;
+    height: 2.25rem;
+    background: red;
+    position: relative;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+}
+#rectangleRounded2 {
+    width: 2.25rem;
+    height: 2.25rem;
+    background: yellow;
+    position: relative;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+}
