@@ -110,7 +110,37 @@ class CharacterSheet extends Component{
                             </Col>
                         </Row>
                     </Col>
-                    <Col size="6, sm-6, md-6, lg-6, xl-6"></Col>
+                    <Col size="6, sm-6, md-6, lg-6, xl-6">
+                    <Row>
+                        <Col size="9, sm-9, md-9, lg-9, xl-9">
+                            <Row>
+                                <Col size="4, sm-4, md-4, lg-4, xl-4">
+                                    <div id="hexagon1">
+                                        <div id="hexagon2"></div>
+                                    </div>
+                                </Col>
+                                <Col size="4, sm-4, md-4, lg-4, xl-4">
+                                    <div id="hexagon1">
+                                        <div id="hexagon2"></div>
+                                    </div>
+                                </Col>
+                                <Col size="4, sm-4, md-4, lg-4, xl-4">
+                                    <div id="hexagon1">
+                                        <div id="hexagon2"></div>
+                                    </div>
+                                </Col>
+                            </Row>
+                        </Col>
+                        <Col size="3, sm-3, md-3, lg-3, xl-3">
+                            <Row>
+                                <Col size="12, sm-12, md-12, lg-12, xl-12">
+                                    <Row></Row>
+                                    <Row></Row>
+                                </Col>
+                            </Row>
+                        </Col>
+                    </Row>
+                    </Col>
                 </Row>
             </div>
         )
