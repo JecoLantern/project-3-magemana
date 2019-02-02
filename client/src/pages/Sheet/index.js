@@ -39,6 +39,79 @@ class CharacterSheet extends Component{
                         </Row>
                     </Col>
                 </Row>
+                <Row>
+                    <Col size="6, sm-6, md-6, lg-6, xl-6">
+                        <Row>
+                            <Col size="2, sm-2, md-2, lg-2, xl-2">
+                                <div>
+                                    <div id="rectangle"></div>
+                                    <div id="squareTV">
+                                        <div id="rectangleRounded"></div>
+                                    </div>
+                                    <div id="oval">
+                                        <div id="circle"></div>
+                                    </div>
+                                </div>
+                            </Col>
+                            <Col size="2, sm-2, md-2, lg-2, xl-2">
+                                <div>
+                                    <div id="rectangle"></div>
+                                    <div id="squareTV">
+                                        <div id="rectangleRounded"></div>
+                                    </div>
+                                    <div id="oval">
+                                        <div id="circle"></div>
+                                    </div>
+                                </div>
+                            </Col>
+                            <Col size="2, sm-2, md-2, lg-2, xl-2">
+                                <div>
+                                    <div id="rectangle"></div>
+                                    <div id="squareTV">
+                                        <div id="rectangleRounded"></div>
+                                    </div>
+                                    <div id="oval">
+                                        <div id="circle"></div>
+                                    </div>
+                                </div>
+                            </Col>
+                            <Col size="2, sm-2, md-2, lg-2, xl-2">
+                                <div>
+                                    <div id="rectangle"></div>
+                                    <div id="squareTV">
+                                        <div id="rectangleRounded"></div>
+                                    </div>
+                                    <div id="oval">
+                                        <div id="circle"></div>
+                                    </div>
+                                </div>
+                            </Col>
+                            <Col size="2, sm-2, md-2, lg-2, xl-2">
+                                <div>
+                                    <div id="rectangle"></div>
+                                    <div id="squareTV">
+                                        <div id="rectangleRounded"></div>
+                                    </div>
+                                    <div id="oval">
+                                        <div id="circle"></div>
+                                    </div>
+                                </div>
+                            </Col>
+                            <Col size="2, sm-2, md-2, lg-2, xl-2">
+                                <div>
+                                    <div id="rectangle"></div>
+                                    <div id="squareTV">
+                                        <div id="rectangleRounded"></div>
+                                    </div>
+                                    <div id="oval">
+                                        <div id="circle"></div>
+                                    </div>
+                                </div>
+                            </Col>
+                        </Row>
+                    </Col>
+                    <Col size="6, sm-6, md-6, lg-6, xl-6"></Col>
+                </Row>
             </div>
         )
     }

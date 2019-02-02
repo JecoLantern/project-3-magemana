@@ -70,3 +70,40 @@
     padding-left: 0 !important;
     padding-right: 0 !important;
 }
+#rectangle {
+    width: 5.5rem;
+    height: 2.25rem;
+    background: chocolate;
+}
+#squareTV {
+    width: 5.5rem;
+    height: 80px;
+    background: red;
+    position: relative;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+}
+#rectangleRounded {
+    width: 5.5rem;
+    height: 2.25rem;
+    background: yellow;
+    position: relative;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+}
+#oval {
+    width: 5.5rem;
+    height: 2.25rem;
+    background: orange;
+    border-radius: 3.125rem / 3.125rem;
+}
+#circle {
+    width: 2.25rem;
+    height: 2.25rem;
+    background: orangered;
+    border-radius: 3.125rem / 3.125rem;
+    position: relative;
+    right: -3.25rem;
+}
