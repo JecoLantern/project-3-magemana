@@ -14,10 +14,10 @@ router.get('/user', (req, res, next) => {
 		return res.json({ user: null })
 	}
 })
-
+//login route
 router.post(
 	'/login',
-	function(req, res, next) {
+	function (req, res, next) {
 		console.log(req.body)
 		console.log('================')
 		next()
@@ -34,7 +34,7 @@ router.post(
 		res.json({ user: cleanUser })
 	}
 )
-
+//logout route
 router.post('/logout', (req, res) => {
 	if (req.user) {
 		req.session.destroy()
@@ -44,7 +44,7 @@ router.post('/logout', (req, res) => {
 		return res.json({ msg: 'no user to log out!' })
 	}
 })
-
+//sign upe
 router.post('/signup', (req, res) => {
 	console.log(req.body)
 	let { username, password } = req.body
@@ -61,8 +61,11 @@ router.post('/signup', (req, res) => {
 			'local.username': username,
 			'local.password': password
 		})
-		console.log(`hashing ${newUser}..`);
-		newUser.save(function(err, newUser){
+		if (!newUser.local.password) {
+			return console.log('=======NO PASSWORD PROVIDED=======')
+		}
+		newUser.local.password = newUser.hashPassword(password)
+		newUser.save(function (err, newUser) {
 			if (err) return res.json(err);
 			console.log(newUser)
 			return res.json(newUser)

@@ -9,7 +9,7 @@ import ModalAlert from '../components/modal'
 
 import '../styles/App.css'
 
-export default class App extends Component {
+ class Select extends Component {
   state = {
     tasks: [],
     selectedTask: undefined
@@ -91,3 +91,5 @@ export default class App extends Component {
     )
   }
 }
+
+export default Select;
