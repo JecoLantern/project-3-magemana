@@ -1,5 +1,5 @@
 import React from 'react'
-import logo from '../../../components/assets/favicon (1).ico'
+import logo from '../../../components/assets/favicon.ico'
 
 const Header = () => (
     <div className="App-header container-full">

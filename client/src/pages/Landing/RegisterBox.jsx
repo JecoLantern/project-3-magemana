@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import axios from "axios";
-import { Redirect } from 'react-router-dom';
+import LoginForm from './LoginForm'
 class RegisterBox extends Component {
 
     state = {
@@ -117,7 +117,7 @@ class RegisterBox extends Component {
             pwdStrong = true;
         }
         if (this.state.redirectTo) {
-            return <Redirect to={{ pathname: this.state.redirectTo }} />
+            return <LoginForm/>
         } else {
             return (
                 <div className="inner-container">
