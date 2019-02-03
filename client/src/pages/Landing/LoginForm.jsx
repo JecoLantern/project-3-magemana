@@ -28,7 +28,7 @@ class LoginBox extends Component {
           this.setState({
             loggedIn: true,
             user: response.data.user,
-            redirectTo: "/Select"
+            redirectTo: "/select"
           })
         }
       })
@@ -47,7 +47,7 @@ class LoginBox extends Component {
     console.log('handleSubmit')
     this._login(this.state.username, this.state.password)
     this.setState({
-      redirectTo: '/Select'
+      redirectTo: '/select'
     })
   }
 

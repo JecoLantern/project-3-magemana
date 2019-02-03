@@ -15,7 +15,7 @@ class App extends Component {
                         <Route exact path="/charsheet" component={Sheet} />
                         <Route path="/survey" component={Survey} />
                         <Route path="/select" component={Select} />
-                        <Route component={fof} />
+                        <Route component={fof}/>
 
                     </Switch>
                 </Router>

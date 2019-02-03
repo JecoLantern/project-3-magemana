@@ -1,7 +1,7 @@
 development Pahses: 
 	-html skeleton
 		>from there we divi-out the pages and components based on our skeleton.
-		>pages and associated components			
+		>pages and associated components
 			-Login/Landing
 				#Buttons(login/sign-in)
 			-Character Select
@@ -49,11 +49,11 @@ development Pahses:
 		>each class level table will also have its associated subclass data at each respective [Subclass Feature] level.
 	-API
 		>the API will hadle the cheking of conditionals for character sheet generation through the user of params maybe? 
-		(i.e. will render [Spellbook] components if [`isSpellcaster = true`], will render [Animal Companion/ Familiar Sheet] if ['hasAnimal = true'])
+		 (i.e. will render [Spellbook] components if [`isSpellcaster = true`], will render [Animal Companion/familiar Sheet] if ['hasAnimal = true'])
 
 		>using the dnd5eapi we will use that to populate the users charactersheet based on the answers.  
 
-		>using the state on the Survey component, well store the users survey choices and then at the end of the suvey when they click `generate`it will `push` an api call to 
+		>using the state on the Survey component, well store the users survey choices and then at the end of   the suvey when they click `generate`it will `push` an api call to 
 		 store the data upto the DB. from there once the character sheet pulls up it will then pull that data drom the database.
 		
-		> 		
+		

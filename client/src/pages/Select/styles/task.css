@@ -1,5 +1,4 @@
 .single-task  {
-    
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -59,3 +58,22 @@
     cursor: pointer;
     color: #f03f3f;
 }
+h4{
+  margin-left: 50%;
+  font-size: 20px;
+}
+
+
+
+@media screen and (max-width: 1200px) {
+    .single-task  {
+       height: 50px;
+    }
+    .tasks  {
+    
+        margin-top: -2%;
+    }
+    
+  }
+  
+  
