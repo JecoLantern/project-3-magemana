@@ -4,7 +4,7 @@ const List = props =>{
     return (
         <ul>
             {props.children}
-            <li><button onClick={props.onClick}>{props.buttonLabel}</button></li>
+            <li><button onClick={props.onClick}> Add {props.addLabel}</button></li>
         </ul>
     )
 }
