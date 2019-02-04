@@ -444,3 +444,87 @@
     -webkit-border-radius: 0.625rem;
     border-radius: 0.625rem;
 }
+#rectangle2 {
+position: relative;
+top: 1.5rem;
+left: 2rem;
+width: 15rem;
+height: 6.5rem;
+background: darkolivegreen;
+}
+#rectangle3 {
+position: relative;
+top: 1.5rem;
+left: 2rem;
+width: 15rem;
+height: 2.25rem;
+background: darkkhaki;
+}
+#rectangle4 {
+position: relative;
+top: 1.5rem;
+left: 2rem;
+width: 4rem;
+height: 2.25rem;
+background: darksalmon;
+}
+#rectangle5 {
+position: relative;
+top: 1.5rem;
+left: 0rem;
+width: 4rem;
+height: 2.25rem;
+background: salmon;
+}
+#rectangle6 {
+position: relative;
+top: 1.5rem;
+left: -2rem;
+width: 4rem;
+height: 2.25rem;
+background: lightsalmon;
+}
+#rectangle7 {
+position: relative;
+top: 1.5rem;
+left: 2rem;
+width: 4rem;
+height: 2.25rem;
+background: salmon;
+}
+#rectangle8 {
+position: relative;
+top: 1.5rem;
+left: 0rem;
+width: 4rem;
+height: 2.25rem;
+background: lightsalmon;
+}
+#rectangle9 {
+position: relative;
+top: 1.5rem;
+left: -2rem;
+width: 4rem;
+height: 2.25rem;
+background: darksalmon;
+}
+#diamond2 {
+    width: 0;
+    height: 0;
+    border: 70px solid transparent;
+    border-bottom-color: orange;
+    position: relative;
+    top: -92px;
+    left: -18px;
+    z-index: 1;
+}
+#diamond2:after {
+    content: "";
+    position: absolute;
+    left: -70px;
+    top: 70px;
+    width: 0;
+    height: 0;
+    border: 70px solid transparent;
+    border-top-color: orange;
+}
