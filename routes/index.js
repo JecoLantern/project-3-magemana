@@ -1,7 +1,6 @@
-const path = require("path");
 const router = require("express").Router();
 const charRoutes = require("./api/charsheetAPI");
-const extRoutes = require("./api/5eapi");
+const extRoutes = require("./api/extApi");
 
 
 // API Routes
