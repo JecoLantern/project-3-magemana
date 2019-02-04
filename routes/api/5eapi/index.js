@@ -1,8 +1,8 @@
 const axios = require('axios');
 const express = require('express');
 const app = express()
-module.exports =()=>{
-    const url = 'http://dnd5eapi.co/api/';
+module.exports = function (){
+    const url = 'http://dnd5eapi.co/api';
 
     app.get("dnd/classes/:id", function (req, res) {
         switch (req.params.id) {
