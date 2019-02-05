@@ -161,7 +161,6 @@ class CharacterSheet extends Component{
                                     </Col>
                                     <Col size="4, sm4, md-4, lg-4, xl-4">
                                         <div id="rectangle6"></div>
-                                        {/* <div id="diamond2"></div> */}
                                     </Col>
                                 </Row>
                                 <Row>
@@ -173,7 +172,6 @@ class CharacterSheet extends Component{
                                     </Col>
                                     <Col size="4, sm4, md-4, lg-4, xl-4">
                                         <div id="rectangle9"></div>
-                                        {/* <div id="diamond2"></div> */}
                                     </Col>
                                 </Row>
                                     {/* <div id="rectangle5"></div>
