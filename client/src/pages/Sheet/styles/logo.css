@@ -1,0 +1,21 @@
+#diamond1 {
+    margin-top: 2rem;
+    width: 0;
+    height: 0;
+    border: 4.375rem solid transparent;
+    border-bottom-color: orange;
+    position: relative;
+    top: -5.75rem;
+    left: -1.125rem;
+    z-index: 1;
+}
+#diamond1:after {
+    content: "";
+    position: absolute;
+    left: -4.375rem;
+    top: 4.375rem;
+    width: 0;
+    height: 0;
+    border: 4.375rem solid transparent;
+    border-top-color: orange;
+}
