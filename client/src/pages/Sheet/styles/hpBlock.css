@@ -1,0 +1,32 @@
+#squareTV4, #squareTV5 {
+    margin-top: 1rem;
+    width: 8rem;
+    height: 5.25rem;
+    background: red;
+    position: relative;
+    -moz-border-radius: 0.625rem;
+    -webkit-border-radius: 0.625rem;
+    border-radius: 0.625rem;
+}
+#rectangleRounded4, #rectangleRounded5 {
+    top: 2rem;
+    width: 8rem;
+    height: 3.25rem;
+    background: yellow;
+    position: relative;
+    -moz-border-radius: 0.625rem;
+    -webkit-border-radius: 0.625rem;
+    border-radius: 0.625rem;
+}
+#rectangleRounded6 {
+    margin: auto;
+    margin-top: 1rem;
+    margin-left: 1rem;
+    width: 17rem;
+    height: 4rem;
+    background: darkgreen;
+    position: relative;
+    -moz-border-radius: 0.625rem;
+    -webkit-border-radius: 0.625rem;
+    border-radius: 0.625rem;
+}
