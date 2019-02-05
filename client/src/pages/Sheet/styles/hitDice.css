@@ -1,0 +1,34 @@
+#squareTV6 {
+    margin: auto;
+    margin-top: 1rem;
+    margin-left: 1rem;
+    width: 17rem;
+    height: 8rem;
+    background: darkgray;
+    position: relative;
+    -moz-border-radius: 0.625rem;
+    -webkit-border-radius: 0.625rem;
+    border-radius: 0.625rem;
+}
+#rectangleRounded7 {
+    margin-top: 3rem;
+    width: 8.25rem;
+    height: 5rem;
+    background: black;
+    position: absolute;
+    -moz-border-radius: 0.625rem;
+    -webkit-border-radius: 0.625rem;
+    border-radius: 0.625rem;
+}
+#rectangleRounded8 {
+    z-index: 0;
+    left: 8.6rem;
+    margin-top: 3rem;
+    width: 8.25rem;
+    height: 5rem;
+    background: black;
+    position: relative;
+    -moz-border-radius: 0.625rem;
+    -webkit-border-radius: 0.625rem;
+    border-radius: 0.625rem;
+}
