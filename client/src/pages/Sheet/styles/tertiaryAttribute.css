@@ -1,0 +1,37 @@
+#squareTV2 {
+    width: 9rem;
+    height: 2.25rem;
+    background: red;
+    position: relative;
+    -moz-border-radius: 0.625rem;
+    -webkit-border-radius: 0.625rem;
+    border-radius: 0.625rem;
+}
+#rectangleRounded2 {
+    width: 2.25rem;
+    height: 2.25rem;
+    background: yellow;
+    position: relative;
+    -moz-border-radius: 0.625rem;
+    -webkit-border-radius: 0.625rem;
+    border-radius: 0.625rem;
+}
+#squareTV3 {
+    margin-top: 1rem;
+    width: 9rem;
+    height: 2.25rem;
+    background: red;
+    position: relative;
+    -moz-border-radius: 0.625rem;
+    -webkit-border-radius: 0.625rem;
+    border-radius: 0.625rem;
+}
+#rectangleRounded3 {
+    width: 2.25rem;
+    height: 2.25rem;
+    background: yellow;
+    position: relative;
+    -moz-border-radius: 0.625rem;
+    -webkit-border-radius: 0.625rem;
+    border-radius: 0.625rem;
+}
