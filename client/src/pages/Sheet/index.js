@@ -1,5 +1,7 @@
 import React, { Component } from "react";
 import {Col, Row, Container} from "../../components/Grid";
+import List from "../../components/Lists";
+import {Equip, Skill} from "../../components/Lists/ListItems";
 import "../Sheet/_charSheetSty.css";
 
 class CharacterSheet extends Component{
@@ -146,7 +148,11 @@ class CharacterSheet extends Component{
                     <Col size="9, sm-9, md-9, lg-9, xl-9">
                     <Row>
                         <Col size="4, sm-4, md-4, lg-4, xl-4">
-                            <div id="squareTV7"></div>
+                            <div id="squareTV7">
+                                <List>
+                                    <Skill></Skill>
+                                </List>
+                            </div>
                         </Col>
                         <Col size="4, sm-4, md-4, lg-4, xl-4">
                             <div id="squareTV8">
@@ -174,18 +180,15 @@ class CharacterSheet extends Component{
                                         <div id="rectangle9"></div>
                                     </Col>
                                 </Row>
-                                    {/* <div id="rectangle5"></div>
-                                    <div id="rectangle4"></div>
-                                    <div id="diamond2"></div>
-                                    <div id="rectangle4"></div>
-                                    <div id="rectangle4"></div>
-                                    <div id="rectangle4"></div>
-                                    <div id="diamond2"></div> */}
                                 </div>
                                 <div id="rectangle3"></div>
                             </Row>
                             <Row>
-                                <div></div>
+                                <div className="space">
+                                    <List>
+                                        <Equip></Equip>
+                                    </List>
+                                </div>
                             </Row>
                             </div>
                         </Col>
