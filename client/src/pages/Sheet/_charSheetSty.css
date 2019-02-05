@@ -80,18 +80,18 @@
     height: 80px;
     background: red;
     position: relative;
-    -moz-border-radius: 10px;
-    -webkit-border-radius: 10px;
-    border-radius: 10px;
+    -moz-border-radius: 0.625rem;
+    -webkit-border-radius: 0.625rem;
+    border-radius: 0.625rem;
 }
 #rectangleRounded {
     width: 5.5rem;
     height: 2.25rem;
     background: yellow;
     position: relative;
-    -moz-border-radius: 10px;
-    -webkit-border-radius: 10px;
-    border-radius: 10px;
+    -moz-border-radius: 0.625rem;
+    -webkit-border-radius: 0.625rem;
+    border-radius: 0.625rem;
 }
 #oval {
     width: 5.5rem;
@@ -109,40 +109,40 @@
 }
 #hexagon1 {
     transform: rotate(-90deg);
-    width: 4.5rem;
+    width: 6.5rem;
     height: 4.6rem;
-    background: black;
+    background:black;
     position: absolute;
     top: 7rem;
-    left: 4rem;
+    left: 2rem;
     margin-top: -3.8125rem;
 }
 #hexagon1:before {
     content: "";
     position: absolute;
-    top: -2.25rem;
+    top: -1.25rem;
     left: 0;
     width: 0;
     height: 0;
-    border-left: 2.25rem solid transparent;
-    border-right: 2.25rem solid transparent;
-    border-bottom: 2.25rem solid black;
+    border-left: 3.25rem solid transparent;
+    border-right: 3.25rem solid transparent;
+    border-bottom: 1.25rem solid black;
 }
 #hexagon1:after {
     content: "";
     position: absolute;
-    bottom: -2.25rem;
+    bottom: -1.25rem;
     left: 0;
     width: 0;
     height: 0;
-    border-left: 2.25rem solid transparent;
-    border-right: 2.25rem solid transparent;
-    border-top: 2.25rem solid black;
+    border-left: 3.25rem solid transparent;
+    border-right: 3.25rem solid transparent;
+    border-top: 1.25rem solid black;
     z-index: -1;
 }
 #hexagon2 {
     transform: rotate(0deg);
-    width: 2.5rem;
+    width: 4.1rem;
     height: 4.25rem;
     background: gray;
     position: relative;
@@ -157,9 +157,9 @@
     left: 0;
     width: 0;
     height: 0;
-    border-left: 1.25rem solid transparent;
+    border-left: 2.9rem solid transparent;
     border-right: 1.25rem solid transparent;
-    border-bottom: 1.25rem solid gray;
+    border-bottom: 1.27rem solid gray;
 }
 #hexagon2:after {
     content: "";
@@ -168,26 +168,346 @@
     left: 0;
     width: 0;
     height: 0;
-    border-left: 1.25rem solid transparent;
+    border-left: 2.9rem solid transparent;
+    border-right: 1.25rem solid transparent;
+    border-top: 1.27rem solid gray;
+    z-index: -1;
+}
+#hexagon3 {
+    transform: rotate(-90deg);
+    width: 6.1rem;
+    height: 4.6rem;
+    background: black;
+    position: absolute;
+    top: 7rem;
+    left: 1rem;
+    margin-top: -3.8125rem;
+}
+#hexagon3:before {
+    content: "";
+    position: absolute;
+    top: -1.25rem;
+    left: 0;
+    width: 0;
+    height: 0;
+    border-left: 2.9rem solid transparent;
+    border-right: 3.25rem solid transparent;
+    border-bottom: 1.25rem solid black;
+}
+#hexagon3:after {
+    content: "";
+    position: absolute;
+    bottom: -1.25rem;
+    left: 0;
+    width: 0;
+    height: 0;
+    border-left: 2.9rem solid transparent;
+    border-right: 3.25rem solid transparent;
+    border-top: 1.25rem solid black;
+    z-index: -1;
+}
+#hexagon4 {
+    transform: rotate(0deg);
+    width: 4.1rem;
+    height: 4.25rem;
+    background: gray;
+    position: relative;
+    top: 5rem;
+    left: 0rem;
+    margin-top: -4.8125rem;
+}
+#hexagon4:before {
+    content: "";
+    position: absolute;
+    top: -1.25rem;
+    left: 0;
+    width: 0;
+    height: 0;
+    border-left: 2.9rem solid transparent;
+    border-right: 1.25rem solid transparent;
+    border-bottom: 1.25rem solid gray;
+}
+#hexagon4:after {
+    content: "";
+    position: absolute;
+    bottom: -1.25rem;
+    left: 0;
+    width: 0;
+    height: 0;
+    border-left: 2.9rem solid transparent;
     border-right: 1.25rem solid transparent;
     border-top: 1.25rem solid gray;
     z-index: -1;
 }
+#hexagon5 {
+    transform: rotate(-90deg);
+    width: 6.5rem;
+    height: 4.6rem;
+    background: black;
+    position: absolute;
+    top: 7rem;
+    left: 0rem;
+    margin-top: -3.8125rem;
+}
+#hexagon5:before {
+    content: "";
+    position: absolute;
+    top: -1.25rem;
+    left: 0;
+    width: 0;
+    height: 0;
+    border-left: 3.25rem solid transparent;
+    border-right: 3.25rem solid transparent;
+    border-bottom: 1.25rem solid black;
+}
+#hexagon5:after {
+    content: "";
+    position: absolute;
+    bottom: -1.25rem;
+    left: 0;
+    width: 0;
+    height: 0;
+    border-left: 3.25rem solid transparent;
+    border-right: 3.25rem solid transparent;
+    border-top: 1.25rem solid black;
+    z-index: -1;
+}
+#hexagon6 {
+    transform: rotate(0deg);
+    width: 4.1rem;
+    height: 4.25rem;
+    background: gray;
+    position: relative;
+    top: 5rem;
+    left: 0rem;
+    margin-top: -4.8125rem;
+}
+#hexagon6:before {
+    content: "";
+    position: absolute;
+    top: -1.25rem;
+    left: 0;
+    width: 0;
+    height: 0;
+    border-left: 2.9rem solid transparent;
+    border-right: 1.25rem solid transparent;
+    border-bottom: 1.27rem solid gray;
+}
+#hexagon6:after {
+    content: "";
+    position: absolute;
+    bottom: -1.25rem;
+    left: 0;
+    width: 0;
+    height: 0;
+    border-left: 2.9rem solid transparent;
+    border-right: 1.25rem solid transparent;
+    border-top: 1.27rem solid gray;
+    z-index: -1;
+}
 #squareTV2 {
-    width: 8rem;
+    width: 9rem;
     height: 2.25rem;
     background: red;
     position: relative;
-    -moz-border-radius: 10px;
-    -webkit-border-radius: 10px;
-    border-radius: 10px;
+    -moz-border-radius: 0.625rem;
+    -webkit-border-radius: 0.625rem;
+    border-radius: 0.625rem;
 }
 #rectangleRounded2 {
     width: 2.25rem;
     height: 2.25rem;
     background: yellow;
     position: relative;
-    -moz-border-radius: 10px;
-    -webkit-border-radius: 10px;
-    border-radius: 10px;
+    -moz-border-radius: 0.625rem;
+    -webkit-border-radius: 0.625rem;
+    border-radius: 0.625rem;
+}
+#squareTV3 {
+    margin-top: 1rem;
+    width: 9rem;
+    height: 2.25rem;
+    background: red;
+    position: relative;
+    -moz-border-radius: 0.625rem;
+    -webkit-border-radius: 0.625rem;
+    border-radius: 0.625rem;
+}
+#rectangleRounded3 {
+    width: 2.25rem;
+    height: 2.25rem;
+    background: yellow;
+    position: relative;
+    -moz-border-radius: 0.625rem;
+    -webkit-border-radius: 0.625rem;
+    border-radius: 0.625rem;
+}
+#squareTV4, #squareTV5 {
+    margin-top: 1rem;
+    width: 8rem;
+    height: 5.25rem;
+    background: red;
+    position: relative;
+    -moz-border-radius: 0.625rem;
+    -webkit-border-radius: 0.625rem;
+    border-radius: 0.625rem;
+}
+#rectangleRounded4, #rectangleRounded5 {
+    top: 2rem;
+    width: 8rem;
+    height: 3.25rem;
+    background: yellow;
+    position: relative;
+    -moz-border-radius: 0.625rem;
+    -webkit-border-radius: 0.625rem;
+    border-radius: 0.625rem;
+}
+#rectangleRounded6 {
+    margin: auto;
+    margin-top: 1rem;
+    margin-left: 1rem;
+    width: 17rem;
+    height: 4rem;
+    background: darkgreen;
+    position: relative;
+    -moz-border-radius: 0.625rem;
+    -webkit-border-radius: 0.625rem;
+    border-radius: 0.625rem;
+}
+#squareTV6 {
+    margin: auto;
+    margin-top: 1rem;
+    margin-left: 1rem;
+    width: 17rem;
+    height: 8rem;
+    background: darkgray;
+    position: relative;
+    -moz-border-radius: 0.625rem;
+    -webkit-border-radius: 0.625rem;
+    border-radius: 0.625rem;
+}
+#rectangleRounded7 {
+    margin-top: 3rem;
+    width: 8.25rem;
+    height: 5rem;
+    background: black;
+    position: absolute;
+    -moz-border-radius: 0.625rem;
+    -webkit-border-radius: 0.625rem;
+    border-radius: 0.625rem;
+}
+#rectangleRounded8 {
+    z-index: 0;
+    left: 8.6rem;
+    margin-top: 3rem;
+    width: 8.25rem;
+    height: 5rem;
+    background: black;
+    position: relative;
+    -moz-border-radius: 0.625rem;
+    -webkit-border-radius: 0.625rem;
+    border-radius: 0.625rem;
+}
+#squareTV7 {
+    margin: auto;
+    margin-top: 1rem;
+    margin-left: 1rem;
+    width: 17rem;
+    height: 20rem;
+    background: darkgray;
+    position: relative;
+    -moz-border-radius: 0.625rem;
+    -webkit-border-radius: 0.625rem;
+    border-radius: 0.625rem;
+}
+#squareTV8 {
+    margin: auto;
+    margin-top: 1rem;
+    margin-left: 1rem;
+    width: 17rem;
+    height: 20rem;
+    background: darkgray;
+    position: relative;
+    -moz-border-radius: 0.625rem;
+    -webkit-border-radius: 0.625rem;
+    border-radius: 0.625rem;
+}
+#squareTV9 {
+    margin: auto;
+    margin-top: 1rem;
+    margin-left: 1rem;
+    width: 17rem;
+    height: 20rem;
+    background: darkgrey;
+    position: relative;
+    -moz-border-radius: 0.625rem;
+    -webkit-border-radius: 0.625rem;
+    border-radius: 0.625rem;
+}
+#rectangle2 {
+position: relative;
+top: 1.5rem;
+left: 2rem;
+width: 15rem;
+height: 6.5rem;
+background: darkolivegreen;
+}
+#rectangle3 {
+position: relative;
+top: 1.5rem;
+left: 2rem;
+width: 15rem;
+height: 2.25rem;
+background: darkkhaki;
+}
+#rectangle4 {
+position: absolute;
+top: 1.5rem;
+left: 2rem;
+width: 3.6rem;
+height: 2.25rem;
+background: darksalmon;
+}
+#rectangle5 {
+position: absolute;
+top: 1.5rem;
+left: 0rem;
+width: 3.6rem;
+height: 2.25rem;
+background: salmon;
+}
+#rectangle6 {
+position: absolute;
+top: 1.5rem;
+left: -2rem;
+width: 3.6rem;
+height: 2.25rem;
+background: lightsalmon;
+}
+#rectangle7 {
+position: relative;
+top: 3.5rem;
+left: 2rem;
+width: 3.6rem;
+height: 2.25rem;
+background: salmon;
+}
+#rectangle8 {
+position: relative;
+top: 3.5rem;
+left: 0rem;
+width: 3.6rem;
+height: 2.25rem;
+background: lightsalmon;
+}
+#rectangle9 {
+position: relative;
+top: 3.5rem;
+left: -2rem;
+width: 3.6rem;
+height: 2.25rem;
+background: darksalmon;
+}
+.space {
+    margin-top: 1.75rem;
 }

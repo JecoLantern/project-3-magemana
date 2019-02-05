@@ -3,13 +3,11 @@ import ReactDOM from 'react-dom'
 import Header from './components/header'
 import Create from './components/create-task'
 import Tasks from './components/tasks'
-
 import Deleteall from './components/delete-all'
-
 import ModalAlert from './components/modal'
-
-import './styles/App.css'
+import './styles/Select.css'
 import registerServiceWorker from './components/registerServiceWorker'
+
 
 export default class App extends Component {
   state = {
@@ -51,7 +49,6 @@ export default class App extends Component {
   closeModal = () => {
     this.setState(() => ({selectedTask: undefined}))
   }
-
   onSubmit = (event) => {
     event.preventDefault()
     const singletask = event.target.elements.singletask.value.trim().toLowerCase()
@@ -62,6 +59,8 @@ export default class App extends Component {
     } else this.setState((prevState) => ({ tasks: [...prevState.tasks, singletask] }))
     event.target.elements.singletask.value = ''
   }
+
+  
   render() {
     return (
       <div>
@@ -69,9 +68,7 @@ export default class App extends Component {
         <Create 
         onSubmit={this.onSubmit} 
         />
-     
         { this.state.tasks.length > 0 ?
-
           <Tasks
             tasks={this.state.tasks}
             deleteTask={this.deleteTask}
@@ -88,7 +85,6 @@ export default class App extends Component {
             selectedTask={this.state.selectedTask}
             closeModal={this.closeModal}
         />
-       
       </div>
     )
   }

@@ -2,11 +2,8 @@ import React, { Component } from 'react'
 import Header from '../components/header'
 import Create from './create-task'
 import Tasks from './tasks'
-
 import Deleteall from './delete-all'
-
 import ModalAlert from '../components/modal'
-
 import '../styles/App.css'
 
 export default class App extends Component {
@@ -14,7 +11,6 @@ export default class App extends Component {
     tasks: [],
     selectedTask: undefined
   }
-
   componentDidMount = () => {
     try {
         const json = localStorage.getItem('tasks')
@@ -27,7 +23,6 @@ export default class App extends Component {
         this.setState(() => ({selectedTask: 'Something went wrong!'}))
     }
   }
-
   componentDidUpdate = (prevProps, prevState) => {
       if(prevState.tasks.length !== this.state.tasks.length) {
           const json = JSON.stringify(this.state.tasks)
@@ -60,6 +55,7 @@ export default class App extends Component {
     } else this.setState((prevState) => ({ tasks: [...prevState.tasks, singletask] }))
     event.target.elements.singletask.value = ''
   }
+
   render() {
     return (
       <div>

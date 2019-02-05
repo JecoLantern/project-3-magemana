@@ -1,4 +1,4 @@
-html, body {
+html, body, #root {
   width: 100%;
   height: 100%;
   box-sizing: border-box;
@@ -33,16 +33,13 @@ html, body {
 
 }
 
-input{
+.searchbox{
   border-color: green !important;
   width: 680px;
   margin-left: -5%;
  
 }
 .purple-input{
-  border-color: rgba(255, 0, 0, 0);
-}
-input{
   border-color: rgba(255, 0, 0, 0);
 }
 .btn-rounded{
@@ -63,6 +60,7 @@ background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   height: 135px;
+  margin-top:25%;
 }
 
 

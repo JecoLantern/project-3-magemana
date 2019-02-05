@@ -1,12 +1,14 @@
 import React, { Component } from "react";
-import {Col, Row} from "../../components/Grid";
+import {Col, Row, Container} from "../../components/Grid";
+import List from "../../components/Lists";
+import {Equip, Skill} from "../../components/Lists/ListItems";
 import "../Sheet/_charSheetSty.css";
 
 class CharacterSheet extends Component{
 
     render() {
         return (
-            <div className="container">
+            <Container>
                 <Row>
                     <Col size="2, sm-2, md-2, lg-2, xl-2">
                         <div id="diamond1"><h6>Place Logo IMG here</h6></div>
@@ -112,45 +114,114 @@ class CharacterSheet extends Component{
                     </Col>
                     <Col size="6, sm-6, md-6, lg-6, xl-6">
                     <Row>
-                        <Col size="9, sm-9, md-9, lg-9, xl-9">
-                            <Row>
-                                <Col size="4, sm-4, md-4, lg-4, xl-4">
-                                    <div id="hexagon1">
-                                        <div id="hexagon2"></div>
-                                    </div>
-                                </Col>
-                                <Col size="4, sm-4, md-4, lg-4, xl-4">
-                                    <div id="hexagon1">
-                                        <div id="hexagon2"></div>
-                                    </div>
-                                </Col>
-                                <Col size="4, sm-4, md-4, lg-4, xl-4">
-                                    <div id="hexagon1">
-                                        <div id="hexagon2"></div>
-                                    </div>
-                                </Col>
-                            </Row>
+                        <Col size="3, sm-3, md-3, lg-3, xl-3">
+                            <div id="hexagon1">
+                                <div id="hexagon2"></div>
+                            </div>
+                        </Col>
+                        <Col size="3, sm-3, md-3, lg-3, xl-3">
+                            <div id="hexagon3">
+                                <div id="hexagon4"></div>
+                            </div>
+                        </Col>
+                        <Col size="3, sm-3, md-3, lg-3, xl-3">
+                            <div id="hexagon5">
+                                <div id="hexagon6"></div>
+                            </div>
                         </Col>
                         <Col size="3, sm-3, md-3, lg-3, xl-3">
                             <Row>
-                                <Col size="12, sm-12, md-12, lg-12, xl-12">
-                                    <Row>
-                                        <div id="squareTV2">
-                                            <div id="rectangleRounded2"></div>
-                                        </div>
-                                    </Row>
-                                    <Row>
-                                        <div id="squareTV2">
-                                            <div id="rectangleRounded2"></div>
-                                        </div>
-                                    </Row>
-                                </Col>
+                                <div id="squareTV2">
+                                    <div id="rectangleRounded2"></div>
+                                </div>
+                            </Row>
+                            <Row>
+                                <div id="squareTV3">
+                                    <div id="rectangleRounded3"></div>
+                                </div>
                             </Row>
                         </Col>
                     </Row>
                     </Col>
                 </Row>
-            </div>
+                <Row>
+                    <Col size="9, sm-9, md-9, lg-9, xl-9">
+                    <Row>
+                        <Col size="4, sm-4, md-4, lg-4, xl-4">
+                            <div id="squareTV7">
+                                <List>
+                                    <Skill></Skill>
+                                </List>
+                            </div>
+                        </Col>
+                        <Col size="4, sm-4, md-4, lg-4, xl-4">
+                            <div id="squareTV8">
+                            <Row>
+                                <div id="rectangle2">
+                                <Row>
+                                    <Col size="4, sm4, md-4, lg-4, xl-4">
+                                        <div id="rectangle4"></div>
+                                    </Col>
+                                    <Col size="4, sm4, md-4, lg-4, xl-4">
+                                        <div id="rectangle5"></div>
+                                    </Col>
+                                    <Col size="4, sm4, md-4, lg-4, xl-4">
+                                        <div id="rectangle6"></div>
+                                    </Col>
+                                </Row>
+                                <Row>
+                                    <Col size="4, sm4, md-4, lg-4, xl-4">
+                                        <div id="rectangle7"></div>
+                                    </Col>
+                                    <Col size="4, sm4, md-4, lg-4, xl-4">
+                                        <div id="rectangle8"></div>
+                                    </Col>
+                                    <Col size="4, sm4, md-4, lg-4, xl-4">
+                                        <div id="rectangle9"></div>
+                                    </Col>
+                                </Row>
+                                </div>
+                                <div id="rectangle3"></div>
+                            </Row>
+                            <Row>
+                                <div className="space">
+                                    <List>
+                                        <Equip></Equip>
+                                    </List>
+                                </div>
+                            </Row>
+                            </div>
+                        </Col>
+                        <Col size="4, sm-4, md-4, lg-4, xl-4">
+                            <div id="squareTV9"></div>
+                        </Col>
+                    </Row>
+                    </Col>
+                    <Col size="3, sm-3, md-3, lg-3, xl-3">
+                        <Row>
+                            <Col size="6, sm-6, md-6, lg-6, xl-6">
+                                <div id="squareTV4">
+                                    <div id="rectangleRounded4"></div>
+                                </div>
+                            </Col>
+                            <Col size="6, sm-6, md-6, lg-6, xl-6">
+                                <div id="squareTV5">
+                                    <div id="rectangleRounded5"></div>
+                                </div>
+                            </Col>
+                        </Row>
+                        <Row>
+                            <div id="rectangleRounded6"></div>
+                        </Row>
+                        <Row>
+                            <div id="squareTV6">
+                                <div id="rectangleRounded7"></div>
+                                <div id="rectangleRounded8"></div>
+                            </div>
+                        </Row>
+                    </Col>
+                </Row>
+            </Container>
         )
     }
 
