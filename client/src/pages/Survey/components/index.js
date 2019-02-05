@@ -13,10 +13,10 @@ const QuestionBox = props => {
                 </button>
                 <div className="dropdown-menu" aria-labelledby="dropdownMenuButton">
                     {//if choices is empty provide text field
-                    props.choices.length >= 1 ?
-                        props.choices.map(ans =>
-                    <a className="dropdown-item" onClick={props.choicePush}>{ans}</a>)
-                    : <input className={props.value} onChange={props.onChange}/>
+                        props.choices.length >= 1 ?
+                            props.choices.map(ans =>
+                                <span className="dropdown-item" href="#" onClick={props.choicePush}>{ans}</span>)
+                            : <input className={props.value} onChange={props.onChange} />
                     }
                 </div>
             </div>
