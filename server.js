@@ -32,6 +32,7 @@ app.use(passport.session()) // will call the deserializeUser
 
 
 
+
 // Connect to the Mongo DB
 mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/characterbuild", {useNewUrlParser: true});
 var db = mongoose.connection;
