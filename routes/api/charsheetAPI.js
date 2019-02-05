@@ -1,15 +1,15 @@
 const router = require("express").Router();
-const charsheetController = require("../../controllers/index");
+const {localController} = require("../../controllers/index");
 
 router.route("/charsheet")
-  .get(charsheetController.findAll)
-  .post(charsheetController.create);
+  .get(localController.findAllCharByUserId)
+  .post(localController.create);
 
 
 router
   .route("/charsheet/:id")
-  .get(charsheetController.findById)
-  .put(charsheetController.update)
-  .delete(charsheetController.remove);
+  .get(localController.findCharByUserCharId)
+  .put(localController.update)
+  .delete(localController.remove);
 
 module.exports = router;
