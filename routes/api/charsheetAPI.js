@@ -3,7 +3,7 @@ const {localController} = require("../../controllers/index");
 
 router.route("/charsheet")
   .get(localController.findAllCharByUserId)
-  .post(localController.create);
+  .post(localController.charCreate);
 
 
 router
