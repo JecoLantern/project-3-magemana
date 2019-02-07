@@ -1,11 +1,10 @@
-import axios from 'axios';
+let axios = require('axios');
 
 class CharacterGen {
     constructor(name, race, className, alignment) {
         this.name = name;
         this.race = race;
         this.level = 1;
-        this.subrace = "";
         this.class = className;
         this.alignment = alignment;
         this.hitDice = 0;
@@ -30,30 +29,8 @@ class CharacterGen {
         this.proficiencies = [];
         this.startingEquipment = [];
     }
-    //GETTERS
-    get health() {
-        return (this.hitDice * this.level) + (this.attrMod(this.attributes[2]) * this.level)
-    }
-    get initiative() {
-        return this.attrMod(this.attributes[1])
-    }
-    get proficiencieBonus() {
-        switch (this.level) {
-            case 1 || 2 || 3 || 4:
-                return 2;
-            case 5 || 6 || 7 || 8:
-                return 3;
-            case 9 || 10 || 11 || 12:
-                return 4;
-            case 13 || 14 || 15 || 16:
-                return 5;
-            case 17 || 18 || 19 || 20:
-                return 6;
-            default: return 2;
-        }
-    }
-    //SETTERS
-    set attrMod(attribute) {
+
+    attrMod(attribute) {
         switch (attribute.val) {
             case 1:
                 return -5;
@@ -82,11 +59,12 @@ class CharacterGen {
     }
 
     arrayRandSelect(arr, amt) {
+        let tempArr = [...arr]
         const newArr = []
         for (let i = 0; i < amt; i++) {
-            let choice = Math.floor((Math.random() * arr.length) - 1)
-            newArr.push(arr[choice]);
-            return arr.splice(choice, 1)
+            let choice = Math.floor((Math.random() * tempArr.length) - 1)
+            newArr.push(tempArr[choice]);
+            return tempArr.splice(choice, 1)
         }
         return newArr
     }
@@ -110,16 +88,19 @@ class CharacterGen {
                     proficiency_choices,
                     saving_throws,
                     hit_die,
-                } = res
+                } = res;
 
 
                 let profChoice = proficiency_choices[0].from.map(el => el.name);
+
                 let profChoiceAmt = proficiency_choices[0].choose;
 
                 //need to figure out how to translate this data into our object.
-                let saveThrows = saving_throws.map(el => el.name)
+                let saveThrows = saving_throws.map(el => el.name);
+                
+                let tempSave = [...this.savingThrows]
                 //set the isProficient property of the savethrow at the the index of the respective save
-                this.savingThrows = this.savingThrows.map(save => {
+                this.savingThrows = tempSave.map(save => {
                     if (save === saveThrows[0]) save.isProficient = true;
                     if (save === saveThrows[1]) save.isProficient = true;
                     return save
@@ -130,11 +111,11 @@ class CharacterGen {
                 this.proficiencies = [...this.proficiencies, proficiencies.map(el => {
                     return el.name
                 })]
-            })
+            }).catch(err => console.log(err))
 
     };
 
-    handleRacePush() {
+    getRaceData() {
         //based on the selected race it will set the state of the character to the optimized selections for each racial choice
         axios.get(`/api/e/dnd/races/${this.race}`)
             .then(data => {
@@ -171,21 +152,20 @@ class CharacterGen {
                     ...this.proficiencies,
                     starting_proficiencies.map(el => el.name)
                 ]
-            })
+            }).catch(err => console.log(err))
 
     };
 
-    handleFinalSubmitPush() {
-        //here we will make the finall submit to the database for the character then we will load the charactersheet with the unique id of the selected character
-        axios.get("/auth/user")
-        .then(res =>{
-            let {_id} = res
-            axios.post("/api/c/charsheet", 
-                      {...this, user_Id :_id })
-                        .then(response=> console.log(response))
-        })
-    };
-
+    build() {
+        this.getClassData();
+        this.getRaceData();
+        console.log(this)
+        // this.handleFinalSubmitPush();
+    }
 }
+
+// let John = new CharacterGen("John", "Human", "Bard", "CN")
+// John.build();
+// console.log(John)
 
 export default CharacterGen;
