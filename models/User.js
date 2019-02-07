@@ -8,6 +8,12 @@ const userSchema = new Schema({
         username: { type: String, required: false },
         password: { type: String, required: false }
     },
+    characters: [
+        {
+            type: Schema.Types.ObjectId,
+            ref: "charSchema"
+        }
+    ]
 })
 // Define schema methods
 userSchema.methods = {
