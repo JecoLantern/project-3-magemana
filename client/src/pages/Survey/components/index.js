@@ -15,8 +15,9 @@ const QuestionBox = props => {
                     {//if choices is empty provide text field
                         props.choices.length >= 1 ?
                             props.choices.map(ans =>
-                                <span className="dropdown-item" href="#" onClick={props.choicePush}>{ans}</span>)
-                            : <input className={props.value} onChange={props.onChange} />
+                                <span className="dropdown-item" href="#"
+                                value={ans} onClick={props.onClick}>{ans}</span>)
+                            : <input className={props.name} onChange={props.onChange} />
                     }
                 </div>
             </div>

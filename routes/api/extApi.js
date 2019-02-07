@@ -1,8 +1,8 @@
 const router = require('express').Router()
-const controller = require("../../controllers")
+const {externalcontroller} = require("../../controllers")
 
-router.route("/dnd/classes/:id").get(controller.getClass)
-router.route("/dnd/subclasses/:id").get(controller.getSubClass)
-router.route("/dnd/race/:id").get(controller.getRace)
+router.route("/dnd/classes/:id").get(externalcontroller.getClass)
+router.route("/dnd/subclasses/:id").get(externalcontroller.getSubClass)
+router.route("/dnd/race/:id").get(externalcontroller.getRace)
 
 module.exports = router;

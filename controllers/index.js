@@ -1,4 +1,4 @@
 module.exports = {
-  localController = require("./localController"),
-  externalcontroller = require("./extController")
+ localController: require("./localController"),
+ externalcontroller: require("./extController")
 }

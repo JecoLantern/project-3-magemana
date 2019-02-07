@@ -1,4 +1,4 @@
-const surveyQuestions = [
+export default [
     {
         value: "name",
         question: "What is your adventurers name?",

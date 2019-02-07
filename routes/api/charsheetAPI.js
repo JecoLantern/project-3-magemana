@@ -1,5 +1,5 @@
 const router = require("express").Router();
-const {localController} = require("../../controllers/index");
+const localController = require("../../controllers/localController");
 
 router.route("/charsheet")
   .get(localController.findAllCharByUserId)
