@@ -1,8 +1,5 @@
 import React, { Component } from "react";
 import { Col, Row, Container } from "../../components/Grid";
-import List from "../../components/Lists";
-import { Equip, Skill } from "../../components/Lists/ListItems";
-import "../Sheet/_charSheetSty.css";
 
 //Importing CharSheet Components
 import Logo from "./components/logo";
