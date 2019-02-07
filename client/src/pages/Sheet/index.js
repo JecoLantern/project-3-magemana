@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { Col, Row, Container } from "../../components/Grid";
+import "../Sheet/_charSheetSty.css";
 
 //Importing CharSheet Components
 import Logo from "./components/logo";
