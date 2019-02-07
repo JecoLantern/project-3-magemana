@@ -11,7 +11,7 @@
 #hexagon1:before {
     content: "";
     position: absolute;
-    top: -1.25rem;
+    top: -1.23rem;
     left: 0;
     width: 0;
     height: 0;
@@ -22,7 +22,7 @@
 #hexagon1:after {
     content: "";
     position: absolute;
-    bottom: -1.25rem;
+    bottom: -1.22rem;
     left: 0;
     width: 0;
     height: 0;

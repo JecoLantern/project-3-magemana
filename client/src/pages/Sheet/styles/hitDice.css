@@ -2,7 +2,7 @@
     margin: auto;
     margin-top: 1rem;
     margin-left: 1rem;
-    width: 17rem;
+    width: 16.5rem;
     height: 8rem;
     background: #5b3624;
     position: relative;
@@ -12,7 +12,7 @@
 }
 #rectangleRounded7 {
     margin-top: 3rem;
-    width: 8.25rem;
+    width: 8rem;
     height: 5rem;
     background: #c7b48c;
     position: absolute;
@@ -22,7 +22,7 @@
 }
 #rectangleRounded8 {
     z-index: 0;
-    left: 8.6rem;
+    left: 8.25rem;
     margin-top: 3rem;
     width: 8.25rem;
     height: 5rem;
