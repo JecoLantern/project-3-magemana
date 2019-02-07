@@ -3,13 +3,14 @@
     width: 0;
     height: 0;
     border: 4.375rem solid transparent;
-    border-bottom-color: orange;
+    border-bottom-color: #AA8226;
     position: relative;
     top: -5.75rem;
     left: -1.125rem;
     z-index: 1;
 }
 #diamond1:after {
+    z-index: -1;
     content: "";
     position: absolute;
     left: -4.375rem;
@@ -17,5 +18,5 @@
     width: 0;
     height: 0;
     border: 4.375rem solid transparent;
-    border-top-color: orange;
+    border-top-color: #AA8226;
 }

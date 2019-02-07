@@ -1,7 +1,7 @@
 #squareTV2 {
     width: 9rem;
     height: 2.25rem;
-    background: red;
+    background: #5b3624;
     position: relative;
     -moz-border-radius: 0.625rem;
     -webkit-border-radius: 0.625rem;
@@ -10,7 +10,7 @@
 #rectangleRounded2 {
     width: 2.25rem;
     height: 2.25rem;
-    background: yellow;
+    background: #c7b48c;
     position: relative;
     -moz-border-radius: 0.625rem;
     -webkit-border-radius: 0.625rem;
@@ -20,7 +20,7 @@
     margin-top: 1rem;
     width: 9rem;
     height: 2.25rem;
-    background: red;
+    background: #5b3624;
     position: relative;
     -moz-border-radius: 0.625rem;
     -webkit-border-radius: 0.625rem;
@@ -29,7 +29,7 @@
 #rectangleRounded3 {
     width: 2.25rem;
     height: 2.25rem;
-    background: yellow;
+    background: #c7b48c;
     position: relative;
     -moz-border-radius: 0.625rem;
     -webkit-border-radius: 0.625rem;

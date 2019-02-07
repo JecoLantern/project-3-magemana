@@ -1,0 +1,12 @@
+#logoIMG {
+    height: 4rem;
+    width: 4rem;
+    position: absolute;
+    top: 2rem;
+    left: -2rem;
+    animation: spin 5s linear infinite;
+}
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
