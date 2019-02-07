@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
 import { Col, Row } from '../../components/Grid';
 import QuestionBox from './components';
-import CharGen from './util/CharacterClass'
-import SurveyQs from './util/Survey'
+import CharGen from './util/CharacterClass';
+import SurveyQs from './util/Survey';
 import axios from 'axios';
+
 class Survey extends Component {
     state = {
         answers: []
@@ -36,6 +37,7 @@ class Survey extends Component {
         const name = event.target.name;
         const value = event.target.value;
         this.setState({
+            ...this.state,
             [name]: value
         });
     };
@@ -44,9 +46,9 @@ class Survey extends Component {
     render() {
         return (
             <div className="container">
-                <Row>
-                    <Col size={"sm-12, md-6, lg-4"}>
-                        <div>
+                <Row add="justify-content-center">
+                    <Col size="sm-12, md-6, lg-4,">
+                        <form className="survey">
                             {SurveyQs.map(el => (
                                 //map through the question objects
                                 <QuestionBox
@@ -59,7 +61,8 @@ class Survey extends Component {
                                     onChange={this.handleInput}
                                 />
                             ))}
-                        </div>
+                            <button type="submit">Submit and build!</button>
+                        </form>
                     </Col>
                 </Row>
             </div>

@@ -1,25 +1,36 @@
 import React from 'react';
-import { Col } from '../../../components/Grid'
-
+import { Col } from '../../../components/Grid';
+import style from '../style/index.css';
 const QuestionBox = props => {
     return (
         <Col size="m-4">
-            <div>
+            <div className="questionWrap">
                 {props.question}
             </div>
-            <div className="dropdown">
-                <button className="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    {props.buttonLabel}
-                </button>
-                <div className="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                    {//if choices is empty provide text field
-                        props.choices.length >= 1 ?
-                            props.choices.map(ans =>
-                                <span className="dropdown-item" href="#"
-                                value={ans} onClick={props.onClick}>{ans}</span>)
-                            : <input className={props.name} onChange={props.onChange} />
-                    }
-                </div>
+            <div className="ansWrap" id={props.key}>
+                {//if choices is empty provide text field, change these to radio buttons, and pull the active one, put these into a form to make submission easier. you fucking idiot
+                    props.choices.length >= 1 ?
+                        props.choices.map(ans =>
+                            <div className="radioWrap">
+                                <input
+                                    key={ans}
+                                    className="radBut"
+                                    name={props.name}
+                                    value={ans}
+                                    type="radio"
+                                />
+                                <label htmlFor={ans}>
+                                    {ans}
+                                </label>
+                            </div>
+                        ) :
+                        <input
+                            id={`${props.name}1`}
+                            className="textBox"
+                            name={props.name}
+                            onChange={props.onChange}
+                        />
+                }
             </div>
         </Col>
     )

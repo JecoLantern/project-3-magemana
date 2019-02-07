@@ -1,13 +1,13 @@
 import React, { Component } from 'react'
-import Header from '../components/header'
-import Create from './create-task'
-import Tasks from './tasks'
+import Header from './components/header'
+import Create from './components/create-task'
+import Tasks from './components/tasks'
 
-import Deleteall from './delete-all'
+import Deleteall from './components/delete-all'
 
-import ModalAlert from '../../../components/Modal/modal'
+import ModalAlert from '../../components/Modal/modal'
 
-import '../styles/App.css'
+import './styles/App.css'
 
 class Select extends Component {
   state = {
