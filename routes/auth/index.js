@@ -44,7 +44,7 @@ router.post('/logout', (req, res) => {
 		return res.json({ msg: 'no user to log out!' })
 	}
 })
-//sign upe
+//sign up
 router.post('/signup', (req, res) => {
 	console.log(req.body)
 	let { username, password } = req.body

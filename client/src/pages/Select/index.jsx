@@ -1,20 +1,28 @@
 import React, { Component } from 'react'
-import ReactDOM from 'react-dom'
+<<<<<<< HEAD:client/src/pages/Select/components/App.jsx
+import Header from '../components/header'
+import Create from './create-task'
+import Tasks from './tasks'
+import Deleteall from './delete-all'
+import ModalAlert from '../components/modal'
+import '../styles/App.css'
+=======
 import Header from './components/header'
 import Create from './components/create-task'
 import Tasks from './components/tasks'
-import Deleteall from './components/delete-all'
-import ModalAlert from './components/modal'
-import './styles/Select.css'
-import registerServiceWorker from './components/registerServiceWorker'
 
+import Deleteall from './components/delete-all'
+
+import ModalAlert from '../../components/Modal/modal'
+
+import './styles/App.css'
+>>>>>>> 7cf6808b74e5c2dac930d5533eaf5d4a76df48c8:client/src/pages/Select/index.jsx
 
 export default class App extends Component {
   state = {
     tasks: [],
     selectedTask: undefined
   }
-
   componentDidMount = () => {
     try {
         const json = localStorage.getItem('tasks')
@@ -27,7 +35,6 @@ export default class App extends Component {
         this.setState(() => ({selectedTask: 'Something went wrong!'}))
     }
   }
-
   componentDidUpdate = (prevProps, prevState) => {
       if(prevState.tasks.length !== this.state.tasks.length) {
           const json = JSON.stringify(this.state.tasks)
@@ -49,6 +56,7 @@ export default class App extends Component {
   closeModal = () => {
     this.setState(() => ({selectedTask: undefined}))
   }
+
   onSubmit = (event) => {
     event.preventDefault()
     const singletask = event.target.elements.singletask.value.trim().toLowerCase()
@@ -60,7 +68,6 @@ export default class App extends Component {
     event.target.elements.singletask.value = ''
   }
 
-  
   render() {
     return (
       <div>
@@ -68,7 +75,9 @@ export default class App extends Component {
         <Create 
         onSubmit={this.onSubmit} 
         />
+     
         { this.state.tasks.length > 0 ?
+
           <Tasks
             tasks={this.state.tasks}
             deleteTask={this.deleteTask}
@@ -85,8 +94,8 @@ export default class App extends Component {
             selectedTask={this.state.selectedTask}
             closeModal={this.closeModal}
         />
+       
       </div>
     )
   }
 }
-registerServiceWorker()
