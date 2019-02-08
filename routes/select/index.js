@@ -1,9 +1,9 @@
 import express from 'express';
 //import controller file
-import * as characterController from '../../controllers/charController';
+import * as characterController from '../../controllers/localController';
 // get an instance of express router
 const router = express.Router();
-router.route('/')
+router.route('/characters')
      .get(characterController.getCharacters)
      .post(characterController.addCharacter)
      .put(characterController.updateCharacter);

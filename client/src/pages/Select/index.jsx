@@ -1,39 +1,25 @@
 import React, { Component } from 'react'
-<<<<<<< HEAD:client/src/pages/Select/components/App.jsx
-import Header from '../components/header'
-import Create from './create-task'
-import Tasks from './tasks'
-import Deleteall from './delete-all'
-import ModalAlert from '../components/modal'
-import '../styles/App.css'
-=======
 import Header from './components/header'
 import Create from './components/create-task'
 import Tasks from './components/tasks'
-
+import axios from 'axios'
 import Deleteall from './components/delete-all'
 
 import ModalAlert from '../../components/Modal/modal'
 
 import './styles/App.css'
->>>>>>> 7cf6808b74e5c2dac930d5533eaf5d4a76df48c8:client/src/pages/Select/index.jsx
 
 export default class App extends Component {
   state = {
     tasks: [],
     selectedTask: undefined
   }
-  componentDidMount = () => {
-    try {
-        const json = localStorage.getItem('tasks')
-        const tasks = JSON.parse(json)
-
-        if (tasks) {
-            this.setState(() => ({tasks}))
-        }
-    } catch(e) {
-        this.setState(() => ({selectedTask: 'Something went wrong!'}))
-    }
+  componentDidMount () {
+    axios.get('http://localhost:3000/api/todos/')
+        .then((res) => {
+          this.setState({tasks: res.data});
+        })
+        .catch((error) => console.error('axios error', error));
   }
   componentDidUpdate = (prevProps, prevState) => {
       if(prevState.tasks.length !== this.state.tasks.length) {
