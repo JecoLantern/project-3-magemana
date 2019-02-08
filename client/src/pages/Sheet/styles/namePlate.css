@@ -1,0 +1,45 @@
+.name {
+    margin-top: 1rem;
+    border-top: 0.2rem solid black;
+    border-left: 0.2rem solid black;
+    border-bottom: 0.2rem solid black;
+    text-align: center;
+}
+.background {
+    margin-top: 1rem;
+    border-top: 0.2rem solid black;
+    border-bottom: 0.2rem solid black;
+    text-align: center;
+}
+.expPoints {
+    margin-top: 1rem;
+    border-top: 0.2rem solid black;
+    border-right: 0.2rem solid black;
+    border-bottom: 0.2rem solid black;
+    text-align: center;
+}
+.race {
+    border-top: 0.2rem solid black;
+    border-left: 0.2rem solid black;
+    border-bottom: 0.2rem solid black;
+    text-align: center;
+}
+.alignment {
+    border-top: 0.2rem solid black;
+    border-bottom: 0.2rem solid black;
+    text-align: center;
+}
+.classLvl {
+    border-top: 0.2rem solid black;
+    border-right: 0.2rem solid black;
+    border-bottom: 0.2rem solid black;
+    text-align: center;
+}
+.col-4,
+.col-sm-4,
+.col-md-4,
+.col-lg-4,
+.col-xl-4 {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}

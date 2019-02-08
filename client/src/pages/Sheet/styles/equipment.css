@@ -1,0 +1,80 @@
+#squareTV8 {
+    margin: auto;
+    margin-top: 1rem;
+    margin-left: 1rem;
+    width: 17rem;
+    height: 20rem;
+    background: #c7b48c;
+    position: relative;
+    -moz-border-radius: 0.625rem;
+    -webkit-border-radius: 0.625rem;
+    border-radius: 0.625rem;
+}
+
+#rectangle2 {
+position: relative;
+top: 1.5rem;
+left: 2rem;
+width: 15rem;
+height: 6.5rem;
+background: #684a2e;
+}
+#rectangle3 {
+position: relative;
+top: 1.5rem;
+left: 2rem;
+width: 15rem;
+height: 2.25rem;
+background: #aa8259;
+}
+#rectangle4 {
+position: absolute;
+top: 1.5rem;
+left: 2rem;
+width: 3.6rem;
+height: 2.25rem;
+background: #aa8259;
+}
+#rectangle5 {
+position: absolute;
+top: 1.5rem;
+left: 0rem;
+width: 3.6rem;
+height: 2.25rem;
+background: #AA8226;
+}
+#rectangle6 {
+position: absolute;
+top: 1.5rem;
+left: -2rem;
+width: 3.6rem;
+height: 2.25rem;
+background: #c7b48c;
+}
+#rectangle7 {
+position: relative;
+top: 3.5rem;
+left: 2rem;
+width: 3.6rem;
+height: 2.25rem;
+background: #aa8259;
+}
+#rectangle8 {
+position: relative;
+top: 3.5rem;
+left: 0rem;
+width: 3.6rem;
+height: 2.25rem;
+background: #AA8226;
+}
+#rectangle9 {
+position: relative;
+top: 3.5rem;
+left: -2rem;
+width: 3.6rem;
+height: 2.25rem;
+background: #c7b48c;
+}
+.space {
+    margin-top: 1.75rem;
+}

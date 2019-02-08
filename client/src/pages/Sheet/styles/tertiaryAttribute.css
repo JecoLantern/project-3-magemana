@@ -1,0 +1,37 @@
+#squareTV2 {
+    width: 8.5rem;
+    height: 2.25rem;
+    background: #5b3624;
+    position: relative;
+    -moz-border-radius: 0.625rem;
+    -webkit-border-radius: 0.625rem;
+    border-radius: 0.625rem;
+}
+#rectangleRounded2 {
+    width: 2.25rem;
+    height: 2.25rem;
+    background: #c7b48c;
+    position: relative;
+    -moz-border-radius: 0.625rem;
+    -webkit-border-radius: 0.625rem;
+    border-radius: 0.625rem;
+}
+#squareTV3 {
+    margin-top: 1rem;
+    width: 8.5rem;
+    height: 2.25rem;
+    background: #5b3624;
+    position: relative;
+    -moz-border-radius: 0.625rem;
+    -webkit-border-radius: 0.625rem;
+    border-radius: 0.625rem;
+}
+#rectangleRounded3 {
+    width: 2.25rem;
+    height: 2.25rem;
+    background: #c7b48c;
+    position: relative;
+    -moz-border-radius: 0.625rem;
+    -webkit-border-radius: 0.625rem;
+    border-radius: 0.625rem;
+}

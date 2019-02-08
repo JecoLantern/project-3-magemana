@@ -1,0 +1,37 @@
+#rectangle {
+    width: 5.5rem;
+    height: 2.25rem;
+    background: #5b3624;
+}
+#squareTV {
+    width: 5.5rem;
+    height: 80px;
+    background: #aa8259;
+    position: relative;
+    -moz-border-radius: 0.625rem;
+    -webkit-border-radius: 0.625rem;
+    border-radius: 0.625rem;
+}
+#rectangleRounded {
+    width: 5.5rem;
+    height: 2.25rem;
+    background: #c7b48c;
+    position: relative;
+    -moz-border-radius: 0.625rem;
+    -webkit-border-radius: 0.625rem;
+    border-radius: 0.625rem;
+}
+#oval {
+    width: 5.5rem;
+    height: 2.25rem;
+    background: #5b3624;
+    border-radius: 3.125rem / 3.125rem;
+}
+#circle {
+    width: 2.25rem;
+    height: 2.25rem;
+    background: #c7b48c;
+    border-radius: 3.125rem / 3.125rem;
+    position: relative;
+    right: -3.25rem;
+}
