@@ -165,9 +165,21 @@ class CharacterSheet extends Component{
                     </Col>
                     <Col size="6, sm-6, md-6, lg-6, xl-6">
                     <Row>
-                        <VitalBlock></VitalBlock>
-                        <VitalBlock></VitalBlock>
-                        <VitalBlock></VitalBlock>
+                        <VitalBlock>
+                            <div id="hexagon1"><h6 className="hexagonTxt">ARMOR CLASS</h6>
+                                <div id="hexagon2"><h6 className="hexagonTxt2">{this.state.CharModel.armorClass}</h6></div>
+                            </div>
+                        </VitalBlock>
+                        <VitalBlock>
+                            <div id="hexagon1"><h6 className="hexagonTxt">INITIATIVE</h6>
+                                <div id="hexagon2"><h6 className="hexagonTxt2">{this.state.CharModel.initiative}</h6></div>
+                            </div>
+                        </VitalBlock>
+                        <VitalBlock>
+                            <div id="hexagon1"><h6 className="hexagonTxt">SPEED</h6>
+                                <div id="hexagon2"><h6 className="hexagonTxt2">{this.state.CharModel.speed}</h6></div>
+                            </div>
+                        </VitalBlock>
                         <TertiaryAttribute></TertiaryAttribute>
                     </Row>
                     </Col>
