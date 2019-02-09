@@ -1,9 +1,14 @@
 import React from 'react';
 
-export default props => (
+const ListItem = props => (
 
-    <li className="character" value={props._id} onClick={props.onClick}>
-        <div>{props.name}<small>{props.lvl}</small></div>
+    <li className="character">
+        <button className="characterBtn" value={props._id} onClick={props.onClick}> 
+            <strong>{props.name}  </strong>
+            <small>Level: {props.lvl}</small>
+        </button>
     </li>
 
 )
+
+export default ListItem;

@@ -135,12 +135,12 @@ class CharacterGen {
                 if (starting_proficiencie_options) {
                     let startProfOp = starting_proficiencie_options.map(el => el.name)
                     var startOps = this.arrayRandSelect(startProfOp, starting_proficiencie_options.choose)
-                    this.proficiencies = [...this.proficiencies, startOps]
+                    this.proficiencies = [...this.proficiencies, ...startOps]
                 }
                 if(starting_proficiencies){
                     this.proficiencies = [
                         ...this.proficiencies,
-                        starting_proficiencies.map(el => el.name)
+                        ...starting_proficiencies.map(el => el.name)
                     ]
                 }
                 ability_bonuses.map(el => {
@@ -167,9 +167,9 @@ class CharacterGen {
                 const push = {...this}
                 push.user_Id = res.data.user._id
                 console.log("heres your push", push)
-                axios.post("/api/c/charsheet", push)
+                axios.post("/api/c/charsheet",{...push})
                     .then(response => console.log("heres your sign",response))
-                    .catch(err =>  console.log(err))
+                    .catch(err =>  console.log(err.response))
             })
     }
 

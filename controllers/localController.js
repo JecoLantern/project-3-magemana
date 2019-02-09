@@ -17,10 +17,10 @@ module.exports ={
       charCreate: function (req, res) {
         db.CharModel
           .create(req.body)
-          .then(dbModel => {
-            return db.User.findByIdAndUpdate({_id:req.user}, { $push: {characters: dbModel._id
-            }})
-          })
+          // .then(dbModel => {
+          //   return db.user.findByIdAndUpdate({_id:req.user.local._id}, { $push: {characters: dbModel._id
+          //   }})
+          // })
           .then(dbModel => res.json(dbModel))
           .catch(err => res.status(422).json(err));
       },

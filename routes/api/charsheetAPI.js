@@ -12,4 +12,4 @@ router
   .put(localController.update)
   .delete(localController.remove);
 
-module.exports = router;
+module.exports = router; 
