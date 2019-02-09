@@ -3,7 +3,7 @@ const Schema = mongoose.Schema;
 
 const charSchema = new Schema({
     //charstuff
-    user_id: String,
+    user_Id: String,
     name: { type: String, required: true },
     level: { type: Number, required: true },
     race: { type: String, required: true },
@@ -196,10 +196,10 @@ const charSchema = new Schema({
 });
 
 // Delete before deploy
-const fakedata = require("../client/src/pages/Sheet/util/fakeSheet.json")
-mongoose.model("charSchema", charSchema).deleteMany({}).then(() => {
-    mongoose.model("charSchema", charSchema).insertMany(fakedata, function (err) { console.log(err + " errors. Data inserted!") })
-})
+// const fakedata = require("../client/src/pages/Sheet/util/fakeSheet.json")
+// mongoose.model("charSchema", charSchema).deleteMany({}).then(() => {
+//     mongoose.model("charSchema", charSchema).insertMany(fakedata, function (err) { console.log(err + " errors. Data inserted!") })
+// })
 
 
 

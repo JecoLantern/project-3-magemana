@@ -1,42 +1,34 @@
 import React, { Component } from 'react';
-import axios from 'axios';
 import { Redirect } from 'react-router-dom';
 import ListItem from "./components/Character";
 import Header from "./components/Header";
 
+import axios from 'axios';
 
 class CharSelect extends Component {
     state = {
         redirectTo: null,
+        characters: []
     }
 
     // componentDidMount = () =>{
     //     return this.HandleList
     // }
 
-    handleNewAdventurer = event =>{
-        this.setState({redirectTo: "/survey"})
-    }
-
-    HandleList = () => {
-        //here you will pull formaxios to get the useres list of charactersa
+    componentDidMount() {
         axios.get("/api/c/charsheet")
             .then(res => {
-                if(res.length > 0){
-                    console.log(res)
-                    res.map(char => {
-                        return (<ListItem
-                            _id={char._id}
-                            onClick={this.handelSelect}
-                            name={char.name}
-                            lvl={char.level}
-                        />)
-                    })
-                } else {
-                    return <h2>No Adventurers found</h2>
-                }
+                const characters = res.data
+                this.setState({characters:characters})
             })
+
     }
+
+    handleNewAdventurer = event => {
+        this.setState({ redirectTo: "/survey" })
+    }
+
+
 
     render() {
         if (this.state.redirectTo) {
@@ -45,10 +37,18 @@ class CharSelect extends Component {
             return (
                 <div>
                     <Header
-                        onClick = {this.handleNewAdventurer}
+                        onClick={this.handleNewAdventurer}
                     />
                     <ul>
-                        {this.HandleList}
+                        {this.state.characters.length ? this.state.characters.map(char =>{
+                                    return <ListItem
+                                        name = {char.name} 
+                                        key = {char._id} 
+                                        _id = {char._id}
+                                        onClick = {this.handleSelect}
+                                        lvl ={char.level} 
+                                    />
+                        }): <h4>No Characters Found</h4>}
                     </ul>
                 </div>
             )
