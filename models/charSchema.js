@@ -3,11 +3,11 @@ const Schema = mongoose.Schema;
 
 const charSchema = new Schema({
     //charstuff
-    user_id: { type:String},
+    user_id: String,
     name: { type: String, required: true },
     level: { type: Number, required: true },
     race: { type: String, required: true },
-    subrace: { type: String, required: true },
+    subrace: String,
     gender: String,
     alignment: String,
     class: {
@@ -15,13 +15,13 @@ const charSchema = new Schema({
     },
     subclass: String,
     isSpellcaster: Boolean,
-    classFeatures: [
-        { featureName: String, fUrl: String }
+    traits: [
+        { name: String, url: String }
     ],
     //vitals
-    armorClass: { type: Number, required: true, default:10 },
+    armorClass: { type: Number, required: true, default: 0 },
     health: { type: Number, required: true, default:6 },
-    hitDice: { type: String, required: true, default:6 },
+    hitDice: { type: Number, required: true, default:6 },
     speed: { type: Number, required: true, default:30 },
     initiative: { type: Number, required: true, default:0 },
     passivePerception: { type: Number, required: true, default: 10},
@@ -64,121 +64,118 @@ const charSchema = new Schema({
     skills: [
         {
             skillName: { type: String, default: "Acrobatics", required: true },
-            val: { type: Number, default: 10, required: true },
+            val: { type: Number, default: 0, required: true },
             parentAttr: { type: String, default: "Dex", required: true },
             isProficient: { type: Boolean, required: true, default: false }
         },
         {
             skillName: { type: String, default: "Animal Handling", required: true },
-            val: { type: Number, default: 10, required: true },
+            val: { type: Number, default: 0, required: true },
             parentAttr: { type: String, default: "Wis", required: true },
             isProficient: { type: Boolean, required: true, default: false }
         },
         {
             skillName: { type: String, default: "Arcana", required: true },
-            val: { type: Number, default: 10, required: true },
+            val: { type: Number, default: 0, required: true },
             parentAttr: { type: String, default: "Int", required: true },
             isProficient: { type: Boolean, required: true, default: false }
         },
         {
             skillName: { type: String, default: "Athletics", required: true },
-            val: { type: Number, default: 10, required: true },
+            val: { type: Number, default: 0, required: true },
             parentAttr: { type: String, default: "Str", required: true },
             isProficient: { type: Boolean, required: true, default: false }
         },
         {
             skillName: { type: String, default: "Deception", required: true },
-            val: { type: Number, default: 10, required: true },
+            val: { type: Number, default: 0, required: true },
             parentAttr: { type: String, default: "Cha", required: true },
             isProficient: { type: Boolean, required: true, default: false }
         },
         {
             skillName: { type: String, default: "History", required: true },
-            val: { type: Number, default: 10, required: true },
+            val: { type: Number, default: 0, required: true },
             parentAttr: { type: String, default: "Int", required: true },
             isProficient: { type: Boolean, required: true, default: false }
         },
         {
             skillName: { type: String, default: "Insight", required: true },
-            val: { type: Number, default: 10, required: true },
+            val: { type: Number, default: 0, required: true },
             parentAttr: { type: String, default: "Wis", required: true },
             isProficient: { type: Boolean, required: true, default: false }
         },
         {
             skillName: { type: String, default: "Intimidation", required: true },
-            val: { type: Number, default: 10, required: true },
+            val: { type: Number, default: 0, required: true },
             parentAttr: { type: String, default: "Cha", required: true },
             isProficient: { type: Boolean, required: true, default: false }
         },
         {
             skillName: { type: String, default: "Investigation", required: true },
-            val: { type: Number, default: 10, required: true },
+            val: { type: Number, default: 0, required: true },
             parentAttr: { type: String, default: "Int", required: true },
             isProficient: { type: Boolean, required: true, default: false }
         },
         {
             skillName: { type: String, default: "Medicine", required: true },
-            val: { type: Number, default: 10, required: true },
+            val: { type: Number, default: 0, required: true },
             parentAttr: { type: String, default: "Wis", required: true },
             isProficient: { type: Boolean, required: true, default: false }
         },
         {
             skillName: { type: String, default: "Nature", required: true },
-            val: { type: Number, default: 10, required: true },
+            val: { type: Number, default: 0, required: true },
             parentAttr: { type: String, default: "Int", required: true },
             isProficient: { type: Boolean, required: true, default: false }
         },
         {
             skillName: { type: String, default: "Perception", required: true },
-            val: { type: Number, default: 10, required: true },
+            val: { type: Number, default: 0, required: true },
             parentAttr: { type: String, default: "Wis", required: true },
             isProficient: { type: Boolean, required: true, default: false }
         },
         {
             skillName: { type: String, default: "Performance", required: true },
-            val: { type: Number, default: 10, required: true },
+            val: { type: Number, default: 0, required: true },
             parentAttr: { type: String, default: "Cha", required: true },
             isProficient: { type: Boolean, required: true, default: false }
         },
         {
             skillName: { type: String, default: "Persuasion", required: true },
-            val: { type: Number, default: 10, required: true },
+            val: { type: Number, default: 0, required: true },
             parentAttr: { type: String, default: "Cha", required: true },
             isProficient: { type: Boolean, required: true, default: false }
         },
         {
             skillName: { type: String, default: "Religion", required: true },
-            val: { type: Number, default: 10, required: true },
+            val: { type: Number, default: 0, required: true },
             parentAttr: { type: String, default: "Int", required: true },
             isProficient: { type: Boolean, required: true, default: false }
         },
         {
             skillName: { type: String, default: "Sleight of Hand", required: true },
-            val: { type: Number, default: 10, required: true },
+            val: { type: Number, default: 0, required: true },
             parentAttr: { type: String, default: "Dex", required: true },
             isProficient: { type: Boolean, required: true, default: false }
         },
         {
             skillName: { type: String, default: "Stealth", required: true },
-            val: { type: Number, default: 10, required: true },
+            val: { type: Number, default: 0, required: true },
             parentAttr: { type: String, default: "Dex", required: true },
             isProficient: { type: Boolean, required: true, default: false }
         },
         {
             skillName: { type: String, default: "Survival", required: true },
-            val: { type: Number, default: 10, required: true },
+            val: { type: Number, default: 0, required: true },
             parentAttr: { type: String, default: "Wis", required: true },
             isProficient: { type: Boolean, required: true, default: false }
         },
 
     ],
     //the rest
+    languages:[],
     proficiencies: {
-        modifier: { type: Number, required: true, default: 2 },
-        languages: [{ type: String, required: true, default: ["common"] }],
-        armor: [{ type: String }],
-        weapons: [{ type: String }],
-        tools: [{ type: String }],
+        
     },
     equipment: {
         mundane: [{ itemName: String, quantity: Number }],
