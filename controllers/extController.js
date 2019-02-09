@@ -53,7 +53,6 @@ module.exports = {
       }
     }
     axios.get(`http://dnd5eapi.co/api/classes/${index}`).then(resp => {
-      console.log(resp.data)
       res.json(resp.data)
     }).catch(err => {
       console.log(err)
@@ -110,7 +109,6 @@ module.exports = {
       }
     }
     axios.get(`http://dnd5eapi.co/api/subclasses/${index}`).then(resp => {
-      console.log(resp.data)
       res.json(resp.data)
     }).catch(err => {
       console.log(err)
@@ -156,7 +154,6 @@ module.exports = {
       }
     }
     axios.get(`http://dnd5eapi.co/api/races/${index}`).then(resp => {
-      console.log(resp.data)
       res.json(resp.data)
     }).catch(err => {
       console.log(err)

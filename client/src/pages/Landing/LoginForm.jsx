@@ -46,9 +46,7 @@ class LoginBox extends Component {
     event.preventDefault()
     console.log('handleSubmit')
     this._login(this.state.username, this.state.password)
-    this.setState({
-      redirectTo: '/select'
-    })
+
   }
 
   render() {

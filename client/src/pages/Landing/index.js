@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { Redirect } from 'react-router-dom'
 import '../Landing/_loginSty.css';
 import FadeTransition from "../transitions/fadeTransitions.jsx";
 import LoginBox from "./LoginForm";
@@ -19,6 +18,7 @@ class Land extends Component {
     };
   }
 
+  
   _logout(event) {
     event.preventDefault()
     console.log('logging out')

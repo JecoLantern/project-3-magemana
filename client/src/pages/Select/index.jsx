@@ -1,13 +1,15 @@
 import React, { Component } from 'react'
-import Header from '../components/header'
-import Create from './create-task'
-import Tasks from './tasks'
+import { Redirect } from 'react-router-dom'
 
-import Deleteall from './delete-all'
+import Header from './components/header'
+import Create from './components/create-task'
+import Tasks from './components/tasks'
 
-import ModalAlert from '../../../components/Modal/modal'
+import Deleteall from './components/delete-all'
 
-import '../styles/App.css'
+import ModalAlert from '../../components/Modal/modal'
+
+import './styles/App.css'
 
 class Select extends Component {
   state = {
@@ -61,35 +63,39 @@ class Select extends Component {
     event.target.elements.singletask.value = ''
   }
   render() {
-    return (
-      <div>
-        <Header />
-        <Create
-          onSubmit={this.onSubmit}
-        />
-
-        {this.state.tasks.length > 0 ?
-
-          <Tasks
-            tasks={this.state.tasks}
-            deleteTask={this.deleteTask}
+    if (this.state.redirectTo) {
+      return <Redirect to={{ pathname: this.state.redirectTo }} />
+    } else {
+      return (
+        <div>
+          <Header />
+          <Create
+            onSubmit={this.onSubmit}
           />
-          : null
-        }
-        {this.state.tasks.length > 0 ?
-          <Deleteall
-            deleteAll={this.deleteAll}
-          />
-          : null
-        }
-        <ModalAlert
-          selectedTask={this.state.selectedTask}
-          closeModal={this.closeModal}
-        />
 
-      </div>
-    )
+          {this.state.tasks.length > 0 ?
+
+            <Tasks
+              tasks={this.state.tasks}
+              deleteTask={this.deleteTask}
+            />
+            : null
+          }
+          {this.state.tasks.length > 0 ?
+            <Deleteall
+              deleteAll={this.deleteAll}
+            />
+            : null
+          }
+          <ModalAlert
+            selectedTask={this.state.selectedTask}
+            closeModal={this.closeModal}
+          />
+
+        </div>
+      )
+    }
   }
 }
 
-export default Select;
+  export default Select;

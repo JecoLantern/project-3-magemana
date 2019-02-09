@@ -19,50 +19,38 @@ const charSchema = new Schema({
         { featureName: String, fUrl: String }
     ],
     //vitals
-    armorClass: { type: Number, required: true },
-    health: { type: Number, required: true },
-    hitDice: { type: String, required: true },
-    speed: { type: Number, required: true },
-    initiative: { type: Number, required: true },
-    passivePerception: { type: Number, required: true },
+    armorClass: { type: Number, required: true, default:10 },
+    health: { type: Number, required: true, default:6 },
+    hitDice: { type: String, required: true, default:6 },
+    speed: { type: Number, required: true, default:30 },
+    initiative: { type: Number, required: true, default:0 },
+    passivePerception: { type: Number, required: true, default: 10},
     //skills and atts
     attributes: [
 
         {
             attr: { type: String, default: "STR", required: true },
             val: { type: Number, default: 10, required: true },
-            mod: { type: Number, default: 0, required: true },
-
         },
         {
             attr: { type: String, default: "DEX", required: true },
             val: { type: Number, default: 10, required: true },
-            mod: { type: Number, default: 0, required: true },
-
         },
         {
             attr: { type: String, default: "CON", required: true },
             val: { type: Number, default: 10, required: true },
-            mod: { type: Number, default: 0, required: true },
-
         },
         {
             attr: { type: String, default: "INT", required: true },
             val: { type: Number, default: 10, required: true },
-            mod: { type: Number, default: 0, required: true },
-
         },
         {
             attr: { type: String, default: "WIS", required: true },
             val: { type: Number, default: 10, required: true },
-            mod: { type: Number, default: 0, required: true },
-
         },
         {
             attr: { type: String, default: "CHA", required: true },
             val: { type: Number, default: 10, required: true },
-            mod: { type: Number, default: 0, required: true },
-
         }
     ],
     savingThrows: [
