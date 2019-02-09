@@ -77,12 +77,90 @@ class CharacterSheet extends Component{
                 <Row>
                     <Col size="6, sm-6, md-6, lg-6, xl-6">
                         <Row>
-                            <AttributeBlock></AttributeBlock>
-                            <AttributeBlock></AttributeBlock>
-                            <AttributeBlock></AttributeBlock>
-                            <AttributeBlock></AttributeBlock>
-                            <AttributeBlock></AttributeBlock>
-                            <AttributeBlock></AttributeBlock>
+                            <AttributeBlock>
+                                <div>
+                                    {/* <div id="rectangle">{this.state.CharModel.attributes[0].attr}</div> */}
+                                    <div id="rectangle">ATTR</div>
+                                    <div id="squareTV">
+                                        {/* <div id="rectangleRounded">{this.state.CharModel.attributes[0].val}</div> */}
+                                        <div id="rectangleRounded">VALUE</div>
+                                        (MOD)
+                                    </div>
+                                    <div id="oval">SAVE
+                                        <div id="circle"></div>
+                                    </div>
+                                </div>
+                            </AttributeBlock>
+                            <AttributeBlock>
+                                <div>
+                                    {/* <div id="rectangle">{this.state.CharModel.attributes[1].attr}</div> */}
+                                    <div id="rectangle">ATTR</div>
+                                    <div id="squareTV">
+                                        {/* <div id="rectangleRounded">{this.state.CharModel.attributes[1].val}</div> */}
+                                        <div id="rectangleRounded">VALUE</div>
+                                        (MOD)
+                                    </div>
+                                    <div id="oval">SAVE
+                                        <div id="circle"></div>
+                                    </div>
+                                </div>
+                            </AttributeBlock>
+                            <AttributeBlock>
+                                <div>
+                                    {/* <div id="rectangle">{this.state.CharModel.attributes[2].attr}</div> */}
+                                    <div id="rectangle">ATTR</div>
+                                    <div id="squareTV">
+                                        {/* <div id="rectangleRounded">{this.state.CharModel.attributes[2].val}</div> */}
+                                        <div id="rectangleRounded">VALUE</div>
+                                        (MOD)
+                                    </div>
+                                    <div id="oval">SAVE
+                                        <div id="circle"></div>
+                                    </div>
+                                </div>
+                            </AttributeBlock>
+                            <AttributeBlock>
+                                <div>
+                                    {/* <div id="rectangle">{this.state.CharModel.attributes[3].attr}</div> */}
+                                    <div id="rectangle">ATTR</div>
+                                    <div id="squareTV">
+                                        {/* <div id="rectangleRounded">{this.state.CharModel.attributes[3].val}</div> */}
+                                        <div id="rectangleRounded">VALUE</div>
+                                        (MOD)
+                                    </div>
+                                    <div id="oval">SAVE
+                                        <div id="circle"></div>
+                                    </div>
+                                </div>
+                            </AttributeBlock>
+                            <AttributeBlock>
+                                <div>
+                                    {/* <div id="rectangle">{this.state.CharModel.attributes[4].attr}</div> */}
+                                    <div id="rectangle">ATTR</div>
+                                    <div id="squareTV">
+                                        {/* <div id="rectangleRounded">{this.state.CharModel.attributes[4].val}</div> */}
+                                        <div id="rectangleRounded">VALUE</div>
+                                        (MOD)
+                                    </div>
+                                    <div id="oval">SAVE
+                                        <div id="circle"></div>
+                                    </div>
+                                </div>
+                            </AttributeBlock>
+                            <AttributeBlock>
+                                <div>
+                                    {/* <div id="rectangle">{this.state.CharModel.attributes[5].attr}</div> */}
+                                    <div id="rectangle">ATTR</div>
+                                    <div id="squareTV">
+                                        {/* <div id="rectangleRounded">{this.state.CharModel.attributes[5].val}</div> */}
+                                        <div id="rectangleRounded">VALUE</div>
+                                        (MOD)
+                                    </div>
+                                    <div id="oval">SAVE
+                                        <div id="circle"></div>
+                                    </div>
+                                </div>
+                            </AttributeBlock>
                         </Row>
                     </Col>
                     <Col size="6, sm-6, md-6, lg-6, xl-6">
