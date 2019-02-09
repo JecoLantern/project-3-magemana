@@ -56,7 +56,6 @@ class CharSelect extends Component {
                                         <strong>
                                             {char.name}
                                             {char.level}
-                                            {/* onClick={this.handleSelect} */}
                                         </strong>
                                     </Link>
                                     <DeleteBtn onClick={() => this.deleteMyChar(char._id)} />

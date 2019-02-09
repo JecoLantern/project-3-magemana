@@ -8,21 +8,45 @@
     left: 1.5rem;
     margin-top: -3.8125rem;
 }
-.hexagonTxt {
+.armorclassTxt {
     transform: rotate(90deg);
     direction: ltr;
     position: relative;
-    top: 2rem;
+    top: 1.25rem;
     left: 2rem;
     color: white;
+    word-wrap: break-word;
+    color: wheat;
+    text-align: center;
+}
+.initiativeTxt {
+    transform: rotate(90deg);
+    direction: ltr;
+    position: relative;
+    top: 3rem;
+    left: 2rem;
+    color: white;
+    word-wrap: break-word;
+    color: wheat;
+}
+.speedTxt {
+    transform: rotate(90deg);
+    direction: ltr;
+    position: relative;
+    top: 3.75rem;
+    left: 2rem;
+    color: white;
+    word-wrap: break-word;
+    color: wheat;
 }
 .hexagonTxt2 {
     transform: rotate(90deg);
     direction: ltr;
     position: relative;
-    top: 1.25rem;
+    top: 0.75rem;
     color: white;
     font-size: 2.5rem;
+    text-align: center;
 }
 #hexagon1:before {
     content: "";
@@ -69,6 +93,39 @@
     border-bottom: 1.27rem solid #c7b48c;
 }
 #hexagon2:after {
+    content: "";
+    position: absolute;
+    bottom: -1.25rem;
+    left: 0;
+    width: 0;
+    height: 0;
+    border-left: 2.9rem solid transparent;
+    border-right: 1.25rem solid transparent;
+    border-top: 1.27rem solid #c7b48c;
+    z-index: -1;
+}
+#hexagon2armorclass {
+    transform: rotate(0deg);
+    width: 4.1rem;
+    height: 4.25rem;
+    background: #c7b48c;
+    position: relative;
+    top: 2.5rem;
+    left: 0rem;
+    margin-top: -4.8125rem;
+}
+#hexagon2armorclass:before {
+    content: "";
+    position: absolute;
+    top: -1.25rem;
+    left: 0;
+    width: 0;
+    height: 0;
+    border-left: 2.9rem solid transparent;
+    border-right: 1.25rem solid transparent;
+    border-bottom: 1.27rem solid #c7b48c;
+}
+#hexagon2armorclass:after {
     content: "";
     position: absolute;
     bottom: -1.25rem;
