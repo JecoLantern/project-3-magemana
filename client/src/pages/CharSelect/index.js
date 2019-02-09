@@ -11,17 +11,18 @@ class CharSelect extends Component {
         characters: []
     }
 
-    // componentDidMount = () =>{
-    //     return this.HandleList
-    // }
 
     componentDidMount() {
         axios.get("/api/c/charsheet")
             .then(res => {
                 const characters = res.data
-                this.setState({characters:characters})
+                this.setState({ characters: characters })
             })
+    }
 
+    handleSelect = event =>{
+       const _id = event.target.value
+       //^^ the id of the character youre going to view 
     }
 
     handleNewAdventurer = event => {
@@ -40,15 +41,15 @@ class CharSelect extends Component {
                         onClick={this.handleNewAdventurer}
                     />
                     <ul>
-                        {this.state.characters.length ? this.state.characters.map(char =>{
-                                    return <ListItem
-                                        name = {char.name} 
-                                        key = {char._id} 
-                                        _id = {char._id}
-                                        onClick = {this.handleSelect}
-                                        lvl ={char.level} 
-                                    />
-                        }): <h4>No Characters Found</h4>}
+                        {this.state.characters.length ? this.state.characters.map(char => {
+                            return <ListItem
+                                name={char.name}
+                                key={char._id}
+                                _id={char._id}
+                                onClick={this.handleSelect}
+                                lvl={char.level}
+                            />
+                        }) : <h4>No Characters Found</h4>}
                     </ul>
                 </div>
             )
