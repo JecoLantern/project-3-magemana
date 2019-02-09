@@ -36,8 +36,8 @@ class CharacterSheet extends Component{
     }
 
     componentDidMount() {
-        // API.getCharSheet(this.props.match.params.id)
-        API.getCharSheet()
+        API.getCharSheet(this.props.match.params.id)
+        // API.getCharSheet()
             .then(res => {
                 console.log(res.data[0].race)
                 this.setState({ CharModel: res.data[0]})
