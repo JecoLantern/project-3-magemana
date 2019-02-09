@@ -23,12 +23,12 @@ export default class App extends Component {
         })
         .catch((error) => console.error('axios error', error));
   }
-  componentDidUpdate = (prevProps, prevState) => {
-      if(prevState.tasks.length !== this.state.tasks.length) {
-          const json = JSON.stringify(this.state.tasks)
-          localStorage.setItem('tasks', json)
-      }
-  }
+  // componentDidUpdate = (prevProps, prevState) => {
+  //     if(prevState.tasks.length !== this.state.tasks.length) {
+  //         const json = JSON.stringify(this.state.tasks)
+  //         localStorage.setItem('tasks', json)
+  //     }
+  // }
 
   deleteTask = (taskTodelete) => {
     this.setState((prevState) => ({
@@ -92,4 +92,3 @@ export default class App extends Component {
   }
 }
 
-  export default Select;

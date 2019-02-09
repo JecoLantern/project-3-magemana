@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Landing from './pages/Landing'
 import Sheet from './pages/Sheet'
 import Survey from './pages/Survey'
-import Select from './pages/CharSelect'
+import Select from './pages/Select'
 const fof = () => <h1>nothing found</h1>
 class App extends Component {
     render() {
