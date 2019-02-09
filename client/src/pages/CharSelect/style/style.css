@@ -1,0 +1,40 @@
+.character{
+    margin-left: 39%;
+    margin-bottom: 2%;
+}
+
+.characterBtn{
+    width: 300px;
+}
+
+.charHolder{
+    max-height: 550px;
+    overflow-Y: scroll;
+}
+
+.charHolder::-webkit-scrollbar {
+    background-color: #0000;
+    width: 12px;
+    border-radius: 16px;     
+    padding-right: 35%;
+}
+
+.charHolder::-webkit-scrollbar:hover {
+    background-color: whitesmoke;
+}
+
+.charHolder::-webkit-scrollbar-thumb {
+    background-color: black;
+    border-radius: 16px;
+}
+
+.charHolder::-webkit-scrollbar-thumb:hover {
+    background-color: lighten(#494949, 20);
+}
+
+
+.fa-close {
+    
+    cursor: pointer;
+    color: #f03f3f;
+}

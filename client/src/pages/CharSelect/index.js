@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Redirect } from 'react-router-dom';
 import ListItem from "./components/Character";
 import Header from "./components/Header";
-
+import './style/style.css'
 import axios from 'axios';
 
 class CharSelect extends Component {
@@ -39,7 +39,7 @@ class CharSelect extends Component {
                     <Header
                         onClick={this.handleNewAdventurer}
                     />
-                    <ul>
+                    <ul className="charHolder">
                         {this.state.characters.length ? this.state.characters.map(char =>{
                                     return <ListItem
                                         name = {char.name} 
@@ -48,7 +48,7 @@ class CharSelect extends Component {
                                         onClick = {this.handleSelect}
                                         lvl ={char.level} 
                                     />
-                        }): <h4>No Characters Found</h4>}
+                        }): <h4 className="charindex">No Characters Found</h4>}
                     </ul>
                 </div>
             )
