@@ -7,8 +7,6 @@ class CharacterGen {
         this.level = 1;
         this.class = className;
         this.alignment = alignment;
-        this.hitDice = 0;
-        this.speed = 30;
         this.attributes = [
             { attr: "STR", val: 10 },
             { attr: "DEX", val: 10 },
@@ -81,43 +79,46 @@ class CharacterGen {
     //must run these before generating misc stats
     getClassData() {
         //based on the selected Class it will set the character state to the optimized selections for this class, including attribute array, selected skills, proficiencies, and equipment
-        axios.get(`/api/e/classes/${this.className}`)
+        axios.get(`/api/e/dnd/classes/${this.class}`)
             .then(res => {
-                const {
+                let {
                     proficiencies,
                     proficiency_choices,
                     saving_throws,
                     hit_die,
-                } = res;
+                } = res.data;
 
-
+                
+                //need to figure out how to translate this data into our object.
+                let saveThrows = saving_throws.map(el => el.name);
+                //set the isProficient property of the savethrow at the the index of the respective save
+                let tempSave = this.savingThrows.map(save => {
+                    if (save.name === saveThrows[0]) save.isProficient = true;
+                    if (save.name === saveThrows[1]) save.isProficient = true;
+                    return save
+                })
+                
                 let profChoice = proficiency_choices[0].from.map(el => el.name);
 
                 let profChoiceAmt = proficiency_choices[0].choose;
-
-                //need to figure out how to translate this data into our object.
-                let saveThrows = saving_throws.map(el => el.name);
-                
-                let tempSave = [...this.savingThrows]
-                //set the isProficient property of the savethrow at the the index of the respective save
-                this.savingThrows = tempSave.map(save => {
-                    if (save === saveThrows[0]) save.isProficient = true;
-                    if (save === saveThrows[1]) save.isProficient = true;
-                    return save
+                let tempProf = proficiencies.map(el => {
+                    return el.name
                 })
 
+                this.savingThrows = tempSave;
                 this.hitDice = hit_die;
-                this.skillProficiencies = [...this.skillProficiencies, this.arrayRandSelect(profChoice, profChoiceAmt)]
-                this.proficiencies = [...this.proficiencies, proficiencies.map(el => {
-                    return el.name
-                })]
+                this.skillProficiencies = this.arrayRandSelect(profChoice, profChoiceAmt)
+                this.proficiencies = [ ...tempProf]
+
+                // callback
+                this.getRaceData();
             }).catch(err => console.log(err))
 
     };
 
     getRaceData() {
         //based on the selected race it will set the state of the character to the optimized selections for each racial choice
-        axios.get(`/api/e/dnd/races/${this.race}`)
+        axios.get(`/api/e/dnd/race/${this.race}`)
             .then(data => {
                 const {
                     speed,
@@ -127,14 +128,20 @@ class CharacterGen {
                     starting_proficiencie_options,
                     languages,
                     traits
-                } = data;
+                } = data.data;
 
                 // subraces
 
                 if (starting_proficiencie_options) {
                     let startProfOp = starting_proficiencie_options.map(el => el.name)
                     var startOps = this.arrayRandSelect(startProfOp, starting_proficiencie_options.choose)
-                    this.proficiencies = [...this.proficiencies, startOps]
+                    this.proficiencies = [...this.proficiencies, ...startOps]
+                }
+                if(starting_proficiencies){
+                    this.proficiencies = [
+                        ...this.proficiencies,
+                        ...starting_proficiencies.map(el => el.name)
+                    ]
                 }
                 ability_bonuses.map(el => {
                     if (el !== 0) {
@@ -144,23 +151,31 @@ class CharacterGen {
                     else return false;
                 })
 
-                this.traits = [...this.traits, traits]
-                this.languages = [...this.languages, languages.map(el => el.name)];
+                this.traits = [...traits]
+                this.languages = languages.map(el => el.name);
                 this.speed = speed;
                 this.size = size;
-                this.proficiencies = [
-                    ...this.proficiencies,
-                    starting_proficiencies.map(el => el.name)
-                ]
+                this.push()
             }).catch(err => console.log(err))
 
     };
 
+    push(){
+        axios.get("/auth/user")
+            .then(res => {
+                console.log(res.data)
+                const push = {...this}
+                push.user_Id = res.data.user._id
+                console.log("heres your push", push)
+                axios.post("/api/c/charsheet",{...push})
+                    .then(response => console.log("heres your sign",response))
+                    .catch(err =>  console.log(err.response))
+            })
+    }
+
+
     build() {
-        this.getClassData();
-        this.getRaceData();
-        console.log(this)
-        // this.handleFinalSubmitPush();
+        this.getClassData()  
     }
 }
 

@@ -1,10 +1,10 @@
 .ansWrap {
-    height: 20vh;
+    height: 17vh;
     overflow: auto;
     align-content: center
 }
 #name{
-    height: 10vh
+    height: 7vh
 }
 .ansWrap, .questionWrap{
     padding: 9px;
@@ -15,5 +15,6 @@ input.radBut {
 }
 .survey {
     background-color: blanchedalmond;
-    padding: 2rem
+    padding: 2rem;
+    margin: 1vh
 }

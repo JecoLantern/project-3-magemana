@@ -35,8 +35,8 @@ export default {
         }
     },
 
-    proficiencieBonus() {
-        switch (this.level) {
+    proficiencieBonus(char) {
+        switch (char.level) {
             case 1 || 2 || 3 || 4:
                 return 2;
             case 5 || 6 || 7 || 8:

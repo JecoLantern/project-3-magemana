@@ -1,4 +1,6 @@
 import React, { Component } from 'react'
+import { Redirect } from 'react-router-dom'
+
 import Header from './components/header'
 import Create from './components/create-task'
 import Tasks from './components/tasks'
@@ -55,6 +57,7 @@ export default class App extends Component {
   }
 
   render() {
+<<<<<<< HEAD
     return (
       <div>
          <Header />
@@ -85,3 +88,41 @@ export default class App extends Component {
     )
   }
 }
+=======
+    if (this.state.redirectTo) {
+      return <Redirect to={{ pathname: this.state.redirectTo }} />
+    } else {
+      return (
+        <div>
+          <Header />
+          <Create
+            onSubmit={this.onSubmit}
+          />
+
+          {this.state.tasks.length > 0 ?
+
+            <Tasks
+              tasks={this.state.tasks}
+              deleteTask={this.deleteTask}
+            />
+            : null
+          }
+          {this.state.tasks.length > 0 ?
+            <Deleteall
+              deleteAll={this.deleteAll}
+            />
+            : null
+          }
+          <ModalAlert
+            selectedTask={this.state.selectedTask}
+            closeModal={this.closeModal}
+          />
+
+        </div>
+      )
+    }
+  }
+}
+
+  export default Select;
+>>>>>>> 1c967c0516ce825ab9f077ea38fd8b269f25ae83
