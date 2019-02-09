@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import { Col, Row, Container } from "../../components/Grid";
 import "../Sheet/_charSheetSty.css";
 import API from "./util/API.js";
-// import Wrapper from "../../components/Wrapper";
 
 //Importing CharSheet Components
 import Logo from "./components/logo";
@@ -36,11 +35,11 @@ class CharacterSheet extends Component{
     }
 
     componentDidMount() {
-        // API.getCharSheet(this.props.match.params.id)
-        API.getCharSheet()
+        API.getCharSheet(this.props.match.params.id)
+        // API.getCharSheet()
             .then(res => {
-                console.log(res.data[0].race)
-                this.setState({ CharModel: res.data[0]})
+                console.log(res.data)
+                this.setState({ CharModel: res.data})
             })
             .catch(err => console.log(err));
     }
@@ -65,8 +64,7 @@ class CharacterSheet extends Component{
                             <h2>{this.state.CharModel.race}</h2>
                         </Race>
                         <Alignment>
-                            {/* <h2>{this.state.CharModel.alignment}</h2> */}
-                            <h2>Alignment</h2>
+                            <h2>{this.state.CharModel.alignment}</h2>
                         </Alignment>
                         <ClassLVL>
                             <h2>{this.state.CharModel.class} | {this.state.CharModel.level}</h2>

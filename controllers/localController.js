@@ -18,7 +18,7 @@ module.exports ={
         db.CharModel
           .create(req.body)
           .then(dbModel => {
-            return db.User.findByIdAndUpdate({_id:req.user}, { $push: {characters: dbModel._id
+            return db.user.findByIdAndUpdate({_id:req.user.local._id}, { $push: {characters: dbModel._id
             }})
           })
           .then(dbModel => res.json(dbModel))
@@ -39,19 +39,19 @@ module.exports ={
       },
       // view my profile and get all my character
       findAndPopulateUser: function (req, res) {
-        db.User.findOne({user_id: req.user})
+        db.User.findOne({user_id: req.user.local._id})
         .populate("characters")
         .then(data => res.json(data))
         .catch(err => res.status(442).json(err))
       },
       findAllCharByUserId: function (req, res) {
         console.log("req:", req.user)
-        db.CharModel.find({user_id: req.user})
+        db.CharModel.find({user_id: req.user.local._id})
         .then(data => res.json(data))
         .catch(err => res.status(442).json(err))
       },
       findCharByUserCharId: function (req, res) {
-        db.CharModel.findOne({user_id: req.user, _id:req.params.id})
+        db.CharModel.findOne({user_id: req.user.local._id, _id:req.params.id})
         .then(data => res.json(data))
         .catch(err => res.status(442).json(err))
       }

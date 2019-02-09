@@ -3,8 +3,8 @@ import axios from "axios";
 export default {
     // Get charsheet by id
     getCharSheet: function(id) {
-        // return axios.get("/api/c/charsheet/" + id);
-        return axios.get("/api/c/charsheet");
+        return axios.get("/api/c/charsheet/" + id);
+        // return axios.get("/api/c/charsheet");
     },
     // Get all charsheets
     getCharSheets: function() {
