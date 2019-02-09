@@ -57,38 +57,6 @@ export default class App extends Component {
   }
 
   render() {
-<<<<<<< HEAD
-    return (
-      <div>
-         <Header />
-        <Create 
-        onSubmit={this.onSubmit} 
-        />
-     
-        { this.state.tasks.length > 0 ?
-
-          <Tasks
-            tasks={this.state.tasks}
-            deleteTask={this.deleteTask}
-          />
-          : null
-        }
-        { this.state.tasks.length > 0 ?
-          <Deleteall
-            deleteAll={this.deleteAll}
-          />
-          : null
-        }
-        <ModalAlert
-            selectedTask={this.state.selectedTask}
-            closeModal={this.closeModal}
-        />
-       
-      </div>
-    )
-  }
-}
-=======
     if (this.state.redirectTo) {
       return <Redirect to={{ pathname: this.state.redirectTo }} />
     } else {
@@ -125,4 +93,3 @@ export default class App extends Component {
 }
 
   export default Select;
->>>>>>> 1c967c0516ce825ab9f077ea38fd8b269f25ae83

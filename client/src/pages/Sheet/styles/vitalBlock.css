@@ -8,6 +8,22 @@
     left: 1.5rem;
     margin-top: -3.8125rem;
 }
+.hexagonTxt {
+    transform: rotate(90deg);
+    direction: ltr;
+    position: relative;
+    top: 2rem;
+    left: 2rem;
+    color: white;
+}
+.hexagonTxt2 {
+    transform: rotate(90deg);
+    direction: ltr;
+    position: relative;
+    top: 1.25rem;
+    color: white;
+    font-size: 2.5rem;
+}
 #hexagon1:before {
     content: "";
     position: absolute;
@@ -37,7 +53,7 @@
     height: 4.25rem;
     background: #c7b48c;
     position: relative;
-    top: 5rem;
+    top: 3.5rem;
     left: 0rem;
     margin-top: -4.8125rem;
 }
