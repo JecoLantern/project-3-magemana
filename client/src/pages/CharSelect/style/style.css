@@ -4,7 +4,7 @@
 }
 
 .characterBtn{
-    width: 300px;
+        
 }
 
 .charHolder{
@@ -34,7 +34,6 @@
 
 
 .fa-close {
-    
     cursor: pointer;
     color: #f03f3f;
 }
