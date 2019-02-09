@@ -69,8 +69,7 @@ class CharacterSheet extends Component{
                             <h2>Alignment</h2>
                         </Alignment>
                         <ClassLVL>
-                            {/* <h2>{this.state.CharModel.class} | {this.state.CharModel.level}</h2> */}
-                            <h2>{this.state.CharModel.class} & Level</h2>
+                            <h2>{this.state.CharModel.class} | {this.state.CharModel.level}</h2>
                         </ClassLVL>
                     </NamePlate>
                 </Row>
@@ -180,7 +179,14 @@ class CharacterSheet extends Component{
                                 <div id="hexagon2"><h6 className="hexagonTxt2">{this.state.CharModel.speed}</h6></div>
                             </div>
                         </VitalBlock>
-                        <TertiaryAttribute></TertiaryAttribute>
+                        <TertiaryAttribute>
+                            <div id="squareTV2"><h6 className="tertiaryTxt">PROFICIENCY BONUS</h6>
+                                <div id="rectangleRounded2"></div>
+                            </div>
+                            <div id="squareTV3"><h6 className="tertiaryTxt">INSPIRATION</h6>
+                                <div id="rectangleRounded3"></div>
+                            </div>
+                        </TertiaryAttribute>
                     </Row>
                     </Col>
                 </Row>
