@@ -78,3 +78,9 @@ background: #c7b48c;
 .space {
     margin-top: 1.75rem;
 }
+
+@media only screen and (max-width: 1024px) {
+    #squareTV8 {
+        margin-top: 2rem;
+    }
+}

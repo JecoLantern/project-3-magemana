@@ -50,3 +50,13 @@
     border-radius: 0.625rem;
     top: -2.13rem;
 }
+
+@media only screen and (max-width: 1024px) {
+    #squareTV2 {
+        margin-top: 3rem;
+        margin-left: 2rem;
+    }
+    #squareTV3 {
+        margin-left: 2rem;
+    }
+}

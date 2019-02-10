@@ -46,3 +46,21 @@
     right: -3.25rem;
     top: -1.25rem;
 }
+
+@media only screen and (max-width: 1024px) {
+    #rectangle {
+        width: 8.25rem;
+    }
+    #squareTV {
+        width: 8.25rem;
+    }
+    #rectangleRounded {
+        width: 8.25rem;
+    }
+    #oval {
+        width: 8.25rem;
+    }
+    #circle {
+        right: -6.25rem;
+    }
+}

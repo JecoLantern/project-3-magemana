@@ -70,12 +70,12 @@ class CharacterSheet extends Component{
                     </NamePlate>
                 </Row>
                 <Row>
-                    <Col size="6, sm-6, md-6, lg-6">
+                    <Col size="6, sm-6, md-6, lg-6, xl-6">
                         {this.state.CharModel.attributes ? (
                             <Row>
                                 {this.state.CharModel.attributes.map(attr => (
                                     <AttributeBlock key={attr._id}>
-                                        <div>
+                                        <div className="attCentral">
                                             <div id="rectangle"><p className="attributeTxt">{attr.attr}</p></div>
                                             <div id="squareTV">
                                                 <div id="rectangleRounded"><p className="valueTxt">{attr.val}</p></div>
@@ -165,7 +165,7 @@ class CharacterSheet extends Component{
                             </Row>
                         )}
                     </Col>
-                    <Col size="6, sm-6, md-6, lg-6">
+                    <Col size="6, sm-6, md-6, lg, xl-6">
                     <Row>
                         <VitalBlock>
                             <div id="hexagon1"><h6 className="armorclassTxt">ARMOR<br></br>CLASS</h6>
@@ -194,16 +194,20 @@ class CharacterSheet extends Component{
                     </Col>
                 </Row>
                 <Row>
-                    <Col size="9, sm-9, md-9, lg-9">
+                    <Col size="9, sm-9, md-9, lg-12, xl-9">
                     <Row>
                         <SkillsBlock></SkillsBlock>
                         <Equipment></Equipment>
                         <CharacterFeatures></CharacterFeatures>
                     </Row>
                     </Col>
-                    <Col size="3, sm-3, md-3, lg-3">
-                        <HpBlock></HpBlock>
-                        <HitDice></HitDice>
+                    <Col size="3, sm-3, md-3, lg-12, xl-3">
+                    <Row>
+                        {/* <Col size="6, sm-6, md-6, lg-6"> */}
+                            <HpBlock></HpBlock>
+                            <HitDice></HitDice>
+                        {/* </Col> */}
+                    </Row>
                     </Col>
                 </Row>
             </Container>

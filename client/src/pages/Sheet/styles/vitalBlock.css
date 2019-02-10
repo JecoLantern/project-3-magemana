@@ -137,3 +137,9 @@
     border-top: 1.27rem solid #c7b48c;
     z-index: -1;
 }
+
+@media only screen and (max-width: 1024px) {
+    #hexagon1 {
+        left: 5.5rem;
+    }
+}
