@@ -70,7 +70,7 @@ class CharacterSheet extends Component{
                     </NamePlate>
                 </Row>
                 <Row>
-                    <Col size="6, sm-6, md-6, lg-6, xl-6">
+                    <Col size="6, sm-6, md-6, lg-6">
                         {this.state.CharModel.attributes ? (
                             <Row>
                                 {this.state.CharModel.attributes.map(attr => (
@@ -165,7 +165,7 @@ class CharacterSheet extends Component{
                             </Row>
                         )}
                     </Col>
-                    <Col size="6, sm-6, md-6, lg-6, xl-6">
+                    <Col size="6, sm-6, md-6, lg-6">
                     <Row>
                         <VitalBlock>
                             <div id="hexagon1"><h6 className="armorclassTxt">ARMOR<br></br>CLASS</h6>
@@ -194,14 +194,14 @@ class CharacterSheet extends Component{
                     </Col>
                 </Row>
                 <Row>
-                    <Col size="9, sm-9, md-9, lg-9, xl-9">
+                    <Col size="9, sm-9, md-9, lg-9">
                     <Row>
                         <SkillsBlock></SkillsBlock>
                         <Equipment></Equipment>
                         <CharacterFeatures></CharacterFeatures>
                     </Row>
                     </Col>
-                    <Col size="3, sm-3, md-3, lg-3, xl-3">
+                    <Col size="3, sm-3, md-3, lg-3">
                         <HpBlock></HpBlock>
                         <HitDice></HitDice>
                     </Col>
