@@ -1,6 +1,12 @@
-import React from "react";
-// import "./Title.css";
+import React from 'react'
+import logo from '../assets/logo.svg'
 
-const Title = props => <h1 className="title">{props.children}</h1>;
+const Header = () => (
+    <div className="App-header container-full">
+        <img src={logo} className="App-logo" alt="logo" />
+        <h1 className="App-title">Welcome to Mage Manager</h1>
+    </div>
+)
+
 
 export default Title;
