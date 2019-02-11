@@ -1,5 +1,5 @@
 import React from 'react';
-import { Col, Row } from '../../../components/Grid';
+import { Col } from '../../../components/Grid';
 import List from '../../../components/Lists';
 import { Skill } from "../../../components/Lists/ListItems";
 import '../styles/skillsBlock.css';

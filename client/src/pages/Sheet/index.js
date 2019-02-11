@@ -165,7 +165,7 @@ class CharacterSheet extends Component{
                             </Row>
                         )}
                     </Col>
-                    <Col size="6, sm-6, md-6, lg, xl-6">
+                    <Col size="6, sm-6, md-6, lg-6, xl-6">
                     <Row>
                         <VitalBlock>
                             <div id="hexagon1"><h6 className="armorclassTxt">ARMOR<br></br>CLASS</h6>
