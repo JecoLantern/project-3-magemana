@@ -3,6 +3,7 @@ const Schema = mongoose.Schema;
 
 const charSchema = new Schema({
     //charstuff
+    isInitiatlized: {Type:Boolean, default:false},
     user_Id: String,
     name: { type: String, required: true },
     level: { type: Number, required: true },

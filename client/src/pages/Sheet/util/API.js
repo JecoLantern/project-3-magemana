@@ -15,8 +15,8 @@ export default {
         return axios.delete("/api/c/charsheet/" + id);
     },
     // Save
-    saveCharSheet: function(charsheetData) {
-        return axios.post("/api/c/charsheet", charsheetData);
+    saveCharSheet: function(charsheetData, id) {
+        return axios.put(`/api/c/charsheet/${id}`, charsheetData);
     }
     
 
