@@ -7,32 +7,24 @@
     padding: 0 1rem;
     margin-bottom: 1rem;
     background-color:rgb(67, 104, 31);
-  border-radius: 55px;
-  background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+    border-radius: 55px;
     color: slategray;
     opacity: 10%;
+    height: 50px;
 }
-.single-task:hover{
-    background-color: mediumseagreen;
-    color: slategrey;
-    border-style: solid;
-    border-color: rgb(73, 39, 15);
-}
-.single-task:last-child  {
 
-    margin-bottom: unset;
-}
+
 
 .tasks  {
     
     margin-bottom: 1rem;
     padding: 1rem 1rem;
     border-radius: 5px;
-    max-height: 300px;
+    max-height: 250px;
     overflow-Y: scroll;
     background-color: #0000;
+    width: 500px;
+    margin-left: 52%
 }
 
 .tasks::-webkit-scrollbar {
