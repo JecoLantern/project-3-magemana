@@ -3,8 +3,6 @@ import { Col, Row } from '../../components/Grid';
 import QuestionBox from './components';
 import CharGen from './util/CharacterClass';
 import SurveyQs from './util/Survey';
-// import axios from 'axios';
-// import { resolve } from 'dns';
 import { Redirect } from "react-router";
 
 class Survey extends Component {

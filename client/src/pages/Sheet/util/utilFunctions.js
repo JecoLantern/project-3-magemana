@@ -49,5 +49,12 @@ export default {
                 return 6;
             default: return 2;
         }
-    }
+    },
+
+    getSave(save, parentAttr) {
+        //code to get and associate saving throws, get parrent att, get the mod, add that to the save, check if proficient, if so add proficiency
+        
+    },
+
+
 }
