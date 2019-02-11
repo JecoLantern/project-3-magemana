@@ -14,7 +14,7 @@ class App extends Component {
                 <Router>
                     <Switch>
                         <Route exact path="/" component={Landing} />
-                        <Route exact path="/charsheet" component={Sheet} />
+                        <Route exact path="/charsheet/:id" render={(props) => <Sheet {...props} isAuthed={true}/>} />
                         <Route path="/survey" component={Survey} />
                         <Route path="/select" component={Select} />
                         <Route component={fof} />

@@ -1,0 +1,62 @@
+#squareTV2 {
+    width: 8.5rem;
+    height: 2.25rem;
+    background: #5b3624;
+    position: relative;
+    -moz-border-radius: 0.625rem;
+    -webkit-border-radius: 0.625rem;
+    border-radius: 0.625rem;
+}
+.tertiaryTxtproficiency {
+    word-wrap: break-word;
+    color: wheat;
+    margin-left: 2rem;
+    margin-top: 0.25rem;
+    text-align: center;
+}
+.tertiaryTxtinspiration {
+    word-wrap: break-word;
+    color: wheat;
+    margin-left: 3rem;
+    margin-top: 0.65rem;
+}
+#rectangleRounded2 {
+    width: 2.25rem;
+    height: 2.25rem;
+    background: #c7b48c;
+    position: relative;
+    -moz-border-radius: 0.625rem;
+    -webkit-border-radius: 0.625rem;
+    border-radius: 0.625rem;
+    top: -2.7rem;
+}
+#squareTV3 {
+    margin-top: 1rem;
+    width: 8.5rem;
+    height: 2.25rem;
+    background: #5b3624;
+    position: relative;
+    -moz-border-radius: 0.625rem;
+    -webkit-border-radius: 0.625rem;
+    border-radius: 0.625rem;
+}
+#rectangleRounded3 {
+    width: 2.25rem;
+    height: 2.25rem;
+    background: #c7b48c;
+    position: relative;
+    -moz-border-radius: 0.625rem;
+    -webkit-border-radius: 0.625rem;
+    border-radius: 0.625rem;
+    top: -2.13rem;
+}
+
+@media only screen and (max-width: 1024px) {
+    #squareTV2 {
+        margin-top: 3rem;
+        margin-left: 2rem;
+    }
+    #squareTV3 {
+        margin-left: 2rem;
+    }
+}

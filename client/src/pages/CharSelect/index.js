@@ -1,9 +1,11 @@
 import React, { Component } from 'react';
 import { Redirect } from 'react-router-dom';
-import ListItem from "./components/Character";
+import { Container, Row } from "../../components/Grid";
+import { List, ListItem } from "../../components/List";
 import Header from "./components/Header";
-
-import axios from 'axios';
+import API from "../Sheet/util/API";
+import { Link } from "react-router-dom";
+import DeleteBtn from "../../components/DeleteBtn";
 
 class CharSelect extends Component {
     state = {
@@ -11,47 +13,58 @@ class CharSelect extends Component {
         characters: []
     }
 
-
-    componentDidMount() {
-        axios.get("/api/c/charsheet")
+    // Get charsheet by user id
+    loadChars = () => {
+        // API.getCharSheet(this.props.match.params.id)
+        API.getCharSheets()
             .then(res => {
                 const characters = res.data
                 this.setState({ characters: characters })
             })
     }
-
-    handleSelect = event =>{
-       const _id = event.target.value
-       //^^ the id of the character youre going to view 
+    componentDidMount() {
+        this.loadChars();
     }
+
+    deleteMyChar = id => {
+        API.deleteCharSheet(id)
+            .then(res => this.loadChars())
+            .catch(err => console.log(err));
+    };
 
     handleNewAdventurer = event => {
         this.setState({ redirectTo: "/survey" })
     }
-
-
 
     render() {
         if (this.state.redirectTo) {
             return <Redirect to={{ pathname: this.state.redirectTo }} />
         } else {
             return (
-                <div>
+                <Container>
                     <Header
                         onClick={this.handleNewAdventurer}
                     />
-                    <ul>
-                        {this.state.characters.length ? this.state.characters.map(char => {
-                            return <ListItem
-                                name={char.name}
-                                key={char._id}
-                                _id={char._id}
-                                onClick={this.handleSelect}
-                                lvl={char.level}
-                            />
-                        }) : <h4>No Characters Found</h4>}
-                    </ul>
-                </div>
+                    <Row>
+                        {this.state.characters.length ? (
+                            <List>
+                                {this.state.characters.map(char => (
+                                <ListItem 
+                                    key={char._id}
+                                    _id={char._id}>
+                                    <Link to={"/charsheet/" + char._id}>
+                                        <strong>
+                                            {char.name}
+                                            {char.level}
+                                        </strong>
+                                    </Link>
+                                    <DeleteBtn onClick={() => this.deleteMyChar(char._id)} />
+                                </ListItem>
+                                ))}
+                            </List>
+                        ) : (<h4>No Characters Found</h4>)}
+                    </Row>
+                </Container>
             )
         }
     }

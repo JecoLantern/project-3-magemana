@@ -165,7 +165,7 @@ class CharacterGen {
             .then(res => {
                 console.log(res.data)
                 const push = {...this}
-                push.user_Id = res.data.user._id
+                push.user_Id = res.data.user.local._id
                 console.log("heres your push", push)
                 axios.post("/api/c/charsheet",{...push})
                     .then(response => console.log("heres your sign",response))
