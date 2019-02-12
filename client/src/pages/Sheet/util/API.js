@@ -17,7 +17,7 @@ export default {
     // Save
     saveCharSheet: function(charsheetData, id) {
         return axios.put(`/api/c/charsheet/${id}`, charsheetData);
-    }
+    },
     
 
 }

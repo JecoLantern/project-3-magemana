@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { Col, Row, Container } from "../../components/Grid";
 import "../Sheet/_charSheetSty.css";
 import API from "./util/API.js";
-
+import utility from "./util/utilFunctions"
 //Importing CharSheet Components
 import Logo from "./components/logo";
 import Avatar from "./components/avatar";
@@ -38,6 +38,7 @@ class CharacterSheet extends Component{
         API.getCharSheet(this.props.match.params.id)
             .then(res => {
                 this.setState({ CharModel: res.data})
+                console.log(this.state.CharModel)
             })
             .catch(err => console.log(err));
     }
