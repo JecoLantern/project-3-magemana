@@ -96,5 +96,19 @@ background: #c7b48c;
     }
     #rectangle3 {
         width: 13rem;
-        }
+    }
+}
+
+@media (max-width: 850px) and (orientation: landscape) {
+    #squareTV8 {
+        margin-top: 1.5rem;
+        width: 14rem;
+        margin-left: 0.5rem;
+    }
+    #rectangle2 {
+        width: 12rem;
+    }
+    #rectangle3 {
+        width: 12rem;
+    }
 }

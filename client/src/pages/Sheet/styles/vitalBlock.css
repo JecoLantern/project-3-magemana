@@ -150,3 +150,10 @@
         top: 6rem;
     }
 }
+
+@media (max-width: 850px) and (orientation: landscape) {
+    #hexagon1 {
+        top: 5.5rem;
+        left: 3.5rem;
+    }
+}

@@ -25,7 +25,7 @@
 }
 
 @media only screen and (max-width: 768px) {
-    .fontsize768 {
+    .fs768 {
         font-size: 1.25rem;
     }
     .container {
@@ -38,5 +38,23 @@
     }
     html {
         height: 111%;
+    }
+}
+
+@media (max-width: 850px) and (orientation: landscape) {
+    html {
+        height: 256%;
+    }
+    .container {
+        height: 60rem;
+    }
+    .fs850 {
+        font-size: 1.25rem;
+    }
+    p.attributeTxt {
+        font-size: 1.25rem;
+    } 
+    p.valueTxt {
+        font-size: 1.5rem;
     }
 }

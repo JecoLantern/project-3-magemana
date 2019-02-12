@@ -76,11 +76,33 @@
     }
     #rectangleRounded {
         width: 6.25rem;
-        /* margin-left: -0.3rem; */
     }
     #oval {
         width: 6.25rem;
         margin-left: -0.3rem;
+    }
+    #circle {
+        right: -4.25rem;
+    }
+}
+@media (max-width: 850px) and (orientation: landscape) {
+    #rectangle {
+        width: 6.5rem;
+        margin-left: -0.5rem;
+        height: 2rem;
+    }
+    #squareTV {
+        width: 6.5rem;
+        margin-left: -0.5rem;
+        height: 4rem;
+    }
+    #rectangleRounded {
+        width: 6.5rem;
+        height: 2rem;
+    }
+    #oval {
+        width: 6.5rem;
+        margin-left: -0.5rem;
     }
     #circle {
         right: -4.25rem;

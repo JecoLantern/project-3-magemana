@@ -11,3 +11,10 @@
         height: 6.25rem;
     }
 }
+
+@media (max-width: 850px) and (orientation: landscape) {
+    #square1 {
+        width: 6.25rem;
+        height: 6.25rem;
+    }
+}

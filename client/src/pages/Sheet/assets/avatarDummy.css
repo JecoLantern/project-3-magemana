@@ -11,3 +11,10 @@
         width: 5rem;
     }
 }
+
+@media (max-width: 850px) and (orientation: landscape) {
+    #avatarDummyIMG {
+        height: 6rem;
+        width: 5rem;
+    }
+}
