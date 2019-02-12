@@ -4,3 +4,10 @@
     height: 8.25rem;
     background: #aa8259;
 }
+
+@media only screen and (max-width: 768px) {
+    #square1 {
+        width: 6.25rem;
+        height: 6.25rem;
+    }
+}

@@ -84,3 +84,17 @@ background: #c7b48c;
         margin-top: 2rem;
     }
 }
+
+@media only screen and (max-width: 768px) {
+    #squareTV8 {
+        margin-top: 2rem;
+        width: 15rem;
+        margin-left: 0rem;
+    }
+    #rectangle2 {
+        width: 13rem;
+    }
+    #rectangle3 {
+        width: 13rem;
+        }
+}

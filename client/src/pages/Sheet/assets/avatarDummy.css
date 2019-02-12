@@ -4,3 +4,10 @@
     position: absolute;
     left: 1.5rem;
 }
+
+@media only screen and (max-width: 768px) {
+    #avatarDummyIMG {
+        height: 6rem;
+        width: 5rem;
+    }
+}

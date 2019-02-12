@@ -64,3 +64,25 @@
         right: -6.25rem;
     }
 }
+
+@media only screen and (max-width: 768px) {
+    #rectangle {
+        width: 6.25rem;
+        margin-left: -0.3rem;
+    }
+    #squareTV {
+        width: 6.25rem;
+        margin-left: -0.3rem;
+    }
+    #rectangleRounded {
+        width: 6.25rem;
+        /* margin-left: -0.3rem; */
+    }
+    #oval {
+        width: 6.25rem;
+        margin-left: -0.3rem;
+    }
+    #circle {
+        right: -4.25rem;
+    }
+}
