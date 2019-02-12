@@ -18,7 +18,7 @@
 
 @media only screen and (max-width: 1024px) {
     .container {
-        height: 83rem;
+        height: 90vh;
         margin-top: 1rem;
     }
     /* .attCentral {

@@ -1,11 +1,10 @@
-html, body, #root {
+ body {
     width: 100%;
-    height: 100%;
+   
     /* background-image: url(https://i.pinimg.com/originals/5f/89/c3/5f89c39a29f03178787355585581dd73.jpg); */
     background-image: url(https://images.pexels.com/photos/235985/pexels-photo-235985.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260);
-    background-color: #813e16;
     background-position: center;
-    background-repeat: no-repeat;
+    background-repeat: repeat;
     background-size: cover;
   }
   .root-container {

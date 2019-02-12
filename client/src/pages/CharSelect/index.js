@@ -47,11 +47,7 @@ class CharSelect extends Component {
                     <Header
                         onClick={this.handleNewAdventurer}
                     />
-<<<<<<< HEAD
-                    <Row className="holder ">
-=======
                     <Row>
->>>>>>> c1a81d3ab7dc0c995d1ffb217692244e7319bab3
                         {this.state.characters.length ? (
                             <List>
                                 {this.state.characters.map(char => (
@@ -61,14 +57,9 @@ class CharSelect extends Component {
                                     <Link to={"/charsheet/" + char._id} className="link">
                                         <strong>
                                             {char.name}
-<<<<<<< HEAD
-                                            {" Level " + char.level}
+                                            {" Level " +char.level}
                                             {"  " + char.race}
                                             {"  " + char.class}
-                                            {/* onClick={this.handleSelect} */}
-=======
-                                            {char.level}
->>>>>>> c1a81d3ab7dc0c995d1ffb217692244e7319bab3
                                         </strong>
                                     </Link>
                                     <DeleteBtn onClick={() => this.deleteMyChar(char._id)} />

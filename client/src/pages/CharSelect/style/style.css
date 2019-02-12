@@ -1,3 +1,4 @@
+
 .App-logo {
     animation: App-logo-spin infinite 10s linear;
     height: 140px;
@@ -110,3 +111,78 @@ font-size: 30px;
     from { transform: rotate(0deg); }
     to { transform: rotate(360deg); }
   }
+
+  @media only screen and (max-width: 1024px) {
+    .list-overflow-container{
+        margin-left: 15%;  
+        margin-top: 5%;
+  }
+  .list-group{
+    max-height: 450px;
+    max-width: 1000px;
+    overflow-Y: scroll;
+}
+}
+
+
+@media only screen and (max-width: 850px) {
+    .list-overflow-container{
+ margin-left: 18% !important ;
+  }
+
+  .list-group-item{
+      width: 300px;
+      
+  }
+
+  .list-group{
+    max-height: 850px;
+    max-width: 1000px;
+    overflow-Y: scroll;
+}
+  .App-logo {
+    animation: App-logo-spin infinite 10s linear;
+    height: 100px;
+    margin-right: 80%;
+  }
+  .App-logo:hover {
+    animation: App-logo-spin infinite 10s linear;
+    height: 110px;
+    margin-right: 80%;
+    
+  }
+  .container {
+    height: 86vh;
+    margin-top: 1rem;
+}
+
+}
+
+
+@media only screen and (max-width: 600px) {
+    .list-overflow-container{
+        margin-top: 5%;
+        padding-right: 60%;
+  }
+  .list-group{
+      margin-left: -5%;
+  }
+  .list-group-item{
+      width: 300px;
+  }
+  .App-logo {
+    animation: App-logo-spin infinite 10s linear;
+    height: 100px;
+    margin-right: 80%;
+  }
+  .App-logo:hover {
+    animation: App-logo-spin infinite 10s linear;
+    height: 110px;
+    margin-right: 80%;
+    
+  }
+  .container {
+    height: 86vh;
+    margin-top: 1rem;
+}
+}
