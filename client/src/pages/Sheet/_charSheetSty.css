@@ -14,6 +14,7 @@
     background-repeat: no-repeat;
     background-size: cover;
     height: 58rem;
+    margin-top: 1rem;
 }
 
 @media only screen and (max-width: 1024px) {
@@ -21,7 +22,39 @@
         height: 83rem;
         margin-top: 1rem;
     }
-    /* .attCentral {
-        margin-left: 1rem;
-    } */
+}
+
+@media only screen and (max-width: 768px) {
+    .fs768 {
+        font-size: 1.25rem;
+    }
+    .container {
+        height: 62rem;
+    }
+}
+@media (max-width: 1024px) and (orientation: landscape) {
+    .container {
+        height: 64rem;
+    }
+    html {
+        height: 111%;
+    }
+}
+
+@media (max-width: 850px) and (orientation: landscape) {
+    html {
+        height: 256%;
+    }
+    .container {
+        height: 60rem;
+    }
+    .fs850 {
+        font-size: 1.25rem;
+    }
+    p.attributeTxt {
+        font-size: 1.25rem;
+    } 
+    p.valueTxt {
+        font-size: 1.5rem;
+    }
 }
