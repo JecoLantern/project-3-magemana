@@ -36,9 +36,7 @@ class CharacterSheet extends Component{
 
     componentDidMount() {
         API.getCharSheet(this.props.match.params.id)
-        // API.getCharSheet()
             .then(res => {
-                console.log(res.data)
                 this.setState({ CharModel: res.data})
             })
             .catch(err => console.log(err));
@@ -67,121 +65,128 @@ class CharacterSheet extends Component{
                             <h2>{this.state.CharModel.alignment}</h2>
                         </Alignment>
                         <ClassLVL>
-                            <h2>{this.state.CharModel.class} | {this.state.CharModel.level}</h2>
+                            <h2>{this.state.CharModel.class} | <small>Level:</small>{this.state.CharModel.level}</h2>
                         </ClassLVL>
                     </NamePlate>
                 </Row>
                 <Row>
                     <Col size="6, sm-6, md-6, lg-6, xl-6">
-                        <Row>
-                            <AttributeBlock>
-                                <div>
-                                    {/* <div id="rectangle">{this.state.CharModel.attributes[0].attr}</div> */}
-                                    <div id="rectangle">ATTR</div>
-                                    <div id="squareTV">
-                                        {/* <div id="rectangleRounded">{this.state.CharModel.attributes[0].val}</div> */}
-                                        <div id="rectangleRounded">VALUE</div>
-                                        (MOD)
+                        {this.state.CharModel.attributes ? (
+                            <Row>
+                                {this.state.CharModel.attributes.map(attr => (
+                                    <AttributeBlock key={attr._id}>
+                                        <div className="attCentral">
+                                            <div id="rectangle"><p className="attributeTxt">{attr.attr}</p></div>
+                                            <div id="squareTV">
+                                                <div id="rectangleRounded"><p className="valueTxt">{attr.val}</p></div>
+                                                (MOD)
+                                            </div>
+                                            <div id="oval">SAVE
+                                                <div id="circle"></div>
+                                            </div>
+                                        </div>
+                                    </AttributeBlock>
+                                ))}
+                            </Row>
+                        ):(
+                            <Row>
+                                <AttributeBlock>
+                                    <div>
+                                        <div id="rectangle">ATTR</div>
+                                            <div id="squareTV">
+                                                <div id="rectangleRounded">VALUE</div>
+                                            (MOD)
+                                            </div>
+                                        <div id="oval">SAVE
+                                            <div id="circle"></div>
+                                        </div>
                                     </div>
-                                    <div id="oval">SAVE
-                                        <div id="circle"></div>
+                                </AttributeBlock>
+                                <AttributeBlock>
+                                    <div>
+                                        <div id="rectangle">ATTR</div>
+                                            <div id="squareTV">
+                                                <div id="rectangleRounded">VALUE</div>
+                                            (MOD)
+                                            </div>
+                                        <div id="oval">SAVE
+                                            <div id="circle"></div>
+                                        </div>
                                     </div>
-                                </div>
-                            </AttributeBlock>
-                            <AttributeBlock>
-                                <div>
-                                    {/* <div id="rectangle">{this.state.CharModel.attributes[1].attr}</div> */}
-                                    <div id="rectangle">ATTR</div>
-                                    <div id="squareTV">
-                                        {/* <div id="rectangleRounded">{this.state.CharModel.attributes[1].val}</div> */}
-                                        <div id="rectangleRounded">VALUE</div>
-                                        (MOD)
+                                </AttributeBlock>
+                                <AttributeBlock>
+                                    <div>
+                                        <div id="rectangle">ATTR</div>
+                                            <div id="squareTV">
+                                                <div id="rectangleRounded">VALUE</div>
+                                            (MOD)
+                                            </div>
+                                        <div id="oval">SAVE
+                                            <div id="circle"></div>
+                                        </div>
                                     </div>
-                                    <div id="oval">SAVE
-                                        <div id="circle"></div>
+                                </AttributeBlock>
+                                <AttributeBlock>
+                                    <div>
+                                        <div id="rectangle">ATTR</div>
+                                            <div id="squareTV">
+                                                <div id="rectangleRounded">VALUE</div>
+                                            (MOD)
+                                            </div>
+                                        <div id="oval">SAVE
+                                            <div id="circle"></div>
+                                        </div>
                                     </div>
-                                </div>
-                            </AttributeBlock>
-                            <AttributeBlock>
-                                <div>
-                                    {/* <div id="rectangle">{this.state.CharModel.attributes[2].attr}</div> */}
-                                    <div id="rectangle">ATTR</div>
-                                    <div id="squareTV">
-                                        {/* <div id="rectangleRounded">{this.state.CharModel.attributes[2].val}</div> */}
-                                        <div id="rectangleRounded">VALUE</div>
-                                        (MOD)
+                                </AttributeBlock>
+                                <AttributeBlock>
+                                    <div>
+                                        <div id="rectangle">ATTR</div>
+                                            <div id="squareTV">
+                                                <div id="rectangleRounded">VALUE</div>
+                                            (MOD)
+                                            </div>
+                                        <div id="oval">SAVE
+                                            <div id="circle"></div>
+                                        </div>
                                     </div>
-                                    <div id="oval">SAVE
-                                        <div id="circle"></div>
+                                </AttributeBlock>
+                                <AttributeBlock>
+                                    <div>
+                                        <div id="rectangle">ATTR</div>
+                                            <div id="squareTV">
+                                                <div id="rectangleRounded">VALUE</div>
+                                            (MOD)
+                                            </div>
+                                        <div id="oval">SAVE
+                                            <div id="circle"></div>
+                                        </div>
                                     </div>
-                                </div>
-                            </AttributeBlock>
-                            <AttributeBlock>
-                                <div>
-                                    {/* <div id="rectangle">{this.state.CharModel.attributes[3].attr}</div> */}
-                                    <div id="rectangle">ATTR</div>
-                                    <div id="squareTV">
-                                        {/* <div id="rectangleRounded">{this.state.CharModel.attributes[3].val}</div> */}
-                                        <div id="rectangleRounded">VALUE</div>
-                                        (MOD)
-                                    </div>
-                                    <div id="oval">SAVE
-                                        <div id="circle"></div>
-                                    </div>
-                                </div>
-                            </AttributeBlock>
-                            <AttributeBlock>
-                                <div>
-                                    {/* <div id="rectangle">{this.state.CharModel.attributes[4].attr}</div> */}
-                                    <div id="rectangle">ATTR</div>
-                                    <div id="squareTV">
-                                        {/* <div id="rectangleRounded">{this.state.CharModel.attributes[4].val}</div> */}
-                                        <div id="rectangleRounded">VALUE</div>
-                                        (MOD)
-                                    </div>
-                                    <div id="oval">SAVE
-                                        <div id="circle"></div>
-                                    </div>
-                                </div>
-                            </AttributeBlock>
-                            <AttributeBlock>
-                                <div>
-                                    {/* <div id="rectangle">{this.state.CharModel.attributes[5].attr}</div> */}
-                                    <div id="rectangle">ATTR</div>
-                                    <div id="squareTV">
-                                        {/* <div id="rectangleRounded">{this.state.CharModel.attributes[5].val}</div> */}
-                                        <div id="rectangleRounded">VALUE</div>
-                                        (MOD)
-                                    </div>
-                                    <div id="oval">SAVE
-                                        <div id="circle"></div>
-                                    </div>
-                                </div>
-                            </AttributeBlock>
-                        </Row>
+                                </AttributeBlock>
+                            </Row>
+                        )}
                     </Col>
                     <Col size="6, sm-6, md-6, lg-6, xl-6">
                     <Row>
                         <VitalBlock>
-                            <div id="hexagon1"><h6 className="hexagonTxt">ARMOR CLASS</h6>
-                                <div id="hexagon2"><h6 className="hexagonTxt2">{this.state.CharModel.armorClass}</h6></div>
+                            <div id="hexagon1"><h6 className="armorclassTxt">ARMOR<br></br>CLASS</h6>
+                                <div id="hexagon2armorclass"><h6 className="hexagonTxt2">{this.state.CharModel.armorClass}</h6></div>
                             </div>
                         </VitalBlock>
                         <VitalBlock>
-                            <div id="hexagon1"><h6 className="hexagonTxt">INITIATIVE</h6>
+                            <div id="hexagon1"><h6 className="initiativeTxt">INITIATIVE</h6>
                                 <div id="hexagon2"><h6 className="hexagonTxt2">{this.state.CharModel.initiative}</h6></div>
                             </div>
                         </VitalBlock>
                         <VitalBlock>
-                            <div id="hexagon1"><h6 className="hexagonTxt">SPEED</h6>
+                            <div id="hexagon1"><h6 className="speedTxt">SPEED</h6>
                                 <div id="hexagon2"><h6 className="hexagonTxt2">{this.state.CharModel.speed}</h6></div>
                             </div>
                         </VitalBlock>
                         <TertiaryAttribute>
-                            <div id="squareTV2"><h6 className="tertiaryTxt">PROFICIENCY BONUS</h6>
+                            <div id="squareTV2"><h6 className="tertiaryTxtproficiency">PROFICIENCY BONUS</h6>
                                 <div id="rectangleRounded2"></div>
                             </div>
-                            <div id="squareTV3"><h6 className="tertiaryTxt">INSPIRATION</h6>
+                            <div id="squareTV3"><h6 className="tertiaryTxtinspiration">INSPIRATION</h6>
                                 <div id="rectangleRounded3"></div>
                             </div>
                         </TertiaryAttribute>
@@ -189,16 +194,20 @@ class CharacterSheet extends Component{
                     </Col>
                 </Row>
                 <Row>
-                    <Col size="9, sm-9, md-9, lg-9, xl-9">
+                    <Col size="9, sm-9, md-9, lg-12, xl-9">
                     <Row>
                         <SkillsBlock></SkillsBlock>
                         <Equipment></Equipment>
                         <CharacterFeatures></CharacterFeatures>
                     </Row>
                     </Col>
-                    <Col size="3, sm-3, md-3, lg-3, xl-3">
-                        <HpBlock></HpBlock>
-                        <HitDice></HitDice>
+                    <Col size="3, sm-3, md-3, lg-12, xl-3">
+                    <Row>
+                        {/* <Col size="6, sm-6, md-6, lg-6"> */}
+                            <HpBlock></HpBlock>
+                            <HitDice></HitDice>
+                        {/* </Col> */}
+                    </Row>
                     </Col>
                 </Row>
             </Container>

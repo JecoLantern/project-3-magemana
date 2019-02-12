@@ -7,10 +7,18 @@
     -webkit-border-radius: 0.625rem;
     border-radius: 0.625rem;
 }
-.tertiaryTxt {
+.tertiaryTxtproficiency {
     word-wrap: break-word;
-    margin-left: 3rem;
     color: wheat;
+    margin-left: 2rem;
+    margin-top: 0.25rem;
+    text-align: center;
+}
+.tertiaryTxtinspiration {
+    word-wrap: break-word;
+    color: wheat;
+    margin-left: 3rem;
+    margin-top: 0.65rem;
 }
 #rectangleRounded2 {
     width: 2.25rem;
@@ -20,7 +28,7 @@
     -moz-border-radius: 0.625rem;
     -webkit-border-radius: 0.625rem;
     border-radius: 0.625rem;
-    top: -2.5rem;
+    top: -2.7rem;
 }
 #squareTV3 {
     margin-top: 1rem;
@@ -40,5 +48,15 @@
     -moz-border-radius: 0.625rem;
     -webkit-border-radius: 0.625rem;
     border-radius: 0.625rem;
-    top: -1.25rem;
+    top: -2.13rem;
+}
+
+@media only screen and (max-width: 1024px) {
+    #squareTV2 {
+        margin-top: 3rem;
+        margin-left: 2rem;
+    }
+    #squareTV3 {
+        margin-left: 2rem;
+    }
 }

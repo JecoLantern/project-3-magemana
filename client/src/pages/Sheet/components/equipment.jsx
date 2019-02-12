@@ -5,29 +5,29 @@ import { Equip } from "../../../components/Lists/ListItems";
 import '../styles/equipment.css';
 
 const Equipment = () => (
-    <Col size="4, sm-4, md-4, lg-4, xl-4">
+    <Col size="4, sm-4, md-4, lg-4">
             <div id="squareTV8">
         <Row>
         <div id="rectangle2">
         <Row>
-            <Col size="4, sm4, md-4, lg-4, xl-4">
+            <Col size="4, sm4, md-4, lg-4">
                 <div id="rectangle4"></div>
             </Col>
-            <Col size="4, sm4, md-4, lg-4, xl-4">
+            <Col size="4, sm4, md-4, lg-4">
                 <div id="rectangle5"></div>
             </Col>
-            <Col size="4, sm4, md-4, lg-4, xl-4">
+            <Col size="4, sm4, md-4, lg-4">
                 <div id="rectangle6"></div>
             </Col>
         </Row>
         <Row>
-            <Col size="4, sm4, md-4, lg-4, xl-4">
+            <Col size="4, sm4, md-4, lg-4">
                 <div id="rectangle7"></div>
             </Col>
-            <Col size="4, sm4, md-4, lg-4, xl-4">
+            <Col size="4, sm4, md-4, lg-4">
                 <div id="rectangle8"></div>
             </Col>
-            <Col size="4, sm4, md-4, lg-4, xl-4">
+            <Col size="4, sm4, md-4, lg-4">
                 <div id="rectangle9"></div>
             </Col>
         </Row>

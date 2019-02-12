@@ -21,6 +21,16 @@
     -webkit-border-radius: 0.625rem;
     border-radius: 0.625rem;
 }
+.attributeTxt, .valueTxt {
+    color: wheat;
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+.valueTxt {
+    color: chocolate;
+    font-size: 1.75rem;
+}
 #oval {
     width: 5.5rem;
     height: 2.25rem;
@@ -35,4 +45,22 @@
     position: relative;
     right: -3.25rem;
     top: -1.25rem;
+}
+
+@media only screen and (max-width: 1024px) {
+    #rectangle {
+        width: 8.25rem;
+    }
+    #squareTV {
+        width: 8.25rem;
+    }
+    #rectangleRounded {
+        width: 8.25rem;
+    }
+    #oval {
+        width: 8.25rem;
+    }
+    #circle {
+        right: -6.25rem;
+    }
 }

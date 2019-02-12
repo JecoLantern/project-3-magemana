@@ -1,11 +1,11 @@
 import React from 'react';
-import { Col, Row } from '../../../components/Grid';
+import { Col } from '../../../components/Grid';
 import List from '../../../components/Lists';
 import { Skill } from "../../../components/Lists/ListItems";
 import '../styles/skillsBlock.css';
 
 const SkillsBlock = () => (
-    <Col size="4, sm-4, md-4, lg-4, xl-4">
+    <Col size="4, sm-4, md-4, lg-4">
         <div id="squareTV7">
             <List>
                 <Skill></Skill>

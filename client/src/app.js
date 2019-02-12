@@ -4,7 +4,9 @@ import Landing from './pages/Landing'
 import Sheet from './pages/Sheet'
 import Survey from './pages/Survey'
 import Select from './pages/CharSelect'
-const fof = () => <h1>nothing found</h1>
+
+const fof = () => (<header><h1>404 error - nothing found</h1></header>) //<<<404 page
+
 class App extends Component {
     render() {
         return (
