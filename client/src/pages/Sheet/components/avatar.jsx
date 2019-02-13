@@ -4,7 +4,7 @@ import '../styles/avatar.css';
 import AvatarDummyIMG from '../assets/avatarDummy';
 
 const Avatar = () => (
-    <Col size="2, sm-2, md-2">
+    <Col size="2, sm-2">
         <div id="square1"><h6><AvatarDummyIMG></AvatarDummyIMG></h6></div>
     </Col>
 )

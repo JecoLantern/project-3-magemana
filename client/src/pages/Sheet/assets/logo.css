@@ -25,3 +25,11 @@
         left: -1.5rem;
     }
 }
+@media (max-width: 750px) and (orientation: landscape) {
+    #logoIMG {
+        height: 2rem;
+        width: 2rem;
+        top: 1.3rem;
+        left: -1rem;
+    }
+}
