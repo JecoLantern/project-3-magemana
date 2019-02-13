@@ -1,15 +1,20 @@
 import React from 'react';
 import { Col } from '../../../components/Grid';
 import List from '../../../components/Lists';
-import { Skill } from "../../../components/Lists/ListItems";
+import  Skills  from "./Skills";
 import '../styles/skillsBlock.css';
 
-const SkillsBlock = () => (
+const SkillsBlock = ({skillArr}) => (
     <Col size="4, sm-4, md-4">
         <div id="squareTV7">
-            <List>
-                <Skill></Skill>
-            </List>
+            <ul>
+                {skillArr.map(skill=>{
+                    return <Skills
+                        skill = {skill.skillName}
+                        val = {skill.val}
+                    />
+                })}
+            </ul>
         </div>
     </Col>
 )
