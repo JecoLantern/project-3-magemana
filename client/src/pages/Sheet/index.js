@@ -81,7 +81,7 @@ class CharacterSheet extends Component {
                                             <div id="rectangle"><p className="attributeTxt">{attr.attr}</p></div>
                                             <div id="squareTV">
                                                 <div id="rectangleRounded"><p className="valueTxt">{attr.val}</p></div>
-                                                (MOD)
+                                                mod: {utility.attrMod(attr)}
                                             </div>
                                             <div id="oval">SAVE
                                                 <div id="circle"></div>
@@ -198,9 +198,9 @@ class CharacterSheet extends Component {
                 <Row>
                     <Col size="9, sm-9, md-9, lg-12, xl-9">
                         <Row>
-                            {/* <SkillsBlock
-                                // skillArr={this.state.CharModel.skills}
-                            /> */}
+                            <SkillsBlock
+                                skillArr={this.state.CharModel.skills}
+                            />
                             <Equipment
                                 equipment={this.state.CharModel.equipment}
                             />

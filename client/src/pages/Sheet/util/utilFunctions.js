@@ -76,22 +76,22 @@ export default {
         const [STR, DEX, CON, INT, WIS, CHA] = attrArr;
 
         return skills.map(skill => {
-            if (skill.parentAttr === STR.attr) {
+            if (skill.parentAttr == STR.attr) {
                 skill.val += this.attrMod(STR)
             }
-            if (skill.parentAttr === DEX.attr) {
+            if (skill.parentAttr == DEX.attr) {
                 skill.val += this.attrMod(DEX)
             }
-            if (skill.parentAttr === CON.attr) {
+            if (skill.parentAttr == CON.attr) {
                 skill.val += this.attrMod(CON)
             }
-            if (skill.parentAttr === INT.attr) {
+            if (skill.parentAttr == INT.attr) {
                 skill.val += this.attrMod(INT)
             }
-            if (skill.parentAttr === WIS.attr) {
+            if (skill.parentAttr == WIS.attr) {
                 skill.val += this.attrMod(WIS)
             }
-            if (skill.parentAttr === CHA.attr) {
+            if (skill.parentAttr == CHA.attr) {
                 skill.val += this.attrMod(CHA)
             }
             if(skill.isProficient) skill.val += this.proficiencieBonus(level)
