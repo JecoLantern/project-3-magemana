@@ -5,7 +5,7 @@ import '../styles/logo.css';
 import LogoIMG from '../assets/logoIMG'
 
 const Logo = () => (
-    <Col size="2, sm-2, md-2">
+    <Col size="2, sm-2">
         <div id="diamond1"><h6><LogoIMG></LogoIMG></h6></div>
     </Col>
 )
