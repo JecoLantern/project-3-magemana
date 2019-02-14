@@ -80,7 +80,7 @@
         font-size: 1rem;
     }
 }
-@media only screen and (max-width: 480px) {
+@media screen and (max-width: 480px) {
     .container {
         width: 89%;
         height: 103rem;
@@ -93,5 +93,13 @@
     }
     html {
         height: 227%;
+    }
+}
+@media screen and (max-width: 380px) {
+    html {
+        height: 250%;
+    }
+    .container {
+        height: 103rem;
     }
 }

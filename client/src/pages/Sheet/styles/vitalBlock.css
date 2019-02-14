@@ -171,7 +171,7 @@
         top: 1rem;
     }
 }
-@media only screen and (max-width: 480px) {
+@media screen and (max-width: 480px) {
     #hexagon1 {
         top: 7.5rem;
         left: 3.5rem;

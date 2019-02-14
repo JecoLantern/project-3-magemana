@@ -63,7 +63,7 @@
         border-top-color: #AA8226;
     }
 }
-@media only screen and (max-width: 480px) {
+@media screen and (max-width: 480px) {
     #diamond1 {
         border: 2.375rem solid transparent;
         border-bottom-color: #AA8226;

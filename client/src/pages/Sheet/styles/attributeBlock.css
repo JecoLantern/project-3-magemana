@@ -135,7 +135,7 @@
     }
 }
 
-@media only screen and (max-width: 480px) {
+@media screen and (max-width: 480px) {
     #rectangle {
         margin-top: 0.5rem;
         width: 2.75rem;

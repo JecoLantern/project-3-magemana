@@ -64,10 +64,15 @@
         margin-left: 0.5rem;
     }
 }
-@media only screen and (max-width: 480px) {
+@media screen and (max-width: 480px) {
     .hpCentral {
         position: absolute;
         top: 30rem;
         margin-left: 2rem;
+    }
+}
+@media screen and (max-width: 380px) {
+    .hpCentral {
+        margin-left: 1.25rem;
     }
 }
