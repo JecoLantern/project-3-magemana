@@ -30,17 +30,32 @@ class CharacterSheet extends Component {
     constructor(props) {
         super(props)
         this.state = {
-            CharModel: []
+            CharModel: {
+                skills:[]
+            }
         };
     }
 
     componentDidMount() {
-        API.getCharSheet(this.props.match.params.id)
+        this.idHandle(this.props, this.getCharacter)
+    }
+
+    idHandle=(props, callback)=>{
+        this.setState({
+            id:props.match.params.id
+        }, ()=> {
+            callback(this.state.id)
+        })
+    }
+
+    getCharacter = (id) =>{
+        API.getCharSheet(id)
             .then(res => {
                 this.setState({ CharModel: res.data })
                 console.log(this.state.CharModel)
             })
             .then(res => this.setState({ CharModel: utility.runInitialize(this.state.CharModel) }))
+            .then(res => {this.idHandle()} )
             .catch(err => console.log(err));
     }
 
@@ -185,11 +200,11 @@ class CharacterSheet extends Component {
                                 </div>
                             </VitalBlock>
                             <TertiaryAttribute>
-                                <div id="squareTV2"><h6 className="tertiaryTxtproficiency">PROFICIENCY BONUS: {utility.proficiencieBonus(this.state.CharModel.level)}</h6>
-                                    <div id="rectangleRounded2"></div>
+                                <div id="squareTV2"><h6 className="tertiaryTxtproficiency">PROFICIENCY BONUS: </h6>
+                                    <div id="rectangleRounded2">{utility.proficiencieBonus(this.state.CharModel.level)}</div>
                                 </div>
-                                <div id="squareTV3"><h6 className="tertiaryTxtinspiration">INSPIRATION:<input type="checkbox"/> </h6>
-                                    <div id="rectangleRounded3"></div>
+                                <div id="squareTV3"><h6 className="tertiaryTxtinspiration">INSPIRATION:</h6>
+                                    <div id="rectangleRounded3"><input type="checkbox"/></div>
                                 </div>
                             </TertiaryAttribute>
                         </Row>
@@ -199,7 +214,7 @@ class CharacterSheet extends Component {
                     <Col size="9, sm-9, md-9, lg-12, xl-9">
                         <Row>
                             <SkillsBlock
-                                skillArr={this.state.CharModel.skills}
+                                skillList={this.state.CharModel.skillList}
                             />
                             <Equipment
                                 equipment={this.state.CharModel.equipment}

@@ -123,7 +123,7 @@ export default {
         char.armorClass = this.armorClass(char.attributes[1]);
         char.passivePerception = this.passivePerception(char.attributes[4]);
         char.features = this.generateFeatureText(char.traits);
-        char.skills = this.getSkills(char.attributes, char.level);
+        char.skillList = this.getSkills(char.attributes, char.level);
         char.savingThrows = this.generateSaves(char);
         //....run functions listed above....
 
