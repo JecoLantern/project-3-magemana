@@ -3,12 +3,11 @@
     animation: App-logo-spin infinite 10s linear;
     height: 140px;
     margin-right: 60%;
+    z-index: 1;
   }
   .App-logo:hover {
     animation: App-logo-spin infinite 10s linear;
-    height: 145px;
- 
-    
+    height: 142px;  
   }
   
   .App-header {
@@ -113,96 +112,6 @@ font-size: 30px;
     from { transform: rotate(0deg); }
     to { transform: rotate(360deg); }
   }
-
-  @media only screen and (max-width: 1024px) {
-    .list-overflow-container{
-        margin-left: 15%;  
-        margin-top: 5%;
-  }
-  .list-group{
-    max-height: 450px;
-    max-width: 1000px;
-    overflow-Y: scroll;
-}
-}
-
-
-@media only screen and (max-width: 768px) {
-  
-  html{
-    height: 85vh;
-  }
-  body{
-    height: 86vh;
-  }
-  .container{
-    height: 120% !important;
-  } 
-  
-  .list-overflow-container{
- margin-left: 16% !important ;
- margin-top: -4%;
-  }
-
-  .list-group-item{
-      width: 200px;
-      
-  }
-
-  .list-group{
-    max-height: 450px;
-    max-width: 1000px;
-    overflow-Y: scroll;
-    overflow-x: hidden !important;
-}
-  .App-logo {
-    animation: App-logo-spin infinite 10s linear;
-    height: 80px;
-margin-left: -4%;
-  }
-  .container {
-    height: 86vh;
-    margin-top: 1rem;
-}
-
-}
-
-
-@media only screen and (max-width: 600px) {
- 
-  
-  .list-overflow-container{
-        padding-right: 60%;
-  }
-  
-  .list-group{
-      margin-left: -5%;
-      margin-top: -2%;
-  }
-  .list-group-item{
-      width: 300px;
-  }
-  .App-logo {
-    animation: App-logo-spin infinite 10s linear;
-    height: 100px;
-    margin-right: 80%;
-  }
-  .App-logo:hover {
-    animation: App-logo-spin infinite 10s linear;
-    height: 110px;
-    margin-right: 80%;
-    
-  }
-  .container {
-    height: 86vh;
-    margin-top: 1rem;
-}
-}
-
-
-
-
-
 #App {
   font-family: sans-serif;
 
@@ -289,6 +198,175 @@ margin-left: -4%;
 .bm-overlay {
   background: #0000 !important;
 
+}
+
+@media only screen and (max-width: 1024px) {
+  .list-overflow-container{
+      margin-left: 35%;  
+      margin-top: 5%;
+}
+.list-group{
+  max-height: 550px;
+  max-width: 570px;
+  overflow-Y: scroll;
+}
+.list-group::-webkit-scrollbar {
+  background-color: white;
+  width: 12px;
+  border-radius: 16px;     
+}
+
+.list-group::-webkit-scrollbar:hover {
+  background-color: whitesmoke;
+}
+
+.list-group::-webkit-scrollbar-thumb {
+  background-color: black;
+  border-radius: 16px;
+}
+
+.list-group::-webkit-scrollbar-thumb:hover {
+  background-color: lighten(#494949, 20);
+}
+.bm-menu {
+  background: #0000;
+  padding: 2.5em 1.5em 0;
+  font-size: 1.15em;
+  background-image: url(http://pngimg.com/uploads/paper_sheet/paper_sheet_PNG7231.png);
+  background-size: cover;
+  background-position: right;
+  background-repeat: no-repeat;
+  /* margin-right: 140%;
+  margin-left: -110%; */
+  position: relative !important;
+  left: -40px;
+  bottom: 165px;
+  margin-right: 25%;
+}
+
+.bm-burger-button {
+  position: relative;
+  width: 36px;
+  height: 30px;
+  top: -125px;
+  left: 195px;
+}
+}
+
+
+@media only screen and (max-width: 768px) {
+  .container{
+    margin-left: 14%;
+  }
+  
+  .list-overflow-container{
+    margin-left: 15%;  
+    margin-top: 5%;
+}
+.list-group{
+max-height: 550px;
+max-width: 570px;
+overflow-Y: scroll;
+}
+.list-group::-webkit-scrollbar {
+background-color: white;
+width: 12px;
+border-radius: 16px;     
+}
+
+.list-group::-webkit-scrollbar:hover {
+background-color: whitesmoke;
+}
+
+.list-group::-webkit-scrollbar-thumb {
+background-color: black;
+border-radius: 16px;
+}
+
+.list-group::-webkit-scrollbar-thumb:hover {
+background-color: lighten(#494949, 20);
+}
+.bm-menu {
+background: #0000;
+padding: 2.5em 1.5em 0;
+font-size: 1.15em;
+background-image: url(http://pngimg.com/uploads/paper_sheet/paper_sheet_PNG7231.png);
+background-size: cover;
+background-position: right;
+background-repeat: no-repeat;
+/* margin-right: 140%;
+margin-left: -110%; */
+position: relative !important;
+left: -110px;
+bottom: 165px;
+margin-right: 40%;
+}
+
+.bm-burger-button {
+position: relative;
+width: 36px;
+height: 30px;
+top: -125px;
+left: 195px;
+}
+}
+
+
+@media only screen and (max-width: 812px) {
+  .container{
+    margin-left: 10%;
+  }
+  
+  .list-overflow-container{
+    margin-left: 15%;  
+    margin-top: 5%;
+}
+.list-group{
+max-height: 550px;
+max-width: 570px;
+overflow-Y: scroll;
+}
+.list-group::-webkit-scrollbar {
+background-color: white;
+width: 12px;
+border-radius: 16px;     
+}
+
+.list-group::-webkit-scrollbar:hover {
+background-color: whitesmoke;
+}
+
+.list-group::-webkit-scrollbar-thumb {
+background-color: black;
+border-radius: 16px;
+}
+
+.list-group::-webkit-scrollbar-thumb:hover {
+background-color: lighten(#494949, 20);
+}
+.bm-menu {
+background: #0000;
+padding: 2.5em 1.5em 0;
+font-size: 1.15em;
+background-image: url(http://pngimg.com/uploads/paper_sheet/paper_sheet_PNG7231.png);
+background-size: cover;
+background-position: right;
+background-repeat: no-repeat;
+/* margin-right: 140%;
+margin-left: -110%; */
+position: relative !important;
+left: -110px;
+bottom: 165px;
+margin-right: 40%;
+}
+
+.bm-burger-button {
+position: relative;
+width: 36px;
+height: 30px;
+top: -125px;
+left: 115px;
+}
 }
 
 

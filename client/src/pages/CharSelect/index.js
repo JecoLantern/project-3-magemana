@@ -43,22 +43,14 @@ class CharSelect extends Component {
             return <Redirect to={{ pathname: this.state.redirectTo }} />
         } else {
             return (
-                
-               
-                
-                <Container>
 
-              
-                    <Head/>
+                <Container>
                     <Header
                         onClick={this.handleNewAdventurer}
                     />
-        
                     <Row>
-                        
 <div id="App">
-                <SideBar pageWrapId={"page-wrap"} outerContainerId={"App"} />
-          
+                <SideBar pageWrapId={"page-wrap"} outerContainerId={"App"}/>
                 <div id="page-wrap">
                         {this.state.characters.length ? (
                             <List>
