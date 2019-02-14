@@ -69,3 +69,8 @@
         margin-left: 3rem;
     }
 }
+@media (max-width: 680px) and (orientation: landscape) {
+    .hpCentral {
+        margin-left: 0.5rem;
+    }
+}

@@ -50,6 +50,7 @@
 @media only screen and (max-width: 1024px) {
     #rectangle {
         width: 8.25rem;
+        margin-top: -0.5rem;
     }
     #squareTV {
         width: 8.25rem;
@@ -87,6 +88,7 @@
 }
 @media (max-width: 850px) and (orientation: landscape) {
     #rectangle {
+        margin-top: -1.5rem;
         width: 6.5rem;
         margin-left: -0.5rem;
         height: 2rem;
@@ -106,5 +108,29 @@
     }
     #circle {
         right: -4.25rem;
+    }
+}
+
+@media (max-width: 680px) and (orientation: landscape) {
+    #rectangle {
+        width: 6rem;
+        margin-left: -14%;
+        height: 2rem;
+    }
+    #squareTV {
+        width: 6rem;
+        margin-left: -14%;
+        height: 4rem;
+    }
+    #rectangleRounded {
+        width: 6rem;
+        height: 2rem;
+    }
+    #oval {
+        width: 6rem;
+        margin-left: -14%;
+    }
+    #circle {
+        right: -3.75rem;
     }
 }

@@ -141,6 +141,7 @@
 @media only screen and (max-width: 1024px) {
     #hexagon1 {
         left: 5.5rem;
+        margin-top: -4.8125rem;
     }
 }
 
@@ -155,5 +156,18 @@
     #hexagon1 {
         top: 5.5rem;
         left: 3.5rem;
+    }
+}
+
+@media (max-width: 750px) and (orientation: landscape) {
+    #hexagon1 {
+        top: 6.5rem;
+        left: 3.5rem;
+    }
+}
+@media (max-width: 680px) and (orientation: landscape) {
+    .hexagonTxt2 {
+        font-size: 2rem;
+        top: 1rem;
     }
 }

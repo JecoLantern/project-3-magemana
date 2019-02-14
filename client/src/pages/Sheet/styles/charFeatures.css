@@ -31,3 +31,9 @@
         margin-left: 0rem;
     }
 }
+@media (max-width: 680px) and (orientation: landscape) {
+    #squareTV9 {
+        width: 12rem;
+        margin-left: 0.75rem;
+    }
+}

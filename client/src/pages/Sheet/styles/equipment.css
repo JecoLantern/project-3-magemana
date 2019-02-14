@@ -112,3 +112,20 @@ background: #c7b48c;
         width: 12rem;
     }
 }
+@media (max-width: 850px) and (orientation: landscape) {
+    #squareTV8 {
+        width: 13.75rem;
+        margin-left: 0.5rem;
+    }
+    #rectangle2 {
+        width: 11rem;
+    }
+    #rectangle3 {
+        width: 11rem;
+    }
+}
+@media (max-width: 680px) and (orientation: landscape) {
+    #squareTV8 {
+        margin-left: -0.25rem;
+    }
+}

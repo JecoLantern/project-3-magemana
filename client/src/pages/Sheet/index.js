@@ -50,22 +50,22 @@ class CharacterSheet extends Component{
                     <Avatar></Avatar>
                     <NamePlate>
                         <Name>
-                            <h2 className="fs768 fs850">{this.state.CharModel.name}</h2>
+                            <h2 className="fs768 fs850 fs750">{this.state.CharModel.name}</h2>
                         </Name>
                         <Background>
-                            <h2 className="fs768 fs850">Background</h2>
+                            <h2 className="fs768 fs850 fs750">Background</h2>
                         </Background>
                         <ExpPoints>
-                            <h2 className="fs768 fs850">ExpPoints</h2>
+                            <h2 className="fs768 fs850 fs750">ExpPoints</h2>
                         </ExpPoints>
                         <Race>
-                            <h2 className="fs768 fs850">{this.state.CharModel.race}</h2>
+                            <h2 className="fs768 fs850 fs750">{this.state.CharModel.race}</h2>
                         </Race>
                         <Alignment>
-                            <h2 className="fs768 fs850">{this.state.CharModel.alignment}</h2>
+                            <h2 className="fs768 fs850 fs750">{this.state.CharModel.alignment}</h2>
                         </Alignment>
                         <ClassLVL>
-                            <h2 className="fs768 fs850">{this.state.CharModel.class} | <small>Level:</small>{this.state.CharModel.level}</h2>
+                            <h2 className="fs768 fs850 fs750">{this.state.CharModel.class} | <small>Level:</small>{this.state.CharModel.level}</h2>
                         </ClassLVL>
                     </NamePlate>
                 </Row>
