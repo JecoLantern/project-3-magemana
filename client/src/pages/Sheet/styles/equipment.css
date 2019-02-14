@@ -129,3 +129,11 @@ background: #c7b48c;
         margin-left: -0.25rem;
     }
 }
+@media only screen and (max-width: 480px) {
+    #squareTV8 {
+        top: 29.5rem;
+        width: 20.25rem;
+        left: -7rem;;
+        margin-left: 0.5rem;
+    }
+}

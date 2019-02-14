@@ -43,3 +43,36 @@
     padding-left: 0 !important;
     padding-right: 0 !important;
 }
+
+@media only screen and (max-width: 480px) {
+    .name {
+        margin-right: 0.5rem;
+        border-right: 0.2rem solid black;
+    }
+    .background {
+        margin-right: 0.5rem;
+        border-right: 0.2rem solid black;
+        border-left: 0.2rem solid black;
+    }
+    .alignment {
+        margin-right: 0.5rem;
+        border-bottom: none;
+        border-top: none;
+    }
+    .classLvl {
+        margin-right: 0.5rem;
+        border-left: 0.2rem solid black;
+    }
+    .expPoints {
+        border-right: none;
+        border-top: none;
+        margin-top: 0rem;
+        border-bottom: none;
+    }
+    .race {
+        border-top: none;
+        border-left: none;
+        border-bottom: none;
+    }
+    
+}

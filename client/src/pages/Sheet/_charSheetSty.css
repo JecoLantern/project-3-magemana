@@ -79,5 +79,19 @@
     .fs750 {
         font-size: 1rem;
     }
-
+}
+@media only screen and (max-width: 480px) {
+    .container {
+        width: 89%;
+        height: 103rem;
+    }
+    .fs480 {
+        font-size: 0.85rem;
+    }
+    .fs480v2 {
+        font-size: 0.85rem;
+    }
+    html {
+        height: 227%;
+    }
 }
