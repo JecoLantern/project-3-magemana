@@ -120,11 +120,11 @@ export default {
         //here you will run all the above functions then return the newly generated character to be pushed into the state, then set isInitialized=true
         char.health = this.health(char);
         char.initiative = this.initiative(char.attributes[1]);
-        char.armorClass = this.armorClass(char.attributes[1])
-        char.passivePerception = this.passivePerception(char.attributes[4])
-        char.features = this.generateFeatureText(char.traits)
-        char.skills = this.getSkills(char.attributes, char.level)
-        char.savingThrows = this.generateSaves(char)
+        char.armorClass = this.armorClass(char.attributes[1]);
+        char.passivePerception = this.passivePerception(char.attributes[4]);
+        char.features = this.generateFeatureText(char.traits);
+        char.skills = this.getSkills(char.attributes, char.level);
+        char.savingThrows = this.generateSaves(char);
         //....run functions listed above....
 
         char.isInitialized = true;
