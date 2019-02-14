@@ -1,0 +1,26 @@
+#square1 {
+    margin-top: 1rem;
+    width: 8.25rem;
+    height: 8.25rem;
+    background: #aa8259;
+}
+
+@media only screen and (max-width: 768px) {
+    #square1 {
+        width: 6.25rem;
+        height: 6.25rem;
+    }
+}
+
+@media (max-width: 850px) and (orientation: landscape) {
+    #square1 {
+        width: 6.25rem;
+        height: 6.25rem;
+    }
+}
+@media (max-width: 750px) and (orientation: landscape) {
+    #square1 {
+        width: 4.5rem;
+        height: 4.5rem;
+    }
+}

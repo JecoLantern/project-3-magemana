@@ -1,0 +1,110 @@
+[
+    {
+        "skillName": "Acrobatics",
+        "val": 0,
+        "parentAttr": "DEX",
+        "isProficient": false
+    },
+    {
+        "skillName": "Animal Handling",
+        "val": 0,
+        "parentAttr": "WIS",
+        "isProficient": false
+    },
+    {
+        "skillName": "Arcana",
+        "val": 0,
+        "parentAttr": "INT",
+        "isProficient": false
+    },
+    {
+        "skillName": "Athletics",
+        "val": 0,
+        "parentAttr": "STR",
+        "isProficient": false
+    },
+    {
+        "skillName": "Deception",
+        "val": 0,
+        "parentAttr": "CHA",
+        "isProficient": false
+    },
+    {
+        "skillName": "History",
+        "val": 0,
+        "parentAttr": "INT",
+        "isProficient": false
+    },
+    {
+        "skillName": "Insight",
+        "val": 0,
+        "parentAttr": "WIS",
+        "isProficient": false
+    },
+    {
+        "skillName": "Intimidation",
+        "val": 0,
+        "parentAttr": "CHA",
+        "isProficient": false
+    },
+    {
+        "skillName": "Investigation",
+        "val": 0,
+        "parentAttr": "INT",
+        "isProficient": false
+    },
+    {
+        "skillName": "Medicine",
+        "val": 0,
+        "parentAttr": "WIS",
+        "isProficient": false
+    },
+    {
+        "skillName": "Nature",
+        "val": 0,
+        "parentAttr": "INT",
+        "isProficient": false
+    },
+    {
+        "skillName": "Perception",
+        "val": 0,
+        "parentAttr": "WIS",
+        "isProficient": false
+    },
+    {
+        "skillName": "Performance",
+        "val": 0,
+        "parentAttr": "CHA",
+        "isProficient": false
+    },
+    {
+        "skillName": "Persuasion",
+        "val": 0,
+        "parentAttr": "CHA",
+        "isProficient": false
+    },
+    {
+        "skillName": "Religion",
+        "val": 0,
+        "parentAttr": "INT",
+        "isProficient": false
+    },
+    {
+        "skillName": "Sleight Of Hand",
+        "val": 0,
+        "parentAttr": "DEX",
+        "isProficient": false
+    },
+    {
+        "skillName": "Stealth",
+        "val": 0,
+        "parentAttr": "DEX",
+        "isProficient": false
+    },
+    {
+        "skillName": "Survival",
+        "val": 0,
+        "parentAttr": "WIS",
+        "isProficient": false
+    }
+]

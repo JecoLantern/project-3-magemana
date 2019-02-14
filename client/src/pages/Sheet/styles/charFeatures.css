@@ -1,0 +1,33 @@
+#squareTV9 {
+    margin: auto;
+    margin-top: 1rem;
+    margin-left: 1rem;
+    width: 17rem;
+    height: 20rem;
+    background: #c7b48c;
+    position: relative;
+    -moz-border-radius: 0.625rem;
+    -webkit-border-radius: 0.625rem;
+    border-radius: 0.625rem;
+}
+
+@media only screen and (max-width: 1024px) {
+    #squareTV9 {
+        margin-top: 2rem;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    #squareTV9 {
+        margin-top: 2rem;
+        width: 13rem;
+    }
+}
+
+@media (max-width: 850px) and (orientation: landscape) {
+    #squareTV9 {
+        margin-top: 1.5rem;
+        width: 14rem;
+        margin-left: 0rem;
+    }
+}

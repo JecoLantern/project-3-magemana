@@ -1,0 +1,110 @@
+#rectangle {
+    width: 5.5rem;
+    height: 2.25rem;
+    background: #5b3624;
+}
+#squareTV {
+    width: 5.5rem;
+    height: 80px;
+    background: #aa8259;
+    position: relative;
+    -moz-border-radius: 0.625rem;
+    -webkit-border-radius: 0.625rem;
+    border-radius: 0.625rem;
+}
+#rectangleRounded {
+    width: 5.5rem;
+    height: 2.25rem;
+    background: #c7b48c;
+    position: relative;
+    -moz-border-radius: 0.625rem;
+    -webkit-border-radius: 0.625rem;
+    border-radius: 0.625rem;
+}
+.attributeTxt, .valueTxt {
+    color: wheat;
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+.valueTxt {
+    color: chocolate;
+    font-size: 1.75rem;
+}
+#oval {
+    width: 5.5rem;
+    height: 2.25rem;
+    background: #5b3624;
+    border-radius: 3.125rem / 3.125rem;
+}
+#circle {
+    width: 2.25rem;
+    height: 2.25rem;
+    background: #c7b48c;
+    border-radius: 3.125rem / 3.125rem;
+    position: relative;
+    right: -3.25rem;
+    top: -1.25rem;
+}
+
+@media only screen and (max-width: 1024px) {
+    #rectangle {
+        width: 8.25rem;
+    }
+    #squareTV {
+        width: 8.25rem;
+    }
+    #rectangleRounded {
+        width: 8.25rem;
+    }
+    #oval {
+        width: 8.25rem;
+    }
+    #circle {
+        right: -6.25rem;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    #rectangle {
+        width: 6.25rem;
+        margin-left: -0.3rem;
+    }
+    #squareTV {
+        width: 6.25rem;
+        margin-left: -0.3rem;
+    }
+    #rectangleRounded {
+        width: 6.25rem;
+    }
+    #oval {
+        width: 6.25rem;
+        margin-left: -0.3rem;
+    }
+    #circle {
+        right: -4.25rem;
+    }
+}
+@media (max-width: 850px) and (orientation: landscape) {
+    #rectangle {
+        width: 6.5rem;
+        margin-left: -0.5rem;
+        height: 2rem;
+    }
+    #squareTV {
+        width: 6.5rem;
+        margin-left: -0.5rem;
+        height: 4rem;
+    }
+    #rectangleRounded {
+        width: 6.5rem;
+        height: 2rem;
+    }
+    #oval {
+        width: 6.5rem;
+        margin-left: -0.5rem;
+    }
+    #circle {
+        right: -4.25rem;
+    }
+}

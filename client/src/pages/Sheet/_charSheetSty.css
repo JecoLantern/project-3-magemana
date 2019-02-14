@@ -1,193 +1,60 @@
-#diamond1 {
-    margin-top: 2rem;
-    width: 0;
-    height: 0;
-    border: 4.375rem solid transparent;
-    border-bottom-color: orange;
-    position: relative;
-    top: -5.75rem;
-    left: -1.125rem;
-    z-index: 1;
-}
-#diamond1:after {
-    content: "";
-    position: absolute;
-    left: -4.375rem;
-    top: 4.375rem;
-    width: 0;
-    height: 0;
-    border: 4.375rem solid transparent;
-    border-top-color: orange;
-}
-#square1 {
+/* html, body {
+    background-image: url("https://images.pexels.com/photos/235985/pexels-photo-235985.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+    background-color: #e4c55f;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+} */
+
+.container {
+    /* background-image: url("https://images.pexels.com/photos/235985/pexels-photo-235985.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"); */
+    background-image: url("./assets/vintage-old-paper.jpg");
+    background-color: #e4c55f;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 58rem;
     margin-top: 1rem;
-    width: 8.25rem;
-    height: 8.25rem;
-    background: red;
 }
-.name {
-    margin-top: 1rem;
-    border-top: 0.2rem solid black;
-    border-left: 0.2rem solid black;
-    border-bottom: 0.2rem solid black;
-    text-align: center;
+
+@media only screen and (max-width: 1024px) {
+    .container {
+        height: 83rem;
+        margin-top: 1rem;
+    }
 }
-.background {
-    margin-top: 1rem;
-    border-top: 0.2rem solid black;
-    border-bottom: 0.2rem solid black;
-    text-align: center;
+
+@media only screen and (max-width: 768px) {
+    .fs768 {
+        font-size: 1.25rem;
+    }
+    .container {
+        height: 62rem;
+    }
 }
-.expPoints {
-    margin-top: 1rem;
-    border-top: 0.2rem solid black;
-    border-right: 0.2rem solid black;
-    border-bottom: 0.2rem solid black;
-    text-align: center;
+@media (max-width: 1024px) and (orientation: landscape) {
+    .container {
+        height: 64rem;
+    }
+    html {
+        height: 111%;
+    }
 }
-.race {
-    border-top: 0.2rem solid black;
-    border-left: 0.2rem solid black;
-    border-bottom: 0.2rem solid black;
-    text-align: center;
-}
-.alignment {
-    border-top: 0.2rem solid black;
-    border-bottom: 0.2rem solid black;
-    text-align: center;
-}
-.classLvl {
-    border-top: 0.2rem solid black;
-    border-right: 0.2rem solid black;
-    border-bottom: 0.2rem solid black;
-    text-align: center;
-}
-.col-4,
-.col-sm-4,
-.col-md-4,
-.col-lg-4,
-.col-xl-4 {
-    padding-left: 0 !important;
-    padding-right: 0 !important;
-}
-#rectangle {
-    width: 5.5rem;
-    height: 2.25rem;
-    background: chocolate;
-}
-#squareTV {
-    width: 5.5rem;
-    height: 80px;
-    background: red;
-    position: relative;
-    -moz-border-radius: 10px;
-    -webkit-border-radius: 10px;
-    border-radius: 10px;
-}
-#rectangleRounded {
-    width: 5.5rem;
-    height: 2.25rem;
-    background: yellow;
-    position: relative;
-    -moz-border-radius: 10px;
-    -webkit-border-radius: 10px;
-    border-radius: 10px;
-}
-#oval {
-    width: 5.5rem;
-    height: 2.25rem;
-    background: orange;
-    border-radius: 3.125rem / 3.125rem;
-}
-#circle {
-    width: 2.25rem;
-    height: 2.25rem;
-    background: orangered;
-    border-radius: 3.125rem / 3.125rem;
-    position: relative;
-    right: -3.25rem;
-}
-#hexagon1 {
-    transform: rotate(-90deg);
-    width: 4.5rem;
-    height: 4.6rem;
-    background: black;
-    position: absolute;
-    top: 7rem;
-    left: 4rem;
-    margin-top: -3.8125rem;
-}
-#hexagon1:before {
-    content: "";
-    position: absolute;
-    top: -2.25rem;
-    left: 0;
-    width: 0;
-    height: 0;
-    border-left: 2.25rem solid transparent;
-    border-right: 2.25rem solid transparent;
-    border-bottom: 2.25rem solid black;
-}
-#hexagon1:after {
-    content: "";
-    position: absolute;
-    bottom: -2.25rem;
-    left: 0;
-    width: 0;
-    height: 0;
-    border-left: 2.25rem solid transparent;
-    border-right: 2.25rem solid transparent;
-    border-top: 2.25rem solid black;
-    z-index: -1;
-}
-#hexagon2 {
-    transform: rotate(0deg);
-    width: 2.5rem;
-    height: 4.25rem;
-    background: gray;
-    position: relative;
-    top: 5rem;
-    left: 0rem;
-    margin-top: -4.8125rem;
-}
-#hexagon2:before {
-    content: "";
-    position: absolute;
-    top: -1.25rem;
-    left: 0;
-    width: 0;
-    height: 0;
-    border-left: 1.25rem solid transparent;
-    border-right: 1.25rem solid transparent;
-    border-bottom: 1.25rem solid gray;
-}
-#hexagon2:after {
-    content: "";
-    position: absolute;
-    bottom: -1.25rem;
-    left: 0;
-    width: 0;
-    height: 0;
-    border-left: 1.25rem solid transparent;
-    border-right: 1.25rem solid transparent;
-    border-top: 1.25rem solid gray;
-    z-index: -1;
-}
-#squareTV2 {
-    width: 8rem;
-    height: 2.25rem;
-    background: red;
-    position: relative;
-    -moz-border-radius: 10px;
-    -webkit-border-radius: 10px;
-    border-radius: 10px;
-}
-#rectangleRounded2 {
-    width: 2.25rem;
-    height: 2.25rem;
-    background: yellow;
-    position: relative;
-    -moz-border-radius: 10px;
-    -webkit-border-radius: 10px;
-    border-radius: 10px;
+
+@media (max-width: 850px) and (orientation: landscape) {
+    html {
+        height: 256%;
+    }
+    .container {
+        height: 60rem;
+    }
+    .fs850 {
+        font-size: 1.25rem;
+    }
+    p.attributeTxt {
+        font-size: 1.25rem;
+    } 
+    p.valueTxt {
+        font-size: 1.5rem;
+    }
 }

@@ -1,0 +1,35 @@
+#logoIMG {
+    height: 4rem;
+    width: 4rem;
+    position: absolute;
+    top: 2rem;
+    left: -2rem;
+    animation: spin 5s linear infinite;
+}
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+@media only screen and (max-width: 768px) {
+    #logoIMG {
+        top: 1.25rem;
+    }
+}
+
+@media (max-width: 850px) and (orientation: landscape) {
+    #logoIMG {
+        height: 3rem;
+        width: 3rem;
+        top: 1.75rem;
+        left: -1.5rem;
+    }
+}
+@media (max-width: 750px) and (orientation: landscape) {
+    #logoIMG {
+        height: 2rem;
+        width: 2rem;
+        top: 1.3rem;
+        left: -1rem;
+    }
+}

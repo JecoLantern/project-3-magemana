@@ -4,38 +4,31 @@ import { Redirect } from 'react-router-dom'
 import Header from './components/header'
 import Create from './components/create-task'
 import Tasks from './components/tasks'
-
+import axios from 'axios'
 import Deleteall from './components/delete-all'
 
 import ModalAlert from '../../components/Modal/modal'
 
 import './styles/App.css'
 
-class Select extends Component {
+export default class App extends Component {
   state = {
     tasks: [],
     selectedTask: undefined
   }
-
-  componentDidMount = () => {
-    try {
-      const json = localStorage.getItem('tasks')
-      const tasks = JSON.parse(json)
-
-      if (tasks) {
-        this.setState(() => ({ tasks }))
-      }
-    } catch (e) {
-      this.setState(() => ({ selectedTask: 'Something went wrong!' }))
-    }
+  componentDidMount () {
+    axios.get('http://localhost:3000/api/todos/')
+        .then((res) => {
+          this.setState({tasks: res.data});
+        })
+        .catch((error) => console.error('axios error', error));
   }
-
-  componentDidUpdate = (prevProps, prevState) => {
-    if (prevState.tasks.length !== this.state.tasks.length) {
-      const json = JSON.stringify(this.state.tasks)
-      localStorage.setItem('tasks', json)
-    }
-  }
+  // componentDidUpdate = (prevProps, prevState) => {
+  //     if(prevState.tasks.length !== this.state.tasks.length) {
+  //         const json = JSON.stringify(this.state.tasks)
+  //         localStorage.setItem('tasks', json)
+  //     }
+  // }
 
   deleteTask = (taskTodelete) => {
     this.setState((prevState) => ({
@@ -45,23 +38,24 @@ class Select extends Component {
 
 
   deleteAll = () => {
-    this.setState(() => ({ tasks: [] }))
+    this.setState(() => ({tasks: []}))
   }
 
   closeModal = () => {
-    this.setState(() => ({ selectedTask: undefined }))
+    this.setState(() => ({selectedTask: undefined}))
   }
 
   onSubmit = (event) => {
     event.preventDefault()
     const singletask = event.target.elements.singletask.value.trim().toLowerCase()
-    if (!singletask) {
-      this.setState(() => ({ selectedTask: 'Please enter a character!' }))
-    } else if (this.state.tasks.indexOf(singletask) > -1) {
-      this.setState(() => ({ selectedTask: 'This character already exists!' }))
+    if(!singletask) {
+        this.setState(() => ({selectedTask: 'Please enter a character!'}))
+    } else if(this.state.tasks.indexOf(singletask) > -1) {
+        this.setState(() => ({selectedTask: 'This character already exists!'}))
     } else this.setState((prevState) => ({ tasks: [...prevState.tasks, singletask] }))
     event.target.elements.singletask.value = ''
   }
+
   render() {
     if (this.state.redirectTo) {
       return <Redirect to={{ pathname: this.state.redirectTo }} />
@@ -98,4 +92,3 @@ class Select extends Component {
   }
 }
 
-  export default Select;
