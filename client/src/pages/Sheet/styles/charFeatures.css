@@ -51,3 +51,14 @@
         left: -14.5rem;
     }
 }
+@media only screen and (max-width: 640px) and (orientation: landscape) {
+    #squareTV9 {
+        width: 11.5rem;
+    }
+}
+@media only screen and (max-width: 360px) and (orientation: portrait) {
+    #squareTV9 {
+        width: 19.25rem;
+        left: -14rem;
+    }
+}

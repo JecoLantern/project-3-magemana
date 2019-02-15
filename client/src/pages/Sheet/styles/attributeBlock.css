@@ -160,3 +160,38 @@
         right: -0.25rem;
     }
 }
+@media only screen and (max-width: 640px) and (orientation: landscape) {
+    #rectangle {
+        margin-left: -17%;
+    }
+    #squareTV {
+        margin-left: -17%;
+    }
+    #rectangleRounded {
+        width: 6rem;
+        height: 2rem;
+    }
+    #oval {
+        margin-left: -17%;
+    }
+    #circle {
+        right: -3.75rem;
+    }
+}
+@media only screen and (max-width: 360px) and (orientation: portrait) {
+    #rectangle {
+        margin-left: -41%;
+    }
+    #squareTV {
+        margin-left: -41%;
+    }
+    #rectangleRounded {
+        height: 2rem;
+    }
+    #oval {
+        margin-left: -41%;
+    }
+    #circle {
+        right: -0.25rem;
+    }
+}

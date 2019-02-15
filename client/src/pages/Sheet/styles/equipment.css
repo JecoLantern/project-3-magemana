@@ -143,3 +143,14 @@ background: #c7b48c;
         width: 20rem;
     }
 }
+@media only screen and (max-width: 640px) and (orientation: landscape) {
+    #squareTV8 {
+        width: 13.25rem;
+    }
+}
+@media only screen and (max-width: 360px) and (orientation: portrait) {
+    #squareTV8 {
+        width: 19.25rem;
+        margin-left: 0.8rem;
+    }
+}
