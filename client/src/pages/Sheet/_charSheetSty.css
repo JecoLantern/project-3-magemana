@@ -105,10 +105,24 @@
     -ms-transform: rotate(45deg);
     transform: rotate(45deg);
 }
+.checkmarkPosition {
+    top: 0.5rem;
+    left: 0.7rem;
+}
 .skillsFs {
     margin-bottom: 0rem;
 }
-
+.healthTxt {
+    color: wheat;
+    margin-bottom: 0rem;
+    font-weight: bold;
+    text-align: center;
+    font-size: 1.25rem;
+}
+input.hpInput {
+    width: 88%;
+    margin-left: 0.5rem;
+}
 
 
 @media only screen and (max-width: 1024px) {

@@ -213,7 +213,7 @@ class CharacterSheet extends Component {
                                     <div id="rectangleRounded3">
                                     <label className="checkbox">
                                         <input type="checkbox" />
-                                        <span className="checkmarkINSP"></span>
+                                        <span className="checkmark checkmarkPosition"></span>
                                     </label>
                                     </div>
                                 </div>
