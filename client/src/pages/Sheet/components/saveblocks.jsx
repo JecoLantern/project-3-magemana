@@ -9,10 +9,10 @@ const secStyle = {
 const SaveBlock = props => {
     return (
         <div id="oval" style={style}>
-        {props.name}
+        <h5 className="savePosition">{props.name}</h5>
        
             <div id="circle" style={secStyle}>
-            <p>
+            <p className="savePostVal">
             {props.val}
             </p>
             </div>
