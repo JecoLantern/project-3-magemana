@@ -14,6 +14,8 @@ import ExpPoints from "./components/expPoints";
 import Race from "./components/race";
 import Alignment from "./components/alignment";
 import ClassLVL from "./components/classLvL";
+import SideBar from "../../components/SideBar/SideBar"
+import './styles/sidebar.css'
 
 import AttributeBlock from "./components/attributeBlock";
 import VitalBlock from "./components/vitalBlock";
@@ -44,7 +46,12 @@ class CharacterSheet extends Component{
 
     render() {
         return (
+        
+              
             <Container>
+                    <div id="App">
+                <SideBar pageWrapId={"page-wrap"} outerContainerId={"App"}/>
+                <div id="page-wrap">
                 <Row>
                     <Logo></Logo>
                     <Avatar></Avatar>
@@ -68,6 +75,7 @@ class CharacterSheet extends Component{
                             <h2 className="fs768 fs850 fs750 fs480">{this.state.CharModel.class} | <small>Level:</small>{this.state.CharModel.level}</h2>
                         </ClassLVL>
                     </NamePlate>
+                 
                 </Row>
                 <Row>
                     <Col size="6, sm-6, md-6, lg-6, xl-6">
@@ -209,8 +217,14 @@ class CharacterSheet extends Component{
                         {/* </Col> */}
                     </Row>
                     </Col>
+                    
                 </Row>
+                </div>
+                </div>
             </Container>
+          
+            
+            
         )
     }
 
