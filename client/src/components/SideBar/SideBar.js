@@ -7,7 +7,7 @@ export default props => {
     <Menu {...props}>
    
       <a className="Logout" href="/">
-        Sign out
+        Logout
       </a>
 
       <a className="New" href="http://dnd.wizards.com/dungeons-and-dragons/what-is-dd">

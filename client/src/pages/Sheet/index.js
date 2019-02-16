@@ -8,6 +8,7 @@ import Logo from "./components/logo";
 import Avatar from "./components/avatar";
 //Importing NamePlate Components
 import NamePlate from "./components/namePlate";
+import SideBar from "../../components/SideBar/SideBar"
 
 import AttributeBlock from "./components/attributeBlock";
 import SaveBlock from "./components/saveblocks"
