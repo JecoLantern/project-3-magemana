@@ -81,3 +81,15 @@
         margin-left: 1rem;
     }
 }
+@media only screen and (max-width: 320px) and (orientation: portrait) {
+    .hpCentral {
+        margin-left: -0.25rem;
+    }
+}
+@media only screen and (max-width: 568px) and (orientation: landscape) {
+    .hpCentral {
+        position: absolute;
+        top: 10rem;
+        margin-left: -0.9rem;
+    }
+} 
