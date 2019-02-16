@@ -11,28 +11,31 @@ const Equipment = (props) => (
         <div id="rectangle2">
         <Row>
             <Col size="4">
-                <div id="rectangle4"></div>
+                <p>Name</p>
+                <div id="rectangle4">{props.weapons[0].name}</div>
             </Col>
             <Col size="4">
-                <div id="rectangle5"></div>
+                <p>Atk</p>
+                <div id="rectangle5">{props.weapons[0].atk}</div>
             </Col>
             <Col size="4">
-                <div id="rectangle6"></div>
+                <p>Dmg</p>
+                <div id="rectangle6">{props.weapons[0].dmg}</div>
             </Col>
         </Row>
-        <Row>
+        {/* <Row>
             <Col size="4">
-                <div id="rectangle7"></div>
+                <div id="rectangle7">{props.weapons[1].name}</div>
             </Col>
             <Col size="4">
-                <div id="rectangle8"></div>
+                <div id="rectangle8">{props.weapons[1].atk}</div>
             </Col>
             <Col size="4">
-                <div id="rectangle9"></div>
+                <div id="rectangle9">{props.weapons[1].dmg}</div>
             </Col>
-        </Row>
+        </Row> */}
         </div>
-        <div id="rectangle3"></div>
+        <div id="rectangle3">Money gp:{props.money}</div>
     </Row>
     <Row>
         <div className="space">
@@ -51,7 +54,12 @@ const Equipment = (props) => (
 </Col>
 )
 Equipment.defaultProps = {
-    equipment: []
+    equipment: [],
+    weapons:[
+        {name:"shortbow", atk:"+0", dmg:"1d6"},
+        {name:"dagger", atk:"+0", dmg:"1d4"},
+    ],
+    money: "15 gp"
 }
 
 

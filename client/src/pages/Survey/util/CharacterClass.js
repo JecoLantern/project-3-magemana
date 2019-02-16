@@ -2,6 +2,7 @@ let axios = require('axios');
 
 class CharacterGen {
     constructor(name, race, className, alignment) {
+        this.isInitialized = false;
         this.name = name;
         this.race = race;
         this.level = 1;

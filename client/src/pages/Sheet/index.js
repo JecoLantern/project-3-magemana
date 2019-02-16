@@ -51,10 +51,15 @@ class CharacterSheet extends Component {
                 this.setState({ CharModel: res.data })
                 console.log(this.state.CharModel)
             })
-            .then(res => this.setState({ CharModel: utility.runInitialize(this.state.CharModel) }))
+            .then(res => (this.state.CharModel.isInitialized ? null : this.setState({ CharModel: utility.runInitialize(this.state.CharModel) })))
             .then(res => { this.idHandle() })
             .catch(err => console.log(err));
     }
+
+    handleSave = () =>{
+        API.saveCharSheet(this.state.CharModel, this.state.id)
+    }
+
 
     equipPush = (event) => {
         const NewModel = { ...this.state.CharModel };
@@ -62,6 +67,7 @@ class CharacterSheet extends Component {
         this.setState({ CharModel: NewModel })
         event.preventDefault();
     }
+
     handleChange = (event) => {
         this.setState({ item: event.target.value })
     }
