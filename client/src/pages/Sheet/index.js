@@ -205,10 +205,17 @@ class CharacterSheet extends Component {
                             </VitalBlock>
                             <TertiaryAttribute>
                                 <div id="squareTV2"><h6 className="tertiaryTxtproficiency">PROFICIENCY BONUS: </h6>
-                                    <div id="rectangleRounded2">{utility.proficiencieBonus(this.state.CharModel.level)}</div>
+                                    <div id="rectangleRounded2">
+                                    <p className="profBonVal">{utility.proficiencieBonus(this.state.CharModel.level)}</p>
+                                    </div>
                                 </div>
                                 <div id="squareTV3"><h6 className="tertiaryTxtinspiration">INSPIRATION:</h6>
-                                    <div id="rectangleRounded3"><input type="checkbox" /></div>
+                                    <div id="rectangleRounded3">
+                                    <label className="checkbox">
+                                        <input type="checkbox" />
+                                        <span className="checkmarkINSP"></span>
+                                    </label>
+                                    </div>
                                 </div>
                             </TertiaryAttribute>
                         </Row>
