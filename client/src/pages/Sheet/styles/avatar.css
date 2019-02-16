@@ -11,3 +11,30 @@
         height: 6.25rem;
     }
 }
+
+@media (max-width: 850px) and (orientation: landscape) {
+    #square1 {
+        width: 6.25rem;
+        height: 6.25rem;
+    }
+}
+@media (max-width: 750px) and (orientation: landscape) {
+    #square1 {
+        width: 4.5rem;
+        height: 4.5rem;
+    }
+}
+@media screen and (max-width: 480px) {
+    #square1 {
+        position: absolute;
+        margin-top: 5.5rem;
+        left: -3.25rem;
+        width: 4.5rem;
+        height: 4.5rem;
+    }
+}
+@media only screen and (max-width: 360px) and (orientation: portrait) {
+    #square1 {
+        left: -3rem;
+    }
+}

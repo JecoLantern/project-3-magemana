@@ -1,11 +1,3 @@
-/* html, body {
-    background-image: url("https://images.pexels.com/photos/235985/pexels-photo-235985.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
-    background-color: #e4c55f;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-} */
-
 .container {
     /* background-image: url("https://images.pexels.com/photos/235985/pexels-photo-235985.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"); */
     background-image: url("./assets/vintage-old-paper.jpg");
@@ -19,13 +11,18 @@
 
 @media only screen and (max-width: 1024px) {
     .container {
+<<<<<<< HEAD
         height: 90vh;
+=======
+        height: 81rem;
+>>>>>>> c854dfc59751d1af760effa280d96756e982bd66
         margin-top: 1rem;
+        margin-left: 1.5rem;
     }
 }
 
 @media only screen and (max-width: 768px) {
-    .fontsize768 {
+    .fs768 {
         font-size: 1.25rem;
     }
     .container {
@@ -34,9 +31,97 @@
 }
 @media (max-width: 1024px) and (orientation: landscape) {
     .container {
-        height: 64rem;
+        height: 61rem;
+        margin-left: 1.25rem;
     }
     html {
-        height: 111%;
+        height: 129%;
     }
+}
+
+@media (max-width: 850px) and (orientation: landscape) {
+    html {
+        height: 256%;
+    }
+    .container {
+        height: 60rem;
+        margin-left: 2.25rem;
+    }
+    .fs850 {
+        font-size: 1.25rem;
+    }
+    p.attributeTxt {
+        font-size: 1.25rem;
+    } 
+    p.valueTxt {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 750px) and (orientation: landscape) {
+    html {
+        height: 220%;
+    }
+    .container {
+        height: 56rem;
+        margin-left: 1rem;
+        max-width: 95.5%;
+    }
+    .fs750 {
+        font-size: 1rem;
+    }
+}
+@media (max-width: 680px) and (orientation: landscape) {
+    html {
+        height: 245%;
+    }
+    .container {
+        height: 56rem;
+        margin-left: 1rem;
+        max-width: 95.5%;
+    }
+    .fs750 {
+        font-size: 1rem;
+    }
+}
+@media screen and (max-width: 480px) {
+    .container {
+        width: 89%;
+        height: 103rem;
+    }
+    .fs480 {
+        font-size: 0.85rem;
+    }
+    .fs480v2 {
+        font-size: 0.85rem;
+    }
+    html {
+        height: 227%;
+    }
+}
+@media screen and (max-width: 380px) {
+    html {
+        height: 250%;
+    }
+    .container {
+        height: 103rem;
+    }
+}
+@media only screen and (max-width: 640px) and (orientation: landscape) {
+    html {
+        height: 250%;
+    }
+    .container {
+        height: 55rem;
+        margin-left: 0.75rem;
+    }
+}
+@media only screen and (max-width: 360px) and (orientation: portrait) {
+    html {
+        height: 260%;
+    }
+    /* .container {
+        height: 55rem;
+        margin-left: 0.75rem;
+    } */
 }

@@ -9,16 +9,6 @@
     -webkit-border-radius: 0.625rem;
     border-radius: 0.625rem;
 }
-/* #rectangleRounded4, #rectangleRounded5 {
-    top: 2rem;
-    width: 7.75rem;
-    height: 3.25rem;
-    background: #c7b48c;
-    position: relative;
-    -moz-border-radius: 0.625rem;
-    -webkit-border-radius: 0.625rem;
-    border-radius: 0.625rem;
-} */
 #rectangleRounded4 {
     margin-top: 2rem;
     width: 8rem;
@@ -61,5 +51,33 @@
 @media only screen and (max-width: 768px) {
     .hpCentral {
         margin-left: 3rem;
+    }
+}
+
+@media (max-width: 850px) and (orientation: landscape) {
+    .hpCentral {
+        margin-left: 3rem;
+    }
+}
+@media (max-width: 680px) and (orientation: landscape) {
+    .hpCentral {
+        margin-left: 0.5rem;
+    }
+}
+@media screen and (max-width: 480px) {
+    .hpCentral {
+        position: absolute;
+        top: 30rem;
+        margin-left: 2rem;
+    }
+}
+@media screen and (max-width: 380px) {
+    .hpCentral {
+        margin-left: 1.25rem;
+    }
+}
+@media only screen and (max-width: 640px) and (orientation: landscape) {
+    .hpCentral {
+        margin-left: 1rem;
     }
 }

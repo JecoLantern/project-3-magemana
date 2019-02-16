@@ -53,7 +53,7 @@
 
 @media only screen and (max-width: 1024px) {
     #squareTV2 {
-        margin-top: 3rem;
+        margin-top: 1rem;
         margin-left: 2rem;
     }
     #squareTV3 {
@@ -67,6 +67,22 @@
         margin-left: 1rem;
     }
     #squareTV3 {
+        margin-left: 1rem;
+    }
+}
+
+@media (max-width: 850px) and (orientation: landscape) {
+    #squareTV2 {
+        margin-top: 1rem;
+    }
+}
+@media screen and (max-width: 480px) {
+    #squareTV2 {
+        margin-top: 9rem;
+        margin-left: -14.5rem;
+    }
+    #squareTV3 {
+        margin-top: 9rem;
         margin-left: 1rem;
     }
 }

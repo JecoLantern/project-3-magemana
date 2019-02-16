@@ -11,3 +11,23 @@
         width: 5rem;
     }
 }
+
+@media (max-width: 850px) and (orientation: landscape) {
+    #avatarDummyIMG {
+        height: 6rem;
+        width: 5rem;
+    }
+}
+@media (max-width: 750px) and (orientation: landscape) {
+    #avatarDummyIMG {
+        height: 4.25rem;
+        width: 3.5rem;
+    }
+}
+@media screen and (max-width: 480px) {
+    #avatarDummyIMG {
+        left: 0.5rem;
+        height: 4.25rem;
+        width: 3.5rem;
+    }
+}

@@ -16,3 +16,28 @@
         top: 1.25rem;
     }
 }
+
+@media (max-width: 850px) and (orientation: landscape) {
+    #logoIMG {
+        height: 3rem;
+        width: 3rem;
+        top: 1.75rem;
+        left: -1.5rem;
+    }
+}
+@media (max-width: 750px) and (orientation: landscape) {
+    #logoIMG {
+        height: 2rem;
+        width: 2rem;
+        top: 1.3rem;
+        left: -1rem;
+    }
+}
+@media screen and (max-width: 480px) {
+    #logoIMG {
+        height: 2rem;
+        width: 2rem;
+        top: 1.3rem;
+        left: -1rem;
+    }
+}

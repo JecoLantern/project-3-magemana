@@ -96,5 +96,61 @@ background: #c7b48c;
     }
     #rectangle3 {
         width: 13rem;
-        }
+    }
+}
+
+@media (max-width: 850px) and (orientation: landscape) {
+    #squareTV8 {
+        margin-top: 1.5rem;
+        width: 14rem;
+        margin-left: 0.5rem;
+    }
+    #rectangle2 {
+        width: 12rem;
+    }
+    #rectangle3 {
+        width: 12rem;
+    }
+}
+@media (max-width: 850px) and (orientation: landscape) {
+    #squareTV8 {
+        width: 13.75rem;
+        margin-left: 0.5rem;
+    }
+    #rectangle2 {
+        width: 11rem;
+    }
+    #rectangle3 {
+        width: 11rem;
+    }
+}
+@media (max-width: 680px) and (orientation: landscape) {
+    #squareTV8 {
+        margin-left: -0.25rem;
+    }
+}
+@media screen and (max-width: 480px) {
+    #squareTV8 {
+        top: 29.5rem;
+        width: 20.25rem;
+        left: -7rem;;
+        margin-left: 0.5rem;
+    }
+}
+@media screen and (max-width: 380px) {
+    #squareTV8 {
+        top: 29.5rem;
+        width: 20rem;
+    }
+}
+@media only screen and (max-width: 640px) and (orientation: landscape) {
+    #squareTV8 {
+        width: 13.25rem;
+    }
+}
+@media only screen and (max-width: 360px) and (orientation: portrait) {
+    #squareTV8 {
+        width: 19.25rem;
+        margin-left: 0.8rem;
+    }
 }

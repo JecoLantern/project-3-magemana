@@ -33,8 +33,24 @@
     border-radius: 0.625rem;
 }
 
-@media only screen and (max-width: 1024px) {
+@media screen and (max-width: 1024px) {
     #squareTV6 {
         margin-left: 4rem;
     }
+}
+@media screen and (max-width: 480px) {
+    #squareTV6 {
+        margin-left: 3rem;
+        top: 41rem;
+    } 
+}
+@media screen and (max-width: 380px) {
+    #squareTV6 {
+        margin-left: 2.25rem;
+    } 
+}
+@media only screen and (max-width: 640px) and (orientation: landscape) {
+    #squareTV6 {
+        margin-left: 1.25rem;
+    } 
 }

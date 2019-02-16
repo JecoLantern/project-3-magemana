@@ -23,3 +23,43 @@
         width: 13rem;
     }
 }
+
+@media (max-width: 850px) and (orientation: landscape) {
+    #squareTV7 {
+        margin-top: 1.5rem;
+        width: 14rem;
+        margin-left: 0.75rem;
+    }
+}
+@media (max-width: 680px) and (orientation: landscape) {
+    #squareTV7 {
+        width: 12rem;
+        margin-left: 0.5rem;
+    }
+}
+@media screen and (max-width: 480px) {
+    #squareTV7 {
+        width: 20.25rem;
+        top: 9rem;
+        margin-left: 1.25rem;
+    }
+}
+@media screen and (max-width: 380px) {
+    #squareTV7 {
+        width: 20rem;
+        top: 9rem;
+        margin-left: 0.5rem;
+    }
+}
+@media only screen and (max-width: 640px) and (orientation: landscape) {
+    #squareTV7 {
+        width: 11.5rem;
+        margin-left: 0.5rem;
+    }
+}
+@media only screen and (max-width: 360px) and (orientation: portrait) {
+    #squareTV7 {
+        width: 19.25rem;
+        margin-left: 0.4rem;
+    }
+}

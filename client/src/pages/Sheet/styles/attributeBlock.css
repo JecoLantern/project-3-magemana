@@ -50,6 +50,7 @@
 @media only screen and (max-width: 1024px) {
     #rectangle {
         width: 8.25rem;
+        margin-top: -0.5rem;
     }
     #squareTV {
         width: 8.25rem;
@@ -76,7 +77,6 @@
     }
     #rectangleRounded {
         width: 6.25rem;
-        /* margin-left: -0.3rem; */
     }
     #oval {
         width: 6.25rem;
@@ -84,5 +84,114 @@
     }
     #circle {
         right: -4.25rem;
+    }
+}
+@media (max-width: 850px) and (orientation: landscape) {
+    #rectangle {
+        margin-top: -1.5rem;
+        width: 6.5rem;
+        margin-left: -0.5rem;
+        height: 2rem;
+    }
+    #squareTV {
+        width: 6.5rem;
+        margin-left: -0.5rem;
+        height: 4rem;
+    }
+    #rectangleRounded {
+        width: 6.5rem;
+        height: 2rem;
+    }
+    #oval {
+        width: 6.5rem;
+        margin-left: -0.5rem;
+    }
+    #circle {
+        right: -4.25rem;
+    }
+}
+
+@media (max-width: 680px) and (orientation: landscape) {
+    #rectangle {
+        width: 6rem;
+        margin-left: -14%;
+        height: 2rem;
+    }
+    #squareTV {
+        width: 6rem;
+        margin-left: -14%;
+        height: 4rem;
+    }
+    #rectangleRounded {
+        width: 6rem;
+        height: 2rem;
+    }
+    #oval {
+        width: 6rem;
+        margin-left: -14%;
+    }
+    #circle {
+        right: -3.75rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    #rectangle {
+        margin-top: 0.5rem;
+        width: 2.75rem;
+        height: 1.5rem;
+    }
+    .attributeTxt, .valueTxt {
+        font-size: 1rem;
+    }
+    #squareTV {
+        width: 2.75rem;
+        height: 4rem;
+    }
+    #rectangleRounded {
+        width: 2.75rem;
+        height: 1.5rem;
+    }
+    #oval {
+        width: 2.75rem;
+    }
+    #circle {
+        top: 1rem;
+        right: -0.25rem;
+    }
+}
+@media only screen and (max-width: 640px) and (orientation: landscape) {
+    #rectangle {
+        margin-left: -17%;
+    }
+    #squareTV {
+        margin-left: -17%;
+    }
+    #rectangleRounded {
+        width: 6rem;
+        height: 2rem;
+    }
+    #oval {
+        margin-left: -17%;
+    }
+    #circle {
+        right: -3.75rem;
+    }
+}
+@media only screen and (max-width: 360px) and (orientation: portrait) {
+    #rectangle {
+        margin-left: -41%;
+    }
+    #squareTV {
+        margin-left: -41%;
+    }
+    #rectangleRounded {
+        height: 2rem;
+    }
+    #oval {
+        margin-left: -41%;
+    }
+    #circle {
+        right: -0.25rem;
     }
 }
