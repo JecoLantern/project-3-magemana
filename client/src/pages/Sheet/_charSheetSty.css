@@ -82,7 +82,7 @@
         font-size: 1rem;
     }
 }
-@media only screen and (max-width: 480px) {
+@media screen and (max-width: 480px) {
     .container {
         width: 89%;
         height: 103rem;
@@ -95,5 +95,43 @@
     }
     html {
         height: 227%;
+    }
+}
+@media screen and (max-width: 380px) {
+    html {
+        height: 250%;
+    }
+    .container {
+        height: 103rem;
+    }
+}
+@media only screen and (max-width: 640px) and (orientation: landscape) {
+    html {
+        height: 250%;
+    }
+    .container {
+        height: 55rem;
+        margin-left: 0.75rem;
+    }
+}
+@media only screen and (max-width: 360px) and (orientation: portrait) {
+    html {
+        height: 260%;
+    }
+}
+@media only screen and (max-width: 320px) and (orientation: portrait) {
+    html {
+        height: 294%;
+    }
+    .container {
+        margin-left: 1.2rem;
+    }
+}
+@media only screen and (max-width: 568px) and (orientation: landscape) {
+    html {
+        height: 350%;
+    }
+    .container {
+        height: 68.5rem;
     }
 }

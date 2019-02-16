@@ -24,7 +24,7 @@
         width: 3.5rem;
     }
 }
-@media only screen and (max-width: 480px) {
+@media screen and (max-width: 480px) {
     #avatarDummyIMG {
         left: 0.5rem;
         height: 4.25rem;
