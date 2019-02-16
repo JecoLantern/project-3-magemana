@@ -256,3 +256,14 @@
         z-index: -1;
     }
 }
+@media only screen and (max-width: 320px) and (orientation: portrait) {
+    #hexagon1 {
+        left: 2rem;
+    }
+}
+@media only screen and (max-width: 568px) and (orientation: landscape) {
+    #hexagon1 {
+        top: 6.5rem;
+        left: 1rem;
+    }
+}

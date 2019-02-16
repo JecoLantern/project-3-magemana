@@ -1,17 +1,35 @@
 import React from 'react';
 import { Col } from '../../../components/Grid';
-import List from '../../../components/Lists';
-import { Skill } from "../../../components/Lists/ListItems";
+import Skills from "./Skills";
 import '../styles/skillsBlock.css';
 
-const SkillsBlock = () => (
+var style={
+    
+}
+
+const SkillsBlock = (props) => (
     <Col size="4">
         <div id="squareTV7">
-            <List>
-                <Skill></Skill>
-            </List>
+            <h2
+                style={style}
+            >   Skills
+            </h2>
+            <hr />
+            <ul>
+                {props.skillList.map(skill => {
+                    return <Skills
+                        parent={skill.parentAttr}
+                        skill={skill.skillName}
+                        val={skill.val}
+                    />
+                })}
+            </ul>
         </div>
     </Col>
 )
+SkillsBlock.defaultProps = {
+    skillList: []
+}
+
 
 export default SkillsBlock;

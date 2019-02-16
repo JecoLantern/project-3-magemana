@@ -3,14 +3,22 @@
     margin-top: 1rem;
     margin-left: 1rem;
     width: 17rem;
-    height: 20rem;
+    height: 28rem;
     background: #c7b48c;
     position: relative;
     -moz-border-radius: 0.625rem;
     -webkit-border-radius: 0.625rem;
     border-radius: 0.625rem;
-}
+    display: flex;
+    justify-content: center;
+    align-content: center;
 
+}
+#squareTV7 > ul {
+    list-style: none;
+    padding: 1rem;
+    line-height: 1.55
+}
 @media only screen and (max-width: 1024px) {
     #squareTV7 {
         margin-top: 2rem;
@@ -61,5 +69,17 @@
     #squareTV7 {
         width: 19.25rem;
         margin-left: 0.4rem;
+    }
+}
+@media only screen and (max-width: 320px) and (orientation: portrait) {
+    #squareTV7 {
+        width: 17rem;
+    }
+}
+@media only screen and (max-width: 568px) and (orientation: landscape) {
+    #squareTV7 {
+        width: 16.25rem;
+        top: 10.5rem;
+        margin-left: 0.5rem;
     }
 }

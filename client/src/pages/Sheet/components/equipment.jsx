@@ -4,7 +4,7 @@ import List from '../../../components/Lists';
 import { Equip } from "../../../components/Lists/ListItems";
 import '../styles/equipment.css';
 
-const Equipment = () => (
+const Equipment = (props) => (
     <Col size="4">
             <div id="squareTV8">
         <Row>
@@ -36,13 +36,23 @@ const Equipment = () => (
     </Row>
     <Row>
         <div className="space">
-            <List>
-                <Equip></Equip>
+            <List
+                onSubmit = {props.onSubmit}
+                handleChange ={props.handleChange}
+                value={props.value}
+            >
+                <Equip
+                    equipment={props.equipment}
+                />
             </List>
         </div>
     </Row>
     </div>
 </Col>
 )
+Equipment.defaultProps = {
+    equipment: []
+}
+
 
 export default Equipment;

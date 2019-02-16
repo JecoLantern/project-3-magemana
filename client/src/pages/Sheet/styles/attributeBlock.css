@@ -195,3 +195,44 @@
         right: -0.25rem;
     }
 }
+@media only screen and (max-width: 320px) and (orientation: portrait) {
+    #rectangle {
+        margin-left: -75%;
+    }
+    #squareTV {
+        margin-left: -75%;
+    }
+    #rectangleRounded {
+        height: 2rem;
+    }
+    #oval {
+        margin-left: -75%;
+    }
+    #circle {
+        right: -0.25rem;
+    }
+}
+@media only screen and (max-width: 568px) and (orientation: landscape) {
+    #rectangle {
+        margin-top: 0.5rem;
+        width: 4.75rem;
+        height: 1.5rem;
+    }
+    .attributeTxt, .valueTxt {
+        font-size: 1rem;
+    }
+    #squareTV {
+        width: 4.75rem;
+        height: 4rem;
+    }
+    #rectangleRounded {
+        width: 4.75rem;
+        height: 2rem;
+    }
+    #oval {
+        width: 4.75rem;
+    }
+    #circle {
+        right: -2.5rem;
+    }
+}

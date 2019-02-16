@@ -1,10 +1,12 @@
+import skills from "./skills.json"
+
 export default {
     health(char) {
-        return (char.hitDice * char.level) + (char.attrMod(char.attributes[2]) * char.level)
+        return (char.hitDice * char.level) + (this.attrMod(char.attributes[2]) * char.level)
     },
 
-    initiative(char) {//this.attributes[1]
-        return this.attrMod(char.attributes[1])
+    initiative(dex) {//this.attributes[1]
+        return this.attrMod(dex)
     },
 
     attrMod(attribute) {//used to calculate attribute mods
@@ -51,23 +53,81 @@ export default {
         }
     },
 
-    getSave(save, parentAttr, level) {
-        //code to get and associate saving throws, get parrent att, get the mod, add that to the save, check if proficient, if so add proficiency
-        let tempSave = {...save}
-        tempSave.val += this.attrMod(parentAttr);
-        if(tempSave.isProficient){
-            tempSave.val += this.proficiencieBonus(level) 
-        }
-        return tempSave;
+    generateSaves(char) {
+        return char.savingThrows.map(save => {
+            save.val += this.attrMod(save.name);
+            if (save.isProficient) {
+                save.val += this.proficiencieBonus(char.level)
+            }
+            return save;
+        })
     },
 
 
-    armorClass(dex){//this is not at all how this works, but there are so many differebnt options when it comes to armor (natural, unarmored AC, + shield, light, med, heavy, plate, mage ..... some allow dex some dont) so i will probably come back to make this a little more accurate, but for now this will work on demos
-        return 12 + this.attrMod(dex) 
+    armorClass(dex) {//this is not at all how this works, but there are so many differebnt options when it comes to armor (natural, unarmored AC, + shield, light, med, heavy, plate, mage ..... some allow dex some dont) so i will probably come back to make this a little more accurate, but for now this will work on demos
+        return 12 + this.attrMod(dex);
+    },
+
+    //things to calculate equipment? to check if this the first time loading? 
+
+    getSkills(attrArr, level) {
+        //make a json document wtih all of the skills, iterate over it and then return it to it can get plugged into the charModel so that it will be uploadedto the db on save
+
+        const [STR, DEX, CON, INT, WIS, CHA] = attrArr;
+
+        return skills.map(skill => {
+            if (skill.parentAttr == STR.attr) {
+                skill.val += this.attrMod(STR)
+            }
+            if (skill.parentAttr == DEX.attr) {
+                skill.val += this.attrMod(DEX)
+            }
+            if (skill.parentAttr == CON.attr) {
+                skill.val += this.attrMod(CON)
+            }
+            if (skill.parentAttr == INT.attr) {
+                skill.val += this.attrMod(INT)
+            }
+            if (skill.parentAttr == WIS.attr) {
+                skill.val += this.attrMod(WIS)
+            }
+            if (skill.parentAttr == CHA.attr) {
+                skill.val += this.attrMod(CHA)
+            }
+            if(skill.isProficient) skill.val += this.proficiencieBonus(level)
+            return skill;
+        });
+
+    },
+
+    hitDiceDisplay(hitDice, level) {
+        return `${level}d${hitDice}`;
+    },
+    generateWeapons(className) {
+        //do a axios call to get the weapos that this character would statr out with, select them randomly
+        return className;
+    },
+
+    passivePerception(wis) {
+        return 10 + this.attrMod(wis)
+    },
+
+    generateFeatureText(traits) {//will call in the place where you will put the features, 
+        return traits.map(tr8 => tr8.name)
+    },
+
+    runInitialize(char) {
+        //here you will run all the above functions then return the newly generated character to be pushed into the state, then set isInitialized=true
+        char.health = this.health(char);
+        char.initiative = this.initiative(char.attributes[1]);
+        char.armorClass = this.armorClass(char.attributes[1]);
+        char.passivePerception = this.passivePerception(char.attributes[4]);
+        char.features = this.generateFeatureText(char.traits);
+        char.skillList = this.getSkills(char.attributes, char.level);
+        char.savingThrows = this.generateSaves(char);
+        //....run functions listed above....
+
+        char.isInitialized = true;
+        return char
     }
-
-    //things to calculate: passivePerception, equipment, isInitialized? to check if this the first time loading? skills!!!!! those arent getting pushed into the db for some reason
-    //skills will probably be the hardest to figure out, might break that up by attribute, make a seperate file to figure all of those bad boys out? include it it the character initialization.
-
-
 }
