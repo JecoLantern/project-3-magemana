@@ -67,14 +67,6 @@
     width: 1rem;
     background-color: #eee;
 }
-.checkmarkINSP {
-    position: absolute;
-    top: 0.5rem;
-    left: 0.65rem;
-    height: 1rem;
-    width: 1rem;
-    background-color: #eee;
-}
 /* On mouse-over, add a grey background color */
 .checkbox:hover input ~ .checkmark {
     background-color: #ccc;
@@ -112,16 +104,28 @@
 .skillsFs {
     margin-bottom: 0rem;
 }
-.healthTxt {
+.healthTxt, .hitdiceTxt {
     color: wheat;
     margin-bottom: 0rem;
     font-weight: bold;
     text-align: center;
     font-size: 1.25rem;
 }
-input.hpInput {
+input.hpInput, input.hitdiceInput {
     width: 88%;
     margin-left: 0.5rem;
+}
+.checkboxDS {
+    padding-left: 1.25rem;
+}
+.checkboxPosition {
+    margin-left: 1.5rem;
+}
+.successTxt {
+    margin-left: 1.5rem;
+}
+.deathsaveTxt {
+    text-align: center;
 }
 
 
