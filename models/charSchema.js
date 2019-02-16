@@ -62,7 +62,7 @@ const charSchema = new Schema({
         { name: { type: String, default: "WIS" }, val: { type: Number, default: 0 }, isProficient: { type: Boolean, default: false } },
         { name: { type: String, default: "CHA" }, val: { type: Number, default: 0 }, isProficient: { type: Boolean, default: false } },
     ],
-    skills: [],
+    skillList: Array,
     //the rest
     languages: [],
     proficiencies: {

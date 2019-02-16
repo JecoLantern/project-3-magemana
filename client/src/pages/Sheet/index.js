@@ -27,7 +27,7 @@ class CharacterSheet extends Component {
         super(props)
         this.state = {
             CharModel: {
-                skills: []
+
             },
             item: ""
         };
@@ -56,8 +56,11 @@ class CharacterSheet extends Component {
             .catch(err => console.log(err));
     }
 
-    handleSave = () =>{
+    handleSave = (event) =>{
+        event.preventDefault();
         API.saveCharSheet(this.state.CharModel, this.state.id)
+        .then(res=> alert("Saved!") )
+        .catch(err => console.error(err))
     }
 
 
@@ -71,7 +74,10 @@ class CharacterSheet extends Component {
     handleChange = (event) => {
         this.setState({ item: event.target.value })
     }
-
+    buttonStyle = {
+        marginTop: "2rem",
+        marginLeft: "1rem"
+    }
     render() {
         return (
             <Container>
@@ -248,6 +254,9 @@ class CharacterSheet extends Component {
                                 hitDice={utility.hitDiceDisplay(this.state.CharModel.hitDice, this.state.CharModel.level)}
                             />
                             {/* </Col> */}
+                            <button
+                                style={this.buttonStyle}
+                            onClick={this.handleSave}>Save!</button>
                         </Row>
                     </Col>
                 </Row>
