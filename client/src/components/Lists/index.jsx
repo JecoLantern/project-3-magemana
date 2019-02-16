@@ -1,10 +1,15 @@
 import React from "react";
 
-const List = props =>{
+const List = props => {
     return (
         <ul>
             {props.children}
-            {/* <li><button onClick={props.onClick}> Add {props.addLabel}</button></li> */}
+            <li>
+                <form onSubmit={props.onSubmit}>
+                    <input value={props.value} onChange={props.handleChange} />
+                    <button type="submit" value="Submit">Add</button>
+                </form>
+            </li>
         </ul>
     )
 }

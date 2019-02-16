@@ -1,10 +1,10 @@
 import React from 'react';
-import {Col} from '../../../components/Grid';
+import { Col } from '../../../components/Grid';
 import '../styles/attributeBlock.css';
 
-const AttributeBlock = ({children}) => (
-    <Col size="2, sm-2">
-        {children}
+const AttributeBlock = (props) => (
+    <Col size="2">
+        {props.children}
     </Col>
 )
 

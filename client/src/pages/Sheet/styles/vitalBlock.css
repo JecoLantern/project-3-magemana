@@ -141,6 +141,7 @@
 @media only screen and (max-width: 1024px) {
     #hexagon1 {
         left: 5.5rem;
+        margin-top: -4.8125rem;
     }
 }
 
@@ -155,5 +156,103 @@
     #hexagon1 {
         top: 5.5rem;
         left: 3.5rem;
+    }
+}
+
+@media (max-width: 750px) and (orientation: landscape) {
+    #hexagon1 {
+        top: 6.5rem;
+        left: 3.5rem;
+    }
+}
+@media (max-width: 680px) and (orientation: landscape) {
+    .hexagonTxt2 {
+        font-size: 2rem;
+        top: 1rem;
+    }
+}
+@media only screen and (max-width: 480px) {
+    #hexagon1 {
+        top: 7.5rem;
+        left: 3.5rem;
+        width: 5rem;
+        height: 4.5rem;
+        position: absolute;
+        margin-top: -3.8125rem;
+    }
+    .armorclassTxt {
+        position: relative;
+        top: 1.25rem;
+        left: 1rem;
+    }
+    .initiativeTxt {
+        position: relative;
+        top: 2.5rem;
+        left: 1rem;
+    }
+    .speedTxt {
+        position: relative;
+        top: 3.2rem;
+        left: 1rem;
+    }
+    .hexagonTxt2 {
+        position: relative;
+        top: 0.75rem;
+        font-size: 2.5rem;
+    }
+    #hexagon1:before {
+        top: -1.23rem;
+        border-left: 1.85rem solid transparent;
+        border-right: 3.25rem solid transparent;
+        border-bottom: 1.25rem solid #5b3624;
+    }
+    #hexagon1:after {
+        bottom: -1.22rem;
+        border-left: 1.85rem solid transparent;
+        border-right: 3.25rem solid transparent;
+        border-top: 1.25rem solid #5b3624;
+        z-index: -1;
+    }
+    #hexagon2 {
+        width: 2.5rem;
+        height: 4.25rem;
+        position: relative;
+        top: 3.5rem;
+        left: 0rem;
+        margin-top: -4.8125rem;
+    }
+    #hexagon2:before {
+        top: -0.9rem;
+        border-left: 1.25rem solid transparent;
+        border-right: 1.25rem solid transparent;
+        border-bottom: 0.9rem solid #c7b48c;
+    }
+    #hexagon2:after {
+        bottom: -0.9rem;
+        border-left: 1.25rem solid transparent;
+        border-right: 1.25rem solid transparent;
+        border-top: 0.9rem solid #c7b48c;
+        z-index: -1;
+    }
+    #hexagon2armorclass {
+        width: 2.5rem;
+        height: 4.25rem;
+        position: relative;
+        top: 2.5rem;
+        left: 0rem;
+        margin-top: -4.8125rem;
+    }
+    #hexagon2armorclass:before {
+        top: -0.9rem;
+        border-left: 1.25rem solid transparent;
+        border-right: 1.25rem solid transparent;
+        border-bottom: 0.9rem solid #c7b48c;
+    }
+    #hexagon2armorclass:after {
+        bottom: -0.9rem;
+        border-left: 1.25rem solid transparent;
+        border-right: 1.25rem solid transparent;
+        border-top: 0.9rem solid #c7b48c;
+        z-index: -1;
     }
 }

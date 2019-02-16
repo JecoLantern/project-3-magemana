@@ -3,7 +3,7 @@
     margin-top: 1rem;
     margin-left: 1rem;
     width: 17rem;
-    height: 25rem;
+    height: 28rem;
     background: #c7b48c;
     position: relative;
     -moz-border-radius: 0.625rem;
@@ -29,5 +29,19 @@
         margin-top: 1.5rem;
         width: 14rem;
         margin-left: 0rem;
+    }
+}
+@media (max-width: 680px) and (orientation: landscape) {
+    #squareTV9 {
+        width: 12rem;
+        margin-left: 0.75rem;
+    }
+}
+@media only screen and (max-width: 480px) {
+    #squareTV9 {
+        width: 20.25rem;
+        left: -15rem;
+        margin-top: 0.5rem;
+        height: 10rem;
     }
 }

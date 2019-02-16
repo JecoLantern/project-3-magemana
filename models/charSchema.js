@@ -3,7 +3,7 @@ const Schema = mongoose.Schema;
 
 const charSchema = new Schema({
     //charstuff
-    isInitiatlized: {Type:Boolean, default:false},
+    isInitiatlized: { Type: Boolean, default: false },
     user_Id: String,
     name: { type: String, required: true },
     level: { type: Number, required: true },
@@ -21,11 +21,11 @@ const charSchema = new Schema({
     ],
     //vitals
     armorClass: { type: Number, required: true, default: 0 },
-    health: { type: Number, required: true, default:6 },
-    hitDice: { type: Number, required: true, default:6 },
-    speed: { type: Number, required: true, default:30 },
-    initiative: { type: Number, required: true, default:0 },
-    passivePerception: { type: Number, required: true, default: 10},
+    health: { type: Number, required: true, default: 6 },
+    hitDice: { type: Number, required: true, default: 6 },
+    speed: { type: Number, required: true, default: 30 },
+    initiative: { type: Number, required: true, default: 0 },
+    passivePerception: { type: Number, required: true, default: 10 },
     //skills and atts
     attributes: [
 
@@ -64,17 +64,16 @@ const charSchema = new Schema({
     ],
     skills: [],
     //the rest
-    languages:[],
+    languages: [],
     proficiencies: {
-        
+
     },
-    equipment: {
-        mundane: [{ itemName: String, quantity: Number }],
-        magical: [{ itemName: String, quantity: Number }],
-        weapons: [
-            { weaponName: String, damage: String, damageType: String, isProficient: Boolean, IsRanged: Boolean, isFinesse: Boolean, isVersatile: Boolean }
-        ]
-    },
+
+    weapons: [
+        { weaponName: String, damage: String, damageType: String, isProficient: Boolean, IsRanged: Boolean, isFinesse: Boolean, isVersatile: Boolean }
+    ],
+
+    equipment: [],
     money: [
         { currency: { type: String, default: "cp" }, ammount: { type: Number, default: 0 } },
         { currency: { type: String, default: "sp" }, ammount: { type: Number, default: 0 } },

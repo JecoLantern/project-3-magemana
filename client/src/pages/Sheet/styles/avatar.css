@@ -24,3 +24,12 @@
         height: 4.5rem;
     }
 }
+@media only screen and (max-width: 480px) {
+    #square1 {
+        position: absolute;
+        margin-top: 5.5rem;
+        left: -3.25rem;
+        width: 4.5rem;
+        height: 4.5rem;
+    }
+}

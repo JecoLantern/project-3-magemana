@@ -33,3 +33,11 @@
         left: -1rem;
     }
 }
+@media only screen and (max-width: 480px) {
+    #logoIMG {
+        height: 2rem;
+        width: 2rem;
+        top: 1.3rem;
+        left: -1rem;
+    }
+}

@@ -8,14 +8,10 @@ import Logo from "./components/logo";
 import Avatar from "./components/avatar";
 //Importing NamePlate Components
 import NamePlate from "./components/namePlate";
-import Name from "./components/name";
-import Background from "./components/background";
-import ExpPoints from "./components/expPoints";
-import Race from "./components/race";
-import Alignment from "./components/alignment";
-import ClassLVL from "./components/classLvL";
+
 
 import AttributeBlock from "./components/attributeBlock";
+import SaveBlock from "./components/saveblocks"
 import VitalBlock from "./components/vitalBlock";
 import TertiaryAttribute from "./components/tertiaryAttribute";
 import CharacterFeatures from "./components/charFeatures";
@@ -31,8 +27,9 @@ class CharacterSheet extends Component {
         super(props)
         this.state = {
             CharModel: {
-                skills:[]
-            }
+                skills: []
+            },
+            item: ""
         };
     }
 
@@ -40,23 +37,33 @@ class CharacterSheet extends Component {
         this.idHandle(this.props, this.getCharacter)
     }
 
-    idHandle=(props, callback)=>{
+    idHandle = (props, callback) => {
         this.setState({
-            id:props.match.params.id
-        }, ()=> {
+            id: props.match.params.id
+        }, () => {
             callback(this.state.id)
         })
     }
 
-    getCharacter = (id) =>{
+    getCharacter = (id) => {
         API.getCharSheet(id)
             .then(res => {
                 this.setState({ CharModel: res.data })
                 console.log(this.state.CharModel)
             })
             .then(res => this.setState({ CharModel: utility.runInitialize(this.state.CharModel) }))
-            .then(res => {this.idHandle()} )
+            .then(res => { this.idHandle() })
             .catch(err => console.log(err));
+    }
+
+    equipPush = (event) => {
+        const NewModel = { ...this.state.CharModel };
+        NewModel.equipment = [...NewModel.equipment, this.state.item]
+        this.setState({ CharModel: NewModel })
+        event.preventDefault();
+    }
+    handleChange = (event) => {
+        this.setState({ item: event.target.value })
     }
 
     render() {
@@ -65,44 +72,41 @@ class CharacterSheet extends Component {
                 <Row>
                     <Logo></Logo>
                     <Avatar></Avatar>
-                    <NamePlate>
-                        <Name>
-                            <h2 className="fs768 fs850">{this.state.CharModel.name}</h2>
-                        </Name>
-                        <Background>
-                            <h2 className="fs768 fs850">Background</h2>
-                        </Background>
-                        <ExpPoints>
-                            <h2 className="fs768 fs850">ExpPoints</h2>
-                        </ExpPoints>
-                        <Race>
-                            <h2 className="fs768 fs850">{this.state.CharModel.race}</h2>
-                        </Race>
-                        <Alignment>
-                            <h2 className="fs768 fs850">{this.state.CharModel.alignment}</h2>
-                        </Alignment>
-                        <ClassLVL>
-                            <h2 className="fs768 fs850">{this.state.CharModel.class} | <small>Level:</small>{this.state.CharModel.level}</h2>
-                        </ClassLVL>
-                    </NamePlate>
+                    <NamePlate
+                        name={this.state.CharModel.name}
+                        level={this.state.CharModel.level}
+                        race={this.state.CharModel.race}
+                        alignment={this.state.CharModel.alignment}
+                        className={this.state.CharModel.className}
+                    />
                 </Row>
                 <Row>
                     <Col size="6, sm-6, md-6, lg-6, xl-6">
                         {this.state.CharModel.attributes ? (
                             <Row>
                                 {this.state.CharModel.attributes.map(attr => (
+
                                     <AttributeBlock key={attr._id}>
                                         <div className="attCentral">
                                             <div id="rectangle"><p className="attributeTxt">{attr.attr}</p></div>
                                             <div id="squareTV">
                                                 <div id="rectangleRounded"><p className="valueTxt">{attr.val}</p></div>
-                                                mod: {utility.attrMod(attr)}
-                                            </div>
-                                            <div id="oval">SAVE
-                                                <div id="circle"></div>
+                                                <h6>mod:</h6>
+                                                <h4>
+                                                    {utility.attrMod(attr)}
+                                                </h4>
                                             </div>
                                         </div>
                                     </AttributeBlock>
+
+                                ))}
+                                {this.state.CharModel.savingThrows.map(save => (
+                                    <Col size="2">
+                                        <SaveBlock
+                                            name={save.name}
+                                            val={save.val}
+                                        />
+                                    </Col>
                                 ))}
                             </Row>
                         ) : (
@@ -204,7 +208,7 @@ class CharacterSheet extends Component {
                                     <div id="rectangleRounded2">{utility.proficiencieBonus(this.state.CharModel.level)}</div>
                                 </div>
                                 <div id="squareTV3"><h6 className="tertiaryTxtinspiration">INSPIRATION:</h6>
-                                    <div id="rectangleRounded3"><input type="checkbox"/></div>
+                                    <div id="rectangleRounded3"><input type="checkbox" /></div>
                                 </div>
                             </TertiaryAttribute>
                         </Row>
@@ -217,7 +221,11 @@ class CharacterSheet extends Component {
                                 skillList={this.state.CharModel.skillList}
                             />
                             <Equipment
+                                onSubmit={this.equipPush}
+                                handleChange={this.handleChange}
                                 equipment={this.state.CharModel.equipment}
+                                value={this.state.item}
+                                money={this.state.CharModel.money}
                             />
                             <CharacterFeatures
                                 features={this.state.CharModel.features}
@@ -228,10 +236,10 @@ class CharacterSheet extends Component {
                         <Row>
                             {/* <Col size="6, sm-6, md-6, lg-6"> */}
                             <HpBlock
-                                health = {this.state.CharModel.health}
+                                health={this.state.CharModel.health}
                             />
                             <HitDice
-                                hitDice ={utility.hitDiceDisplay(this.state.CharModel.hitDice, this.state.CharModel.level)}
+                                hitDice={utility.hitDiceDisplay(this.state.CharModel.hitDice, this.state.CharModel.level)}
                             />
                             {/* </Col> */}
                         </Row>
