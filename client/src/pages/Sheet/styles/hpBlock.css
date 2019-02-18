@@ -10,7 +10,7 @@
     border-radius: 0.625rem;
 }
 #rectangleRounded4 {
-    margin-top: 2rem;
+    margin-top: 0.2rem;
     width: 8rem;
     height: 3.25rem;
     background: #c7b48c;
@@ -22,7 +22,7 @@
 #rectangleRounded5 {
     z-index: 0;
     left: 8.25rem;
-    margin-top: 2rem;
+    margin-top: 0.2rem;
     width: 8.25rem;
     height: 3.25rem;
     background: #c7b48c;

@@ -27,7 +27,7 @@ class CharacterSheet extends Component {
         super(props)
         this.state = {
             CharModel: {
-                skills: []
+
             },
             item: ""
         };
@@ -51,10 +51,18 @@ class CharacterSheet extends Component {
                 this.setState({ CharModel: res.data })
                 console.log(this.state.CharModel)
             })
-            .then(res => this.setState({ CharModel: utility.runInitialize(this.state.CharModel) }))
+            .then(res => (this.state.CharModel.isInitialized ? null : this.setState({ CharModel: utility.runInitialize(this.state.CharModel) })))
             .then(res => { this.idHandle() })
             .catch(err => console.log(err));
     }
+
+    handleSave = (event) =>{
+        event.preventDefault();
+        API.saveCharSheet(this.state.CharModel, this.state.id)
+        .then(res=> alert("Saved!") )
+        .catch(err => console.error(err))
+    }
+
 
     equipPush = (event) => {
         const NewModel = { ...this.state.CharModel };
@@ -62,10 +70,14 @@ class CharacterSheet extends Component {
         this.setState({ CharModel: NewModel })
         event.preventDefault();
     }
+
     handleChange = (event) => {
         this.setState({ item: event.target.value })
     }
-
+    buttonStyle = {
+        marginTop: "2rem",
+        marginLeft: "1rem"
+    }
     render() {
         return (
         
@@ -210,10 +222,17 @@ class CharacterSheet extends Component {
                             </VitalBlock>
                             <TertiaryAttribute>
                                 <div id="squareTV2"><h6 className="tertiaryTxtproficiency">PROFICIENCY BONUS: </h6>
-                                    <div id="rectangleRounded2">{utility.proficiencieBonus(this.state.CharModel.level)}</div>
+                                    <div id="rectangleRounded2">
+                                    <p className="profBonVal">{utility.proficiencieBonus(this.state.CharModel.level)}</p>
+                                    </div>
                                 </div>
                                 <div id="squareTV3"><h6 className="tertiaryTxtinspiration">INSPIRATION:</h6>
-                                    <div id="rectangleRounded3"><input type="checkbox" /></div>
+                                    <div id="rectangleRounded3">
+                                    <label className="checkbox">
+                                        <input type="checkbox" />
+                                        <span className="checkmark checkmarkPosition"></span>
+                                    </label>
+                                    </div>
                                 </div>
                             </TertiaryAttribute>
                         </Row>
@@ -247,6 +266,9 @@ class CharacterSheet extends Component {
                                 hitDice={utility.hitDiceDisplay(this.state.CharModel.hitDice, this.state.CharModel.level)}
                             />
                             {/* </Col> */}
+                            <button
+                                style={this.buttonStyle}
+                            onClick={this.handleSave}>Save!</button>
                         </Row>
                     </Col>
                     
