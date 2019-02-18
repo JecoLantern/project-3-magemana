@@ -21,6 +21,6 @@ export default [
         pos: 3 ,
         question: "What is your chosen alignment?",
         value: "alignment",
-        choices: ["Lawful Good", "Nuetral Good", "Chaotic Good", "Lawful Nuetral", "True Nuetral", "Chaotic Nuetral", "Lawful Evil", "Nuetral Evil", "Chaotic Evil"]
+        choices: ["Lawful Good", "Neutral Good", "Chaotic Good", "Lawful Neutral", "True Neutral", "Chaotic Neutral", "Lawful Evil", "Neutral Evil", "Chaotic Evil"]
     }
 ]
