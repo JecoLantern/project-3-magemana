@@ -4,7 +4,7 @@ import Landing from './pages/Landing'
 import Sheet from './pages/Sheet'
 import Survey from './pages/Survey'
 import Select from './pages/CharSelect'
-
+import About from './pages/About/index'
 const fof = () => (<header><h1>404 error - nothing found</h1></header>) //<<<404 page
 
 class App extends Component {
@@ -17,6 +17,7 @@ class App extends Component {
                         <Route exact path="/charsheet/:id" render={(props) => <Sheet {...props} isAuthed={true}/>} />
                         <Route path="/survey" component={Survey} />
                         <Route path="/select" component={Select} />
+                        <Route path="/About" component={About} />
                         <Route component={fof} />
 
                     </Switch>
