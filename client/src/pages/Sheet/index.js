@@ -75,8 +75,20 @@ class CharacterSheet extends Component {
         this.setState({ item: event.target.value })
     }
     buttonStyle = {
-        marginTop: "2rem",
-        marginLeft: "1rem"
+        backgroundColor: "#5b3624",
+        border: "none",
+        color: "wheat",
+        textAlign: "center",
+        textDecoration: "none",
+        display: "inline-block",
+        fontSize: "1.25rem",
+        fontWeight: "bold",
+        marginTop: "3.25rem",
+        marginLeft: "4rem",
+        marginRight: "0.125rem",
+        cursor: "pointer",
+        paddingLeft: "4rem",
+        paddingRight: "4rem"
     }
     render() {
         return (
@@ -89,7 +101,7 @@ class CharacterSheet extends Component {
                         level={this.state.CharModel.level}
                         race={this.state.CharModel.race}
                         alignment={this.state.CharModel.alignment}
-                        className={this.state.CharModel.className}
+                        className={this.state.CharModel.class}
                     />
                 </Row>
                 <Row>

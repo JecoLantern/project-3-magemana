@@ -71,7 +71,7 @@
 .checkbox:hover input ~ .checkmark {
     background-color: #ccc;
 }
-/* When the checkbox is checked, add a blue background */
+/* When the checkbox is checked, add a chocolate background */
 .checkbox input:checked ~ .checkmark {
     background-color: chocolate;
 }
@@ -148,24 +148,41 @@ input.hpInput, input.hitdiceInput {
 .charFeatSpace {
     margin-top: 1rem;
 }
-.equipName {
+.equipTxt {
     text-align: center;
-    color: wheat;
-    top: 1.5rem;
-    left: 2rem;
-    width: 3.6rem;
+    color: black;
+    font-weight: bold;
+    padding-top: 0.5rem;
 }
-.equipAtk {
+.attacksTxt {
+    color: wheat;
+    padding-left: 0.75rem;
+}
+.buttonAdd {
+    background-color: #5b3624;
+    border: none;
+    color: wheat;
     text-align: center;
-    color: wheat;
-    width: 25%;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1rem;
+    margin-top: 0.25rem;
+    margin-left: 0.125rem;
+    margin-right: 0.125rem;
+    cursor: pointer;
 }
-.equipDmg {
+.moneyTxt {
+    font-size: 1rem;
+    font-weight: bold;
+}
+.weaponAtkDmgTxt {
     text-align: center;
-    color: wheat;
-    width: 25%;
+    font-weight: bold;
 }
-
+.weaponNameTxt {
+    padding-left: 0.125rem;
+    font-weight: bold;
+}
 
 @media only screen and (max-width: 1024px) {
     .container {
