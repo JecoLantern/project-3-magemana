@@ -35,6 +35,13 @@ a{
     margin-left: 41%;
 position: relative;
 bottom: 150px;
-left: 200px;
+left: 120px;
+}
+
+.page-bg{
+    background-image: url(http://pngimg.com/uploads/paper_sheet/paper_sheet_PNG7231.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 

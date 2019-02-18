@@ -4,7 +4,9 @@ const mongoose = require('mongoose');
 const session = require('express-session');
 const routes = require("./routes");
 const passport = require("passport");
+var cors = require('cors');
 const app = express();
+app.use(cors());
 const PORT = process.env.PORT || 3001;
 
 

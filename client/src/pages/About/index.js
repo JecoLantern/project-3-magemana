@@ -1,12 +1,17 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Container, Row } from "../../components/Grid";
+import SideBar from '../../components/SideBar/SideBar'
 import '../About/style.css'
 
 function About(props) {
   return (
     <Container>
           <Row>
+          <div id="App">
+                <SideBar pageWrapId={"page-wrap"} outerContainerId={"App"}/>
+                <div id="page-wrap">
+                <div className='page-bg'>
     <div className="tech">
       <h1 className="name">
         <span className="tag">&lt; </span>
@@ -51,6 +56,9 @@ In the end, we hope to create a fully connected and digital table-top experience
       <h1 className='source'> Source available <a href="https://github.com/Austin-Shep/project-3-magemana">here</a>.</h1>
     </article>
       </section>
+    </div>
+    </div>
+    </div>
     </div>
     </Row>
     </Container>
