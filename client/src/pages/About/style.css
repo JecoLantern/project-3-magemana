@@ -32,10 +32,8 @@ a{
     color: white;
 }
 .source{
-    margin-left: 41%;
-position: relative;
-bottom: 150px;
-left: 120px;
+font-size: 25px;
+margin-left: 11%;
 }
 
 .page-bg{
@@ -43,5 +41,10 @@ left: 120px;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+}
+
+.Goto2{
+    font-size: 25px;
+    
 }
 

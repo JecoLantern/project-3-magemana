@@ -8,9 +8,6 @@ function About(props) {
   return (
     <Container>
           <Row>
-          <div id="App">
-                <SideBar pageWrapId={"page-wrap"} outerContainerId={"App"}/>
-                <div id="page-wrap">
                 <div className='page-bg'>
     <div className="tech">
       <h1 className="name">
@@ -38,26 +35,24 @@ In the end, we hope to create a fully connected and digital table-top experience
     <div className="about_link">
       <p>Check out our portfolios</p> 
         <ul>
-            <li><a href="https://github.com/Austin-Shep/project-3-magemana">Austin Shepard</a></li>
-            <li><a href="https://github.com/Austin-Shep/project-3-magemana">Jeric Ayonke</a></li>
-            <li><a href="https://github.com/Austin-Shep/project-3-magemana">Troy Gordon</a></li>
+            <li><a href="https://austin-shepherd.herokuapp.com/">Austin Shepard</a></li>
+            <li><a href="https://github.com/JecoLantern">Jeric Ayonke</a></li>
+            <li><a href="https://troy-gordon-portfolio.herokuapp.com/">Troy Gordon</a></li>
             
         </ul>
 
         <p>Or you can contact us on Linkdin</p> 
         <ul>
-            <li><a href="https://github.com/Austin-Shep/project-3-magemana">Austin Shepard</a></li>
-            <li><a href="https://github.com/Austin-Shep/project-3-magemana">Jeric Ayonke</a></li>
-            <li><a href="https://github.com/Austin-Shep/project-3-magemana">Troy Gordon</a></li>
+            <li><a href="https://www.linkedin.com/in/austin-shepherd--/">Austin Shepard</a></li>
+            <li><a href="https://www.linkedin.com/in/jeric-ayonke-93536443/">Jeric Ayonke</a></li>
+            <li><a href="https://www.linkedin.com/in/troy-gordon-008b38165/">Troy Gordon</a></li>
             
         </ul>
         </div>
-
+        <p className='Goto2'> Go back to <Link to="/Select"> Character Selector</Link></p>
       <h1 className='source'> Source available <a href="https://github.com/Austin-Shep/project-3-magemana">here</a>.</h1>
     </article>
       </section>
-    </div>
-    </div>
     </div>
     </div>
     </Row>

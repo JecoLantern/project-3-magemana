@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from 'react-router-dom';
 import axios from "axios"; // For making client request.
 import { Container, Row } from "../../components/Grid";
 import SideBar from '../../components/SideBar/SideBar'
@@ -31,9 +32,6 @@ class Contact extends React.Component {
   render() {
     return (
         <Container>
-            <div id="App">
-                <SideBar pageWrapId={"page-wrap"} outerContainerId={"App"}/>
-                <div id="page-wrap">
 <h1 class="brand">MageManager</h1>
 <div class="wrapper animated bounceInLeft">
   <div class="company-info">
@@ -53,9 +51,8 @@ class Contact extends React.Component {
 
         <button className='contact_button' type="submit">Send</button>
       </form>
+      <p className='Goto1'> Go back to <Link to="/Select"> Character Selector</Link></p>
   </div>
-</div>
-</div>
 </div>
 
       </Container>
