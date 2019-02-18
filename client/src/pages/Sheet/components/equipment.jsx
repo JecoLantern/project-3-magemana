@@ -11,16 +11,23 @@ const Equipment = (props) => (
         <div id="rectangle2">
         <Row>
             <Col size="4">
-                <p>Name</p>
-                <div id="rectangle4">{props.weapons[0].name}</div>
+                {/* <div className="equipName"> */}
+                <div>
+                    <p className="equipName">Name</p>
+                    <div id="rectangle4">{props.weapons[0].name}</div>
+                </div>
             </Col>
             <Col size="4">
-                <p>Atk</p>
-                <div id="rectangle5">{props.weapons[0].atk}</div>
+                <div className="equipAtk">
+                    <p>Atk</p>
+                    <div id="rectangle5">{props.weapons[0].atk}</div>
+                </div>
             </Col>
             <Col size="4">
-                <p>Dmg</p>
-                <div id="rectangle6">{props.weapons[0].dmg}</div>
+                <div className="equipDmg">
+                    <p>Dmg</p>
+                    <div id="rectangle6">{props.weapons[0].dmg}</div>
+                </div>
             </Col>
         </Row>
         {/* <Row>

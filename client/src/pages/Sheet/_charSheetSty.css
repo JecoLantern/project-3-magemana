@@ -148,6 +148,23 @@ input.hpInput, input.hitdiceInput {
 .charFeatSpace {
     margin-top: 1rem;
 }
+.equipName {
+    text-align: center;
+    color: wheat;
+    top: 1.5rem;
+    left: 2rem;
+    width: 3.6rem;
+}
+.equipAtk {
+    text-align: center;
+    color: wheat;
+    width: 25%;
+}
+.equipDmg {
+    text-align: center;
+    color: wheat;
+    width: 25%;
+}
 
 
 @media only screen and (max-width: 1024px) {
