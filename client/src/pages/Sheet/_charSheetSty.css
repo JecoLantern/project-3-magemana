@@ -127,6 +127,27 @@ input.hpInput, input.hitdiceInput {
 .deathsaveTxt {
     text-align: center;
 }
+.hpMaxTxt {
+    text-align: center;
+}
+.hpCurrentTxt {
+    text-align: center;
+}
+.hitdiceMaxTxt {
+    text-align: center;
+    font-size: 1rem;
+}
+.hitdiceVal {
+    text-align: center;
+    font-size: 2rem;
+    margin-top: 0rem;
+}
+.hitdiceCurrentTxt {
+    text-align: center;
+}
+.charFeatSpace {
+    margin-top: 1rem;
+}
 
 
 @media only screen and (max-width: 1024px) {
