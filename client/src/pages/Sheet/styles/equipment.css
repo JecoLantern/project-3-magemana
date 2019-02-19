@@ -180,6 +180,12 @@ background: #c7b48c;
         width: 17rem;
         margin-left: 1.5rem;
     }
+    #rectangle2, #rectangle3 {
+        left: 3rem;
+    }
+    .space {
+        margin-left: 1rem;
+    }
 }
 @media only screen and (max-width: 568px) and (orientation: landscape) {
     #squareTV8 {
@@ -187,5 +193,11 @@ background: #c7b48c;
         width: 16.25rem;
         left: 5.5rem;;
         margin-left: 0.5rem;
+    }
+    #rectangle2, #rectangle3 {
+        left: 3.75rem;
+    }
+    .space {
+        margin-left: 1rem;
     }
 } 

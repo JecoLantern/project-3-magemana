@@ -394,7 +394,7 @@ input.hitdiceInput {
 }
 @media only screen and (max-width: 320px) and (orientation: portrait) {
     html {
-        height: 294%;
+        height: 382%;
     }
     .container {
         margin-left: 1.2rem;
@@ -404,23 +404,29 @@ input.hitdiceInput {
     }
     .buttonPosition {
         position: absolute;
-        left: 19.75rem;
-        top: 9rem;
+        left: -0.5rem;
+        top: 62rem;
     }
 }
 @media only screen and (max-width: 568px) and (orientation: landscape) {
     html {
-        height: 350%;
+        height: 436%;
     }
     .container {
-        height: 68.5rem;
+        height: 86.5rem;
     }
     .modTxt, .modVal{
         margin-bottom: -0.3rem;
     }
     .buttonPosition {
         position: absolute;
-        left: 19.75rem;
-        top: 9rem;
+        left: 7.5rem;
+        top: 19rem;
+    }
+    .skillPosition {
+        left: 1.25rem;
+    }
+    .savePosition {
+        left: 0.4rem;
     }
 }
