@@ -100,12 +100,13 @@
 @media only screen and (max-width: 640px) and (orientation: landscape) {
     #squareTV9 {
         width: 11.5rem;
+        height: 35rem;
     }
     .charFeaturesTxt {
         width: 11.5rem;
     }
     .charFeats {
-        font-size: 1rem;
+        font-size: 0.8rem;
     }
 }
 @media only screen and (max-width: 360px) and (orientation: portrait) {

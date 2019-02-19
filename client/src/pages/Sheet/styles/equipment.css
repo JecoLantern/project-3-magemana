@@ -167,6 +167,15 @@ background: #c7b48c;
 @media only screen and (max-width: 640px) and (orientation: landscape) {
     #squareTV8 {
         width: 13.25rem;
+        height: 35rem;
+    }
+    #rectangle5, #rectangle8 {
+        left: 2rem;
+        width: 2.6rem;
+    }
+    #rectangle6, #rectangle9 {
+        left: 0rem;
+        width: 2.6rem;
     }
 }
 @media only screen and (max-width: 360px) and (orientation: portrait) {

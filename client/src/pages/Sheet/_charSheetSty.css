@@ -364,10 +364,10 @@ input.hitdiceInput {
 }
 @media only screen and (max-width: 640px) and (orientation: landscape) {
     html {
-        height: 250%;
+        height: 335%;
     }
     .container {
-        height: 55rem;
+        height: 74rem;
         margin-left: 0.75rem;
     }
     .modTxt, .modVal{
@@ -375,21 +375,30 @@ input.hitdiceInput {
     }
     .buttonPosition {
         position: absolute;
-        left: 19.75rem;
+        left: 9.5rem;
         top: 9rem;
+    }
+    .skillsFs {
+        font-size: 0.6rem;
+    }
+    .weaponNameTxt {
+        font-size: 0.75rem;
+    }
+    .moneyTxt {
+        font-size: 0.8rem;
     }
 }
 @media only screen and (max-width: 360px) and (orientation: portrait) {
     html {
-        height: 260%;
+        height: 340%;
     }
     .modTxt, .modVal{
         margin-bottom: -0.3rem;
     }
     .buttonPosition {
         position: absolute;
-        left: 19.75rem;
-        top: 9rem;
+        left: 0.85rem;
+        top: 62rem;
     }
 }
 @media only screen and (max-width: 320px) and (orientation: portrait) {
