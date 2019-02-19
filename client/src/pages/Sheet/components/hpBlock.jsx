@@ -5,7 +5,7 @@ import '../styles/hpBlock.css';
 const HpBlock = (props) => (
     <div className="hpCentral">
         <div id="squareTV4"><p className="healthTxt">HEALTH</p>
-            <div id="rectangleRounded4"><h6 className="hpMaxTxt">HP Max:{props.health}</h6></div>
+            <div id="rectangleRounded4"><h6 className="hpMaxTxt">HP Max: {props.health}</h6></div>
             <div id="rectangleRounded5"><h6 className="hpCurrentTxt">HP current:<input className="hpInput"/></h6></div>
         </div>
         <div id="rectangleRounded6">
@@ -15,7 +15,7 @@ const HpBlock = (props) => (
                 </Col>
                 <Col size="4"></Col>
                 <Col size="4">
-                    <h6>Failure</h6>
+                    <h6 className="failureTxt">Failure</h6>
                 </Col>
             </Row>
             <Row>

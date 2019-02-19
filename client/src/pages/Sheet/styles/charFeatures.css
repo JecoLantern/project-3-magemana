@@ -10,17 +10,39 @@
     -webkit-border-radius: 0.625rem;
     border-radius: 0.625rem;
 }
+.charFeaturesTxt {
+    background: #5b3624;
+    color: wheat;
+    width: 17rem;
+    height: 2rem;
+    border-radius: 0.625rem;
+    position: relative;
+    text-align: center;
+}
 
 @media only screen and (max-width: 1024px) {
     #squareTV9 {
         margin-top: 2rem;
+        height: 35rem;
     }
 }
-
+@media only screen and (max-width: 1366px) and (orientation: landscape) {
+    #squareTV9 {
+        height: 35rem;
+    }
+}
 @media only screen and (max-width: 768px) {
     #squareTV9 {
         margin-top: 2rem;
         width: 13rem;
+        margin-left: 1.5rem;
+        height: 35rem;
+    }
+    .charFeaturesTxt {
+        width: 13rem;
+    }
+    .charFeats {
+        font-size: 1rem;
     }
 }
 

@@ -265,17 +265,17 @@ class CharacterSheet extends Component {
                     </Col>
                     <Col size="3, sm-3, md-3, lg-12, xl-3">
                         <Row>
-                            {/* <Col size="6, sm-6, md-6, lg-6"> */}
                             <HpBlock
                                 health={this.state.CharModel.health}
                             />
                             <HitDice
                                 hitDice={utility.hitDiceDisplay(this.state.CharModel.hitDice, this.state.CharModel.level)}
                             />
-                            {/* </Col> */}
+                            <p className="buttonPosition">
                             <button
                                 style={this.buttonStyle}
                             onClick={this.handleSave}>Save!</button>
+                            </p>
                         </Row>
                     </Col>
                 </Row>

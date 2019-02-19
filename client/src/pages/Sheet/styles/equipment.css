@@ -76,20 +76,26 @@ height: 2.25rem;
 background: #c7b48c;
 }
 .space {
-    margin-top: 1.75rem;
+    margin-top: 0.5rem;
 }
 
 @media only screen and (max-width: 1024px) {
     #squareTV8 {
         margin-top: 2rem;
+        height: 35rem;
     }
 }
-
+@media only screen and (max-width: 1366px) and (orientation: landscape) {
+    #squareTV8 {
+        height: 35rem;
+    }
+}
 @media only screen and (max-width: 768px) {
     #squareTV8 {
         margin-top: 2rem;
         width: 15rem;
-        margin-left: 0rem;
+        margin-left: 1rem;
+        height: 35rem;
     }
     #rectangle2 {
         width: 13rem;
