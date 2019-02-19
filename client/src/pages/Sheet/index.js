@@ -115,8 +115,8 @@ class CharacterSheet extends Component {
                                             <div id="rectangle"><p className="attributeTxt">{attr.attr}</p></div>
                                             <div id="squareTV">
                                                 <div id="rectangleRounded"><p className="valueTxt">{attr.val}</p></div>
-                                                <h6>mod:</h6>
-                                                <h4>
+                                                <h6 className="modTxt">mod:</h6>
+                                                <h4 className="modVal">
                                                     {utility.attrMod(attr)}
                                                 </h4>
                                             </div>

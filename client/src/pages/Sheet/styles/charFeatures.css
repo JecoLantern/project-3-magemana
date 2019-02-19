@@ -52,11 +52,23 @@
         width: 14rem;
         margin-left: 0rem;
     }
+    .charFeaturesTxt {
+        width: 14rem;
+    }
+    .charFeats {
+        font-size: 1rem;
+    }
 }
 @media (max-width: 680px) and (orientation: landscape) {
     #squareTV9 {
         width: 12rem;
         margin-left: 0.75rem;
+    }
+    .charFeaturesTxt {
+        width: 12rem;
+    }
+    .charFeats {
+        font-size: 1rem;
     }
 }
 @media screen and (max-width: 480px) {
@@ -66,16 +78,34 @@
         margin-top: 0.5rem;
         height: 10rem;
     }
+    .charFeaturesTxt {
+        width: 20.25rem;
+    }
+    .charFeats {
+        font-size: 1rem;
+    }
 }
 @media screen and (max-width: 380px) {
     #squareTV9 {
         width: 20rem;
-        left: -14.5rem;
+        left: -15rem;
+    }
+    .charFeaturesTxt {
+        width: 20rem;
+    }
+    .charFeats {
+        font-size: 1rem;
     }
 }
 @media only screen and (max-width: 640px) and (orientation: landscape) {
     #squareTV9 {
         width: 11.5rem;
+    }
+    .charFeaturesTxt {
+        width: 11.5rem;
+    }
+    .charFeats {
+        font-size: 1rem;
     }
 }
 @media only screen and (max-width: 360px) and (orientation: portrait) {
@@ -83,11 +113,23 @@
         width: 19.25rem;
         left: -14rem;
     }
+    .charFeaturesTxt {
+        width: 19.25rem;
+    }
+    .charFeats {
+        font-size: 1rem;
+    }
 }
 @media only screen and (max-width: 320px) and (orientation: portrait) {
     #squareTV9 {
         width: 17rem;
         left: -12.5rem;
+    }
+    .charFeaturesTxt {
+        width: 17rem;
+    }
+    .charFeats {
+        font-size: 1rem;
     }
 }
 @media only screen and (max-width: 568px) and (orientation: landscape) {
@@ -96,5 +138,11 @@
         left: -23rem;
         margin-top: 1.5rem;
         height: 10rem;
+    }
+    .charFeaturesTxt {
+        width: 33.25rem;
+    }
+    .charFeats {
+        font-size: 1rem;
     }
 }

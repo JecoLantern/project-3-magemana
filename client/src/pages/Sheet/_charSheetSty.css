@@ -243,11 +243,11 @@ input.hitdiceInput {
 
 @media (max-width: 850px) and (orientation: landscape) {
     html {
-        height: 256%;
+        height: 325%;
     }
     .container {
-        height: 60rem;
-        margin-left: 2.25rem;
+        height: 75rem;
+        margin-left: 2.75rem;
     }
     .fs850 {
         font-size: 1.25rem;
@@ -257,6 +257,14 @@ input.hitdiceInput {
     } 
     p.valueTxt {
         font-size: 1.5rem;
+    }
+    .modTxt, .modVal{
+        margin-bottom: -0.3rem;
+    }
+    .buttonPosition {
+        position: absolute;
+        left: 12.75rem;
+        top: 9rem;
     }
 }
 
@@ -272,6 +280,14 @@ input.hitdiceInput {
     .fs750 {
         font-size: 1rem;
     }
+    .modTxt, .modVal{
+        margin-bottom: -0.3rem;
+    }
+    .buttonPosition {
+        position: absolute;
+        left: 19.75rem;
+        top: 9rem;
+    }
 }
 @media (max-width: 680px) and (orientation: landscape) {
     html {
@@ -284,6 +300,14 @@ input.hitdiceInput {
     }
     .fs750 {
         font-size: 1rem;
+    }
+    .modTxt, .modVal{
+        margin-bottom: -0.3rem;
+    }
+    .buttonPosition {
+        position: absolute;
+        left: 19.75rem;
+        top: 9rem;
     }
 }
 @media screen and (max-width: 480px) {
@@ -300,13 +324,35 @@ input.hitdiceInput {
     html {
         height: 227%;
     }
+    .modTxt, .modVal{
+        margin-bottom: -0.3rem;
+    }
+    .buttonPosition {
+        position: absolute;
+        left: 19.75rem;
+        top: 9rem;
+    }
 }
 @media screen and (max-width: 380px) {
     html {
-        height: 250%;
+        height: 268%;
     }
     .container {
-        height: 103rem;
+        height: 135rem;
+    }
+    .modTxt, .modVal{
+        margin-bottom: -0.3rem;
+    }
+    .buttonPosition {
+        position: absolute;
+        left: 1rem;
+        top: 62rem;
+    }
+    .savePosition {
+        left: 0.4rem;
+    }
+    .skillPosition {
+        left: 2.5rem;
     }
 }
 @media only screen and (max-width: 640px) and (orientation: landscape) {
@@ -317,10 +363,26 @@ input.hitdiceInput {
         height: 55rem;
         margin-left: 0.75rem;
     }
+    .modTxt, .modVal{
+        margin-bottom: -0.3rem;
+    }
+    .buttonPosition {
+        position: absolute;
+        left: 19.75rem;
+        top: 9rem;
+    }
 }
 @media only screen and (max-width: 360px) and (orientation: portrait) {
     html {
         height: 260%;
+    }
+    .modTxt, .modVal{
+        margin-bottom: -0.3rem;
+    }
+    .buttonPosition {
+        position: absolute;
+        left: 19.75rem;
+        top: 9rem;
     }
 }
 @media only screen and (max-width: 320px) and (orientation: portrait) {
@@ -330,6 +392,14 @@ input.hitdiceInput {
     .container {
         margin-left: 1.2rem;
     }
+    .modTxt, .modVal{
+        margin-bottom: -0.3rem;
+    }
+    .buttonPosition {
+        position: absolute;
+        left: 19.75rem;
+        top: 9rem;
+    }
 }
 @media only screen and (max-width: 568px) and (orientation: landscape) {
     html {
@@ -337,5 +407,13 @@ input.hitdiceInput {
     }
     .container {
         height: 68.5rem;
+    }
+    .modTxt, .modVal{
+        margin-bottom: -0.3rem;
+    }
+    .buttonPosition {
+        position: absolute;
+        left: 19.75rem;
+        top: 9rem;
     }
 }

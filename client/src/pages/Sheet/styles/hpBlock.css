@@ -73,6 +73,7 @@
 }
 @media screen and (max-width: 380px) {
     .hpCentral {
+        top: 44rem;
         margin-left: 1.25rem;
     }
 }

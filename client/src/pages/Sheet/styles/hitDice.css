@@ -46,6 +46,7 @@
 }
 @media screen and (max-width: 380px) {
     #squareTV6 {
+        top: 55rem;
         margin-left: 2.25rem;
     } 
 }

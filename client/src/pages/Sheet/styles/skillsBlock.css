@@ -57,11 +57,18 @@
         width: 14rem;
         margin-left: 0.75rem;
     }
+    .skillsTxt {
+        width: 14rem;
+    }
 }
+
 @media (max-width: 680px) and (orientation: landscape) {
     #squareTV7 {
         width: 12rem;
         margin-left: 0.5rem;
+    }
+    .skillsTxt {
+        width: 12rem;
     }
 }
 @media screen and (max-width: 480px) {
@@ -70,12 +77,19 @@
         top: 9rem;
         margin-left: 1.25rem;
     }
+    .skillsTxt {
+        width: 20.25rem;
+    }
 }
 @media screen and (max-width: 380px) {
     #squareTV7 {
         width: 20rem;
         top: 9rem;
         margin-left: 0.5rem;
+        height: 35rem;
+    }
+    .skillsTxt {
+        width: 20rem;
     }
 }
 @media only screen and (max-width: 640px) and (orientation: landscape) {
@@ -83,15 +97,24 @@
         width: 11.5rem;
         margin-left: 0.5rem;
     }
+    .skillsTxt {
+        width: 11.5rem;
+    }
 }
 @media only screen and (max-width: 360px) and (orientation: portrait) {
     #squareTV7 {
         width: 19.25rem;
         margin-left: 0.4rem;
     }
+    .skillsTxt {
+        width: 19.25rem;
+    }
 }
 @media only screen and (max-width: 320px) and (orientation: portrait) {
     #squareTV7 {
+        width: 17rem;
+    }
+    .skillsTxt {
         width: 17rem;
     }
 }
@@ -100,5 +123,8 @@
         width: 16.25rem;
         top: 10.5rem;
         margin-left: 0.5rem;
+    }
+    .skillsTxt {
+        width: 16.25rem;
     }
 }
