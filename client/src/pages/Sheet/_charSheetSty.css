@@ -291,10 +291,10 @@ input.hitdiceInput {
 }
 @media (max-width: 680px) and (orientation: landscape) {
     html {
-        height: 245%;
+        height: 320%;
     }
     .container {
-        height: 56rem;
+        height: 74rem;
         margin-left: 1rem;
         max-width: 95.5%;
     }
@@ -306,7 +306,7 @@ input.hitdiceInput {
     }
     .buttonPosition {
         position: absolute;
-        left: 19.75rem;
+        left: 10.5rem;
         top: 9rem;
     }
 }
@@ -339,9 +339,10 @@ input.hitdiceInput {
         top: 62rem;
     }
 }
+
 @media screen and (max-width: 380px) {
     html {
-        height: 268%;
+        height: 326%;
     }
     .container {
         height: 135rem;
