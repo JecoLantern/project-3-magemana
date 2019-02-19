@@ -197,8 +197,8 @@
     }
     .hexagonTxt2 {
         position: relative;
-        top: 0.75rem;
-        font-size: 2.5rem;
+        top: 1.25rem;
+        font-size: 1.5rem;
     }
     #hexagon1:before {
         top: -1.23rem;

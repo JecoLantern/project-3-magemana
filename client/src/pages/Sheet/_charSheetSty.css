@@ -288,6 +288,9 @@ input.hitdiceInput {
         left: 12.5rem;
         top: 9rem;
     }
+    .moneyTxt {
+        font-size: 0.8rem;
+    }
 }
 @media (max-width: 680px) and (orientation: landscape) {
     html {
@@ -308,6 +311,12 @@ input.hitdiceInput {
         position: absolute;
         left: 10.5rem;
         top: 9rem;
+    }
+    .skillsFs {
+        font-size: 0.65rem;
+    }
+    .moneyTxt {
+        font-size: 0.8rem;
     }
 }
 @media screen and (max-width: 480px) {
@@ -337,6 +346,9 @@ input.hitdiceInput {
         position: absolute;
         left: 1.75rem;
         top: 62rem;
+    }
+    .profBonVal {
+        font-size: 1rem;
     }
 }
 
@@ -392,8 +404,12 @@ input.hitdiceInput {
     html {
         height: 340%;
     }
-    .modTxt, .modVal{
-        margin-bottom: -0.3rem;
+    .modTxt, .modVal {
+        margin-bottom: -0.2rem;
+        font-size: 0.8rem;
+    }
+    .savePostVal {
+        font-size: 1rem;
     }
     .buttonPosition {
         position: absolute;
