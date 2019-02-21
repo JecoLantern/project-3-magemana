@@ -18,7 +18,7 @@
     padding: 1rem;
     line-height: 1.55
 }
-.skillsTxt {
+h2.skillsTxt {
     background: #5b3624;
     color: wheat;
     width: 17rem;
@@ -26,6 +26,13 @@
     border-radius: 0.625rem;
     position: relative;
     text-align: center;
+    margin-left: 0%;
+    font-weight: bold;
+}
+.skillsFs {
+    font-size: 0.8rem;
+    margin-bottom: -0.25rem;
+    text-align: left;
 }
 
 @media only screen and (max-width: 1024px) {

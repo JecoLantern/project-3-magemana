@@ -199,11 +199,26 @@ font-size: 30px;
   background: #0000 !important;
 
 }
-
-@media only screen and (max-width: 1024px) {
+@media screen and (max-width: 1935px) {
+  .bm-menu{
+    left: -25rem;
+    margin-top: 1rem;
+  }
+  .list-overflow-container {
+    margin-left: 38%;
+    margin-right: 0%;
+    width: 132%;
+  }
+  .ul {
+    margin-left: 0%;
+    margin-right: 0%;
+  }
+}
+@media only screen and (max-width: 1080px) {
   .list-overflow-container{
-      margin-left: 35%;  
-      margin-top: 5%;
+    margin-left: 35%;  
+    margin-top: 5%;
+  
 }
 .list-group{
   max-height: 550px;

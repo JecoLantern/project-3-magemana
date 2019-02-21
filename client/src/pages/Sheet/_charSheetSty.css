@@ -15,14 +15,16 @@
 .savePosition {
     position: relative;
     top: 0.5rem;
-    left: 1rem;
+    left: -1rem;
+    font-weight: bold;
 }
 .savePostVal {
     position: relative;
     top: 0.25rem;
-    left: 0.75rem;
+    left: 0rem;
     font-weight: bold;
     font-size: 1.25rem;
+    color: chocolate;
 }
 .profBonVal {
     position: relative;
@@ -36,12 +38,17 @@
     position: relative;
     top: 0rem;
     left: 0rem;
-    margin-top: 0.5rem;
+    margin-top: -0.25rem;
+    margin-bottom: -0.25rem;
+}
+ul.skillPosition {
+    list-style-type: disc;
+    width: 17rem;
 }
 .checkbox {
     display: inline-block;
     position: relative;
-    padding-left: 35px;
+    /* padding-left: 35px; */
     margin-bottom: 12px;
     cursor: pointer;
     font-size: 22px;
@@ -66,6 +73,9 @@
     height: 1rem;
     width: 1rem;
     background-color: #eee;
+}
+.checkmarkPosition2 {
+    left: -0.9rem;
 }
 /* On mouse-over, add a grey background color */
 .checkbox:hover input ~ .checkmark {
@@ -163,9 +173,11 @@ input.hitdiceInput {
     font-weight: bold;
     padding-top: 0.5rem;
 }
-.attacksTxt {
+h2.attacksTxt {
     color: wheat;
     padding-left: 0.75rem;
+    text-align: left;
+    margin-left: 0.5rem;
 }
 .buttonAdd {
     background-color: #5b3624;
@@ -180,18 +192,22 @@ input.hitdiceInput {
     margin-right: 0.125rem;
     cursor: pointer;
 }
-.moneyTxt {
+p.moneyTxt {
     font-size: 1rem;
     font-weight: bold;
     padding-left: 0.125rem;
+    text-align: left;
+    margin-left: 0.5rem;
 }
 .weaponAtkDmgTxt {
     text-align: center;
     font-weight: bold;
 }
-.weaponNameTxt {
+p.weaponNameTxt {
     padding-left: 0.125rem;
     font-weight: bold;
+    text-align: left;
+    font-size: 0.8rem;
 }
 
 
