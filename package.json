@@ -34,14 +34,22 @@
   "dependencies": {
     "axios": "^0.18.0",
     "bcrypt-nodejs": "0.0.3",
+    "cors": "^2.8.5",
     "express": "^4.16.4",
     "express-session": "^1.15.6",
     "if-env": "^1.0.4",
     "mongoose": "^5.4.9",
+    "npm": "^6.8.0",
     "passport": "^0.4.0",
     "passport-local": "^1.0.0",
+    "prop-types": "^15.7.2",
     "react": "^16.7.0",
+    "react-burger-menu": "^2.6.4",
     "react-dom": "^16.7.0",
-    "react-modal": "^3.8.1"
+    "react-ga": "^2.5.7",
+    "react-helmet": "^5.2.0",
+    "react-modal": "^3.8.1",
+    "react-sidebar": "^3.0.2",
+    "start": "^5.1.0"
   }
 }

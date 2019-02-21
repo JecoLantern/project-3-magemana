@@ -64,7 +64,7 @@ class Land extends Component {
               .bind(this)}>
             Register
           </div>
-          <Logout onClick={this._logout} />
+       
         </div>
 
         <FadeTransition isOpen={this.state.isLoginOpen} duration={100}>

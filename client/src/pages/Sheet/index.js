@@ -8,7 +8,7 @@ import Logo from "./components/logo";
 import Avatar from "./components/avatar";
 //Importing NamePlate Components
 import NamePlate from "./components/namePlate";
-
+import SideBar from "../../components/SideBar/SideBar"
 
 import AttributeBlock from "./components/attributeBlock";
 import SaveBlock from "./components/saveblocks"
@@ -92,7 +92,12 @@ class CharacterSheet extends Component {
     }
     render() {
         return (
+        
+              
             <Container>
+                    <div id="App">
+                <SideBar pageWrapId={"page-wrap"} outerContainerId={"App"}/>
+                <div id="page-wrap">
                 <Row>
                     <Logo></Logo>
                     <Avatar></Avatar>
@@ -278,8 +283,14 @@ class CharacterSheet extends Component {
                             </p>
                         </Row>
                     </Col>
+                    
                 </Row>
+                </div>
+                </div>
             </Container>
+          
+            
+            
         )
     }
 

@@ -1,0 +1,50 @@
+
+.name{
+    color: black;
+
+}
+
+p{
+    font-size: 17px;
+    color: black;
+    margin-left: 12%;
+    margin-right: 12%;
+}
+
+h2{
+    margin-left: 12%;
+    margin-right: 12%;
+
+}
+
+h4{
+    margin-left: 12%;
+    margin-right: 12%;
+
+}
+
+ul{
+    margin-left: 12%;
+    margin-right: 12%;
+font-size: 21px;
+}
+a{
+    color: white;
+}
+.source{
+font-size: 25px;
+margin-left: 11%;
+}
+
+.page-bg{
+    background-image: url(http://pngimg.com/uploads/paper_sheet/paper_sheet_PNG7231.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.Goto2{
+    font-size: 25px;
+    
+}
+

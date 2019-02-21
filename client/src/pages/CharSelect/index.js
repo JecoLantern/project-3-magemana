@@ -8,6 +8,7 @@ import API from "../Sheet/util/API";
 import { Link } from "react-router-dom";
 import DeleteBtn from "../../components/DeleteBtn";
 import './style/style.css'
+import SideBar from '../../components/SideBar/SideBar'
 class CharSelect extends Component {
     state = {
         redirectTo: null,
@@ -42,12 +43,15 @@ class CharSelect extends Component {
             return <Redirect to={{ pathname: this.state.redirectTo }} />
         } else {
             return (
+
                 <Container>
-                    <Head/>
                     <Header
                         onClick={this.handleNewAdventurer}
                     />
-                    <Row className="holder ">
+                    <Row>
+<div id="App">
+                <SideBar pageWrapId={"page-wrap"} outerContainerId={"App"}/>
+                <div id="page-wrap">
                         {this.state.characters.length ? (
                             <List>
                                 {this.state.characters.map(char => (
@@ -57,10 +61,9 @@ class CharSelect extends Component {
                                     <Link to={"/charsheet/" + char._id} className="link">
                                         <strong>
                                             {char.name}
-                                            {" Level " + char.level}
+                                            {" Level " +char.level}
                                             {"  " + char.race}
                                             {"  " + char.class}
-                                            {/* onClick={this.handleSelect} */}
                                         </strong>
                                     </Link>
                                     <DeleteBtn onClick={() => this.deleteMyChar(char._id)} />
@@ -68,8 +71,12 @@ class CharSelect extends Component {
                                 ))}
                             </List>
                         ) : (<h4 className="noChar">No Characters Found</h4>)}
+     </div>
+    </div>
                     </Row>
+    
                 </Container>
+                
             )
         }
     }
