@@ -75,8 +75,20 @@ class CharacterSheet extends Component {
         this.setState({ item: event.target.value })
     }
     buttonStyle = {
-        marginTop: "2rem",
-        marginLeft: "1rem"
+        backgroundColor: "#5b3624",
+        border: "none",
+        color: "wheat",
+        textAlign: "center",
+        textDecoration: "none",
+        display: "inline-block",
+        fontSize: "1.25rem",
+        fontWeight: "bold",
+        marginTop: "3.25rem",
+        marginLeft: "4rem",
+        marginRight: "0.125rem",
+        cursor: "pointer",
+        paddingLeft: "4rem",
+        paddingRight: "4rem"
     }
     render() {
         return (
@@ -94,7 +106,7 @@ class CharacterSheet extends Component {
                         level={this.state.CharModel.level}
                         race={this.state.CharModel.race}
                         alignment={this.state.CharModel.alignment}
-                        className={this.state.CharModel.className}
+                        className={this.state.CharModel.class}
                     />
                 </Row>
                 <Row>
@@ -108,8 +120,8 @@ class CharacterSheet extends Component {
                                             <div id="rectangle"><p className="attributeTxt">{attr.attr}</p></div>
                                             <div id="squareTV">
                                                 <div id="rectangleRounded"><p className="valueTxt">{attr.val}</p></div>
-                                                <h6>mod:</h6>
-                                                <h4>
+                                                <h6 className="modTxt">mod:</h6>
+                                                <h4 className="modVal">
                                                     {utility.attrMod(attr)}
                                                 </h4>
                                             </div>
@@ -258,17 +270,17 @@ class CharacterSheet extends Component {
                     </Col>
                     <Col size="3, sm-3, md-3, lg-12, xl-3">
                         <Row>
-                            {/* <Col size="6, sm-6, md-6, lg-6"> */}
                             <HpBlock
                                 health={this.state.CharModel.health}
                             />
                             <HitDice
                                 hitDice={utility.hitDiceDisplay(this.state.CharModel.hitDice, this.state.CharModel.level)}
                             />
-                            {/* </Col> */}
+                            <p className="buttonPosition">
                             <button
                                 style={this.buttonStyle}
                             onClick={this.handleSave}>Save!</button>
+                            </p>
                         </Row>
                     </Col>
                     

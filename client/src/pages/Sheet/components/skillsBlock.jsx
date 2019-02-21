@@ -16,9 +16,7 @@ var style={
 const SkillsBlock = (props) => (
     <Col size="4">
         <div id="squareTV7">
-            <h2
-                style={style}
-                >Skills
+            <h2 className="skillsTxt">Skills
             </h2>
             <Row>
             <ul className="skillPosition">

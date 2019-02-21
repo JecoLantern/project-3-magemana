@@ -67,12 +67,13 @@
 @media screen and (max-width: 480px) {
     .hpCentral {
         position: absolute;
-        top: 30rem;
+        top: 44rem;
         margin-left: 2rem;
     }
 }
 @media screen and (max-width: 380px) {
     .hpCentral {
+        top: 44rem;
         margin-left: 1.25rem;
     }
 }
