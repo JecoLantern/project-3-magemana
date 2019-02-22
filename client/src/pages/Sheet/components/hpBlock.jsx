@@ -37,7 +37,7 @@ const HpBlock = (props) => (
                     <h6 className="deathsaveTxt">Death Saves</h6>
                 </Col>
                 <Col size="4">
-                    <label className="checkbox checkboxDS">
+                    <label className="checkbox checkboxDS checkboxPosition2">
                         <input type="checkbox"/>
                         <span className="checkmark"></span>
                     </label>
