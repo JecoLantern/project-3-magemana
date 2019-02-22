@@ -29,7 +29,7 @@
 .profBonVal {
     position: relative;
     top: 0.25rem;
-    left: 0.75rem;
+    /* left: 0.75rem; */
     font-weight: bold;
     font-size: 1.25rem;
     color: chocolate;
@@ -109,7 +109,7 @@ ul.skillPosition {
 }
 .checkmarkPosition {
     top: 0.5rem;
-    left: 0.7rem;
+    left: -0.6rem;
 }
 
 .healthTxt, .hitdiceTxt {
@@ -172,6 +172,18 @@ input.hitdiceInput {
     color: black;
     font-weight: bold;
     padding-top: 0.5rem;
+}
+li.equipInput {
+    list-style-type: disc;
+    margin-right: 0rem;
+}
+input.equipInput {
+    margin-left: -0.5rem;
+    width: 82%;
+    margin-right: 0rem;
+}
+ul.equipInputList {
+    margin-right: 0rem;
 }
 h2.attacksTxt {
     color: wheat;

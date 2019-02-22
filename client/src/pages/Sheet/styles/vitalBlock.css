@@ -18,26 +18,29 @@
     word-wrap: break-word;
     color: wheat;
     text-align: center;
+    font-weight: bold;
 }
 .initiativeTxt {
     transform: rotate(90deg);
     direction: ltr;
     position: relative;
-    top: 3rem;
+    top: 2rem;
     left: 2rem;
     color: white;
     word-wrap: break-word;
     color: wheat;
+    font-weight: bold;
 }
 .speedTxt {
     transform: rotate(90deg);
     direction: ltr;
     position: relative;
-    top: 3.75rem;
+    top: 1.75rem;
     left: 2rem;
     color: white;
     word-wrap: break-word;
     color: wheat;
+    font-weight: bold;
 }
 .hexagonTxt2 {
     transform: rotate(90deg);
