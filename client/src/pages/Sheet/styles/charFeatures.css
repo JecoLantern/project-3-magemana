@@ -10,6 +10,12 @@
     -webkit-border-radius: 0.625rem;
     border-radius: 0.625rem;
 }
+h4.charFeats {
+    text-align: left;
+}
+.charFeats {
+    font-weight: bold;
+}
 .charFeaturesTxt {
     background: #5b3624;
     color: wheat;
@@ -18,6 +24,12 @@
     border-radius: 0.625rem;
     position: relative;
     text-align: center;
+    left: -2rem;
+}
+li.charFeatList {
+    list-style-type: disc;
+    left: 2rem;
+    position: relative;
 }
 
 @media only screen and (max-width: 1024px) {

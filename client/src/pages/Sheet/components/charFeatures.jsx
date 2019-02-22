@@ -10,7 +10,7 @@ const CharacterFeatures = props => (
                 {props.features.length ? props.features.map(feat => (
                     <div className="charFeatSpace">
                         <ul>
-                            <li><h4 className="charFeats">{feat}</h4></li>
+                            <li className="charFeatList"><h4 className="charFeats">{feat}</h4></li>
                         </ul>
                     </div>
                 )) : <p> No Featrues</p>}
