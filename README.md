@@ -9,5 +9,7 @@ https://drive.google.com/file/d/1opXaMo9dE8gg3Fu41SUVhfge61vHj7Ra/view
 
 ### Developers
 Austin Shepherd https://github.com/Austin-Shep
+
 Jeric Ayonke https://github.com/JecoLantern
+
 Troy Gordon https://github.com/TroyAG
